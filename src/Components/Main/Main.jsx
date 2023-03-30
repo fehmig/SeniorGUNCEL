@@ -488,7 +488,7 @@ const Main = () => {
 
             onClick={() => filterResult('HISTORICAL')}
             className="type-filters-btns">
-            HISTORICAL
+            HISTORICALssad
           </button>
 
           <button
