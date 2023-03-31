@@ -489,7 +489,7 @@ const Main = () => {
             onClick={() => filterResult('ADVENTURE')}
             className="type-filters-btns">
             <h2><GiTreeBranch className="icon" /></h2>
-            ADVENTURE
+            ADVENTURE  
 
           </button>
 
