@@ -29,11 +29,15 @@ import video from '../../Assets/video.mp4'
 import { GrLocation } from 'react-icons/gr'
 import { HiFilter } from 'react-icons/hi'
 import { FiFacebook } from 'react-icons/fi'
-import { AiOutlineInstagram } from 'react-icons/ai'
+import { AiOutlineInstagram, AiOutlineMenuUnfold } from 'react-icons/ai'
 import { SiTripadvisor } from 'react-icons/si'
 import { BsListTask } from 'react-icons/bs'
 import { TbApps } from 'react-icons/tb'
-import {GiCampingTent} from 'react-icons/gi'
+import { GiCampingTent } from 'react-icons/gi'
+import { GiTreeBranch } from 'react-icons/gi'
+import { MdOutlineStarHalf, MdOutlineStarPurple500, MdFastfood, MdMuseum } from 'react-icons/md'
+import { FaMosque, FaUmbrellaBeach } from 'react-icons/fa'
+
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Map2 from '../../Map/Map2'
@@ -60,10 +64,10 @@ const Veri = [
     rating: 4.7,
     type: "CAMPING",
     fees: 700,
-    btnValue:1,
+    btnValue: 1,
     date: "23.07.2023",
     description: "The area is north of Turkey. It takes its name from the Black Sea in the north. The Black Sea climatic conditions are effective in the region. It is rainy every season. The annual temperature difference is small. Summers are cool, winters are warm. The Black Sea is the highest rainfall areas of Turkey. Enjoy the green, enjoy your travel route!"
-    
+
   },
 
 
@@ -73,7 +77,7 @@ const Veri = [
     destTitle: 'Eastern Anatolia',
     location: 'Turkey',
     grade: 'RATING',
-    btnValue:2,
+    btnValue: 2,
     date: "04.03.2023",
     rating: 2.2,
     fees: 600,
@@ -105,7 +109,7 @@ const Veri = [
     grade: 'RATING ',
     rating: 2.7,
     fees: 800,
-    btnValue:4,
+    btnValue: 4,
     type: "ADVENTURE",
     description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region!'
   },
@@ -120,7 +124,7 @@ const Veri = [
     grade: 'RATING',
     rating: 3.5,
     fees: 1100,
-    btnValue:5,
+    btnValue: 5,
     type: "BEACH",
     description: 'A land of beautiful vistas over the sea, lovely evening breezes, and majestic sunsets, Western part of the country,including the Aegean Sea coast across from a wide arch of Greek islands and the adjoining inland areas.'
   },
@@ -135,7 +139,7 @@ const Veri = [
     grade: 'RATING ',
     rating: 4.0,
     fees: 840,
-    btnValue:6,
+    btnValue: 6,
     type: "HISTORICAL",
     description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks. '
   },
@@ -150,7 +154,7 @@ const Veri = [
     grade: 'RATING ',
     rating: 3.8,
     fees: 790,
-    btnValue:3,
+    btnValue: 3,
     type: "CAMPING",
     description: ' Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.'
   },
@@ -165,7 +169,7 @@ const Veri = [
     grade: 'RATING',
     rating: 1.1,
     fees: 900,
-    btnValue:8,
+    btnValue: 8,
     type: "FOOD",
     description: 'Southeastern Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.'
   },
@@ -180,7 +184,7 @@ const Veri = [
     date: "10.11.2023",
     rating: 3.9,
     fees: 500,
-    btnValue:9,
+    btnValue: 9,
     type: "HISTORICAL",
     description: 'Famed as the oldest temple in the world, Göbekli Tepe has changed the way that archaeologists look at history. Its existence pre-dates farming and settlements, and so it proves that man had religion before he even lived in a village or a town. Dated to 9000 BCE and listed by UNESCO'
 
@@ -212,7 +216,7 @@ const Main = () => {
 
   const [fees, setFees] = useState(0);
   const [rating, setRating] = useState(0);
-  
+
   const handleInputFees = (e) => {
     setFees(e.target.value);
   }
@@ -234,12 +238,12 @@ const Main = () => {
 
 
 
-  
 
-    function handleInput(e) {
-      const buttonValue= e.target.value;
-      console.log(buttonValue)
-    }
+
+  function handleInput(e) {
+    const buttonValue = e.target.value;
+    console.log(buttonValue)
+  }
 
 
 
@@ -442,37 +446,41 @@ const Main = () => {
 
         <div className='range-filter' >
           <div>
-            <h3> Min Cost: {fees}$</h3> 
+            <h3> Min Cost: {fees}$</h3>
             <input type="range" onInput={handleInputFees} min="0" max="1500" step="10" />
-            </div> 
-
-            <div>
-            <h3> Min Rating: {rating}</h3> 
-            <input type="range" onInput={handleInputRating} min="0" max="5" />
-            </div> 
-            
-
-
           </div>
+
+          <div>
+            <h3> Min Rating: {rating}</h3>
+            <input type="range" onInput={handleInputRating} min="0" max="5" />
+          </div>
+
+
+
+        </div>
 
         <div className="type-filters">
 
 
-      
-          
+
+
 
           <button
 
             onClick={() => setData(Veri)}
             className="type-filters-btns">
+            <h2><AiOutlineMenuUnfold className="icon" /></h2>
             ALL
           </button>
 
           <button
 
+
             onClick={() => filterResult('CAMPING')}
             className="type-filters-btns">
+            <h2><GiCampingTent className="icon" /></h2>
             CAMPING
+
 
           </button>
 
@@ -480,6 +488,7 @@ const Main = () => {
 
             onClick={() => filterResult('ADVENTURE')}
             className="type-filters-btns">
+            <h2><GiTreeBranch className="icon" /></h2>
             ADVENTURE
 
           </button>
@@ -488,25 +497,28 @@ const Main = () => {
 
             onClick={() => filterResult('HISTORICAL')}
             className="type-filters-btns">
-            HISTORICALssad
+            <h2><FaMosque className="icon" /></h2>
+            HISTORICAL
           </button>
 
           <button
             onClick={() => filterResult('FOOD')}
             className="type-filters-btns">
+            <h2><MdFastfood className="icon" /></h2>
             FOOD
           </button>
 
           <button
             onClick={() => filterResult('BEACH')}
             className="type-filters-btns">
+            <h2><FaUmbrellaBeach className="icon" /></h2>
             BEACH
           </button>
 
 
-          
+
         </div>
-        
+
         <br />
 
         <div className="secContent grid">
@@ -536,16 +548,16 @@ const Main = () => {
                 } else return null
               })
 
-              
 
-              .map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type,btnValue }) => {
+
+              .map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue }) => {
                 return (
 
 
                   <div key={id} data-aos="fade-up" className="singleDestination">
 
                     <div className="imageDiv">
-                    <a href='/routes'> <img src={imgSrc} ></img></a>  
+                      <a href='/routes'> <img src={imgSrc} ></img></a>
                     </div>
 
                     <div className="cardInfo">
@@ -561,6 +573,8 @@ const Main = () => {
                         <div className="grade">
                           <span>{grade}<small><span>{rating}</span></small> </span>
                         </div>
+
+
                         <div className="price">
                           <h5>${fees}</h5>
                         </div>
@@ -576,22 +590,22 @@ const Main = () => {
                       <button
                         className='btn '
                       >
-                       <a href='/routes'>Details</a> 
+                        <a href='/routes'>Details</a>
                         <HiClipboardList className="icon" />
                       </button>
-                      {/* {() => setIsOpen(true)} */}
 
 
-                     
+
+
                       <button
-                        
+
                         onClick={() => setIsOpen(true)}
                         className='btn-map '
                       >
                         Map
                         <FiMapPin classname="icon" />
                       </button>
-                      
+
                     </div>
                   </div>
 
