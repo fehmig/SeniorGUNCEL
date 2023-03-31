@@ -9,6 +9,8 @@ import Map from './Map/Map'
 import MapPage from './MapPage'
 import Packages from './Components/Packages'
 import RoutePage from './Components/RoutePage'
+import About from './Components/About'
+import Forum from './Components/Forum'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 
@@ -22,7 +24,8 @@ const App = () => {
         <Route exact path="/" element={<MainPage/>} />
         <Route path="/routes" element={<RoutePage/>} />
         <Route path="/packages" element={<Packages/>} />
-        
+        <Route path="/about" element={<About/>} />
+        <Route path="/forum" element={<Forum/>} />
        
         
         

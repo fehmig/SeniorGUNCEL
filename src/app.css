@@ -194,3 +194,23 @@ body{
     float: left;
     border-radius: 1.5em;
 }
+
+.about{
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    margin: 0;
+    border: 1px solid black;
+    float: left;
+    border-radius: 1.5em;
+}
+
+.forum{
+    width: 100%;
+    height: 1000px;
+    text-align: center;
+    margin: 0;
+    border: 1px solid black;
+    float: left;
+    border-radius: 1.5em;
+}
