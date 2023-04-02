@@ -198,7 +198,8 @@ body {
     margin: auto;
     float: left;
     border-radius: 1.5em;
-    background-color: white
+    background-color: white;
+    box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
 
 }
 
