@@ -16,7 +16,7 @@ const Home = () => {
     Aos.init({duration: 2000})
   }, [])
 
-    const [searchTerm, setSearchTerm] = useState("");
+
 
 
 

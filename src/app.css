@@ -214,3 +214,15 @@ body{
     float: left;
     border-radius: 1.5em;
 }
+
+.input-yorum {
+    margin: auto;
+    display: block;
+    width:500px;
+    padding: 10px 15px;
+    background-color: #f8f8f8f8;
+    border-radius: 1.5rem;
+    transition: 0.4s;
+    margin-bottom: 10px;
+    
+}

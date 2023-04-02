@@ -38,14 +38,12 @@ const Navbar = () => {
               <li className="navItem">
                 <a href="/forum" className="navLink">Forum</a>
               </li>
+             
               <li className="navItem">
-                <a href="#" className="navLink">News</a>
-              </li>
-              <li className="navItem">
-                <a href="#" className="navLink">Contact</a>
+                <a href="/contact" className="navLink">Contact</a>
               </li>
               <button className="btn">
-                <a href="#">BOOK NOW</a>
+                <a href="#">LOGIN</a>
               </button>
 
             </ul>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import Home from "./Home/Home";
 import Footer from "./Footer/Footer";
@@ -7,6 +7,9 @@ import {FaRoute} from "react-icons/fa"
 
 
 const RoutePage = () => {
+
+
+
 
     return(
         <>
@@ -27,7 +30,25 @@ const RoutePage = () => {
                   
                    <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/> 
                   
-                   <div className="route-yorum"> <h3>   YORUMLAR</h3></div>
+                   <div className="route-yorum"> <h3>YORUMLAR</h3>
+                   <input
+                   
+                   className="input-yorum"
+                    type='text'
+                    placeholder="Yorum yapabilirsiniz..."
+                    
+                    />
+                   <button
+                    className="btn"
+                   >
+                        YORUM YAP
+
+                   </button>
+
+                   <div>
+                   
+                   </div>
+                   </div>
                </div> 
       <Footer/>
                

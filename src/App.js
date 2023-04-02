@@ -12,7 +12,7 @@ import RoutePage from './Components/RoutePage'
 import About from './Components/About'
 import Forum from './Components/Forum'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-
+import Contact from './Components/Contact'
 
 
 
@@ -26,9 +26,7 @@ const App = () => {
         <Route path="/packages" element={<Packages/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/forum" element={<Forum/>} />
-       
-        
-        
+        <Route path="/contact" element={<Contact/>} />       
       </Routes>
     </Router>
   )

@@ -1,9 +1,8 @@
-import React, { useEffect, Component } from 'react'
+import React, { useEffect} from 'react'
 import { useState } from 'react'
 import './main.css'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { HiClipboardList, } from 'react-icons/hi'
-import { AiOutlineClose, AiFillCloseCircle } from 'react-icons/ai'
 import img from '../../Assets/img (12).jpg'
 import img2 from '../../Assets/img (2).jpg'
 import img3 from '../../Assets/img (3).jpg'
@@ -14,16 +13,9 @@ import img7 from '../../Assets/img (7).jpg'
 import img8 from '../../Assets/img (14).jpg'
 import img9 from '../../Assets/img (9).jpg'
 import 'aos/dist/aos.css'
-import { GoogleMap, LoadScript, InfoWindow } from '@react-google-maps/api';
-import { Modal, Button } from 'react-bootstrap';
-import { Marker } from '@react-google-maps/api';
 import Map from '../../Map/Map'
-import { Route } from "react-router-dom"
-import { Link } from "react-router-dom"
 import { withScriptjs } from "react-google-maps"
 import { FiMapPin } from "react-icons/fi"
-import MainPage from '../../MainPage'
-import MapPage from '../../MapPage'
 import ReactModal from 'react-modal';
 import video from '../../Assets/video.mp4'
 import { GrLocation } from 'react-icons/gr'
@@ -35,14 +27,14 @@ import { BsListTask } from 'react-icons/bs'
 import { TbApps } from 'react-icons/tb'
 import { GiCampingTent } from 'react-icons/gi'
 import { GiTreeBranch } from 'react-icons/gi'
-import { MdOutlineStarHalf, MdOutlineStarPurple500, MdFastfood, MdMuseum } from 'react-icons/md'
+import {MdFastfood, MdMuseum } from 'react-icons/md'
 import { FaMosque, FaUmbrellaBeach } from 'react-icons/fa'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Map2 from '../../Map/Map2'
 import Map3 from '../../Map/Map3'
-import FilterBar from '../../FilterBar'
+
 import bolu from '../../Assets/bolu.jpg'
 import duzce from '../../Assets/düzce.jpg'
 import bartın from '../../Assets/bartın.jpg'
@@ -204,10 +196,6 @@ const Main = () => {
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
 
-  const [buttonstate, Setbuttonstate] = useState();
-  function whichbutton(e) {
-
-  }
 
 
   const MapLoader = withScriptjs(Map);
@@ -240,11 +228,7 @@ const Main = () => {
 
 
 
-  function handleInput(e) {
-    const buttonValue = e.target.value;
-    console.log(buttonValue)
-  }
-
+ 
 
 
   return (
@@ -443,7 +427,7 @@ const Main = () => {
           </h3>
         </div>
 
-
+      {/* FİLTRELEME */}
         <div className='range-filter' >
           <div>
             <h3> Min Cost: {fees}$</h3>
@@ -521,6 +505,8 @@ const Main = () => {
 
         <br />
 
+
+        {/* CARDS */}
         <div className="secContent grid">
 
 
