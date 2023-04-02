@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-:root{
+:root {
     --PrimaryColor: hsl(199, 100%, 33%);
     --SecondaryColor: hsl(187, 85%, 43%);
-    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%),hsl(199, 100%, 33%));
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
     --whiteColor: hsl(0, 0%, 100%);
     --blackColor: hsl(201, 33%, 16%);
     --textColor: hsl(240, 4%, 36%);
@@ -21,39 +21,39 @@
     --cardBG: rgb(225, 225, 235);
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-li{
+li {
     list-style: none;
 }
 
-.section{
+.section {
     padding: 4rem 0 2rem;
- }
+}
 
-.container{
+.container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
 
-.icon{
+.icon {
     font-size: 2rem;
     cursor: pointer;
 }
 
-.flex{
+.flex {
     display: flex;
     align-items: center;
 }
 
-.grid{
+.grid {
     display: grid;
     align-items: center;
 }
 
-.btn{
+.btn {
     padding: .6rem 1.5rem;
     background: var(--gradientColor);
     border: none;
@@ -64,16 +64,16 @@ li{
 
 
 
-.btn a{
- color: var(--whiteColor);
- font-weight: 500;
+.btn a {
+    color: var(--whiteColor);
+    font-weight: 500;
 }
 
-.btn:hover{
+.btn:hover {
     background: var(--SecondaryColor);
 }
 
-.btn-map{
+.btn-map {
     position: absolute;
     right: 10px;
     bottom: 20px;
@@ -86,16 +86,18 @@ li{
     color: white;
 }
 
-.btn-filter{
-    background-color:  hsl(187, 85%, 43%);
-    border:none;
+.btn-filter {
+    background-color: hsl(187, 85%, 43%);
+    border: none;
     border-radius: 3rem;
     cursor: pointer;
 }
-.type-filters{
-    right:0px ;
+
+.type-filters {
+    right: 0px;
 }
-.type-filters-btns{
+
+.type-filters-btns {
     background: var(--gradientColor);
     border: none;
     border-radius: 3rem;
@@ -105,58 +107,61 @@ li{
     padding: 0.4rem;
 }
 
-img, video{
-width: 100%;
-height: auto;
+img,
+video {
+    width: 100%;
+    height: auto;
 }
 
-input{
+input {
     font-size: 100%;
 }
 
-body{
+body {
     background: var(--bodyColor);
 }
 
-::selection{
+::selection {
     background: var(--PrimaryColor);
     color: var(--whiteColor);
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
     background: var(--whiteColorDeam);
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: var(--SecondaryColor);
     border-radius: 10px;
 }
 
 
 @media screen and (min-width: 1024px) {
-    .container{
+    .container {
         width: 80% !important;
         margin: auto !important;
     }
 
-    .section{
+    .section {
         padding: 6rem 0 4rem;
-     }
+    }
 }
 
-@media screen and (min-width: 2560px){
-    body{
+@media screen and (min-width: 2560px) {
+    body {
         zoom: 1.7;
     }
 }
 
-.routepage{
+.routepage {
     width: 100%;
     height: 1100px;
     text-align: center;
     margin: auto;
 }
-.route-harita{
+
+.route-harita {
     width: 50%;
     height: 400px;
     text-align: center;
@@ -164,10 +169,11 @@ body{
     border: 1px solid black;
     float: left;
     border-radius: 1.5em;
-    
+
 }
-.route-durum{
-    float:left;
+
+.route-durum {
+    float: left;
     width: 50%;
     height: 400px;
     text-align: center;
@@ -175,17 +181,28 @@ body{
     border: 1px solid black;
     border-radius: 1.5em;
 }
-.route-yorum{
-    width: 600px;
+
+.route-yorum {
+    width: 50%;
     height: 300px;
     text-align: center;
     margin: auto;
-    border: 1px solid black;
+    float: left;
     border-radius: 1.5em;
 
 }
+.route-yorum-goruntule{
+    width: 50%;
+    height: 300px;
+    text-align: center;
+    margin: auto;
+    float: left;
+    border-radius: 1.5em;
+    background-color: white
 
-.packages{
+}
+
+.packages {
     width: 50%;
     height: 400px;
     text-align: center;
@@ -195,7 +212,7 @@ body{
     border-radius: 1.5em;
 }
 
-.about{
+.about {
     width: 100%;
     height: 400px;
     text-align: center;
@@ -205,7 +222,7 @@ body{
     border-radius: 1.5em;
 }
 
-.forum{
+.forum {
     width: 100%;
     height: 1000px;
     text-align: center;
@@ -218,11 +235,40 @@ body{
 .input-yorum {
     margin: auto;
     display: block;
-    width:500px;
+    width: 80%;
+    height: 300px;
     padding: 10px 15px;
+    border:0.5px solid black;
     background-color: #f8f8f8f8;
     border-radius: 1.5rem;
     transition: 0.4s;
     margin-bottom: 10px;
-    
+    box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
+
+}
+
+.btn-yorum {
+    padding: .6rem 1.5rem;
+    background: var(--gradientColor);
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    color: white;
+}
+
+.yorumlar {
+    width: 80%;
+    height: 250px;
+    text-align: center;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    float: left;
+    border-radius: 1.5em;
+    margin-left: 50px;
+    overflow: auto;
+    margin-right: 50px;
 }
