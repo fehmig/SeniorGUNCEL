@@ -3,7 +3,7 @@ import Navbar from "./Navbar/Navbar";
 import Home from "./Home/Home";
 import Footer from "./Footer/Footer";
 import {GrMap} from "react-icons/gr"
-import {FaRoute} from "react-icons/fa"
+import {FaRoute, FaRegCommentDots} from "react-icons/fa"
 
 
 const RoutePage = () => {
@@ -39,7 +39,7 @@ const RoutePage = () => {
                   
                    <br/>   <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/> 
                   
-                   <div className="route-yorum"> <h3>BİZİMLE YORUMUNU PAYLAŞ</h3>
+                   <div className="route-yorum"> <div><span><h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3></span><span></span></div>
                    <input
                    
                    className="input-yorum"

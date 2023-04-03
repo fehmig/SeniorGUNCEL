@@ -1,35 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import Home from "./Home/Home";
 import Footer from "./Footer/Footer";
 
+//
 
 
-const Contact = () => {
+    //
 
-    return(
-    
-        
-        <>
-        
-        <Navbar/>
-       <br/> <br/> <br/> <br/> <br/>
+    const Contact = () => {
+
+        return (
+
+
+            <>
+
+                <Navbar />
+                <br /> <br /> <br /> <br /> <br />
                 <div className="routepage">
-                       <i><h1>İLETİŞİM SAYFASI</h1>  </i>
-                   <br/> <br/> <br/> <br/> <br/>
-
-
-                   <div className="contact">
-                       <h3> </h3>
+                    <i><h1>İLETİŞİM SAYFASI</h1>  </i>
+                    <br /> <br /> <br /> <br /> <br />
+                    {/* deneme */}
                    
-                   </div>                   
-               </div> 
-      <Footer/>
-               
-       </>      
-                
-                     
-        )
-}
+                    
+                    {/* deneme */}
+                    <div className="contact">
+                        <h3> </h3>
 
-export default Contact
+                    </div>
+                </div>
+                <Footer />
+
+            </>
+
+
+        )
+    }
+
+    export default Contact

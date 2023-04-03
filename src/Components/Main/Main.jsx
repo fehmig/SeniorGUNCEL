@@ -21,7 +21,7 @@ import video from '../../Assets/video.mp4'
 import { GrLocation } from 'react-icons/gr'
 import { HiFilter } from 'react-icons/hi'
 import { FiFacebook } from 'react-icons/fi'
-import { AiOutlineInstagram, AiOutlineMenuUnfold } from 'react-icons/ai'
+import { AiOutlineInstagram, AiOutlineMenuUnfold, AiOutlineHeart } from 'react-icons/ai'
 import { SiTripadvisor } from 'react-icons/si'
 import { BsListTask } from 'react-icons/bs'
 import { TbApps } from 'react-icons/tb'
@@ -557,7 +557,7 @@ const Main = () => {
 
                       <div className="fees flex">
                         <div className="grade">
-                          <span>{grade}<small><span>{rating}</span></small> </span>
+                          <span>{grade}<small><span>{rating}</span></small></span>
                         </div>
 
 
