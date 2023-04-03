@@ -34,6 +34,36 @@ const Login = () => {
                             {/* <h1 data-aos="fade-down" className="homeTitle">
                                 Search your Travel routes!
                             </h1> */}
+
+<>
+            <div className="sonucv2">
+             
+                <form action="POST">
+                    <input
+                    type='text'
+                    placeholder="Kullanıcı Adı"
+               
+                    
+                    />
+                    <br/> <br/>
+                    <input
+                    type='password'
+                    placeholder="Şifre"
+                   
+                    
+                    />
+                    <br/>  <br/>
+                    <button type="submit" className="btn-yorum">GİRİŞ</button>
+                </form>
+                
+                    <br/>  <br/>
+                <div>
+                  
+                </div>
+            </div>
+
+           
+            </>
                         </div>
                     </div>
                 </section>
@@ -52,7 +82,7 @@ const Login = () => {
 
                 </div>
             </div>
-            <Footer />
+            
 
         </>
 

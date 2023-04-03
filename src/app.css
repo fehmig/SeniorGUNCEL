@@ -273,3 +273,14 @@ body {
     overflow: auto;
     margin-right: 50px;
 }
+
+.sonucv2{
+    margin: 0;
+  padding: 0;
+  text-align: center;
+  border-radius: 1em;
+  width: 100%;
+  
+  margin-top: 10%;
+  
+}
