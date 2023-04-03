@@ -37,9 +37,11 @@ const RoutePage = () => {
                    
                    <div className="route-durum"> <h3><FaRoute/>  ROTA BİLGİLERİ, DURUMU </h3></div>
                   
-                   <br/>   <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/> 
+                   <br/>     <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/> 
                   
-                   <div className="route-yorum"> <div><span><h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3></span><span></span></div>
+                   <div className="route-yorum"> 
+                   <br/> 
+                   <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
                    <input
                    
                    className="input-yorum"
@@ -61,7 +63,7 @@ const RoutePage = () => {
                    </div>
                    <br/>
                    <div className="route-yorum-goruntule"> <h3><u></u></h3>
-                  
+                            
                             <br/> 
                         <div className="yorumlar">
                         
