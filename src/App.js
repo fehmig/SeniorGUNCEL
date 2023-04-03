@@ -13,6 +13,7 @@ import About from './Components/About'
 import Forum from './Components/Forum'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Contact from './Components/Contact'
+import Login from './Components/login'
 
 
 
@@ -26,7 +27,8 @@ const App = () => {
         <Route path="/packages" element={<Packages/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/forum" element={<Forum/>} />
-        <Route path="/contact" element={<Contact/>} />       
+        <Route path="/contact" element={<Contact/>} /> 
+        <Route path="/login" element={<Login/>} />      
       </Routes>
     </Router>
   )

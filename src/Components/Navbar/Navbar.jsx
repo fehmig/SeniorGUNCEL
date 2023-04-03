@@ -43,7 +43,7 @@ const Navbar = () => {
                 <a href="/contact" className="navLink">Contact</a>
               </li>
               <button className="btn">
-                <a href="#">LOGIN</a>
+                <a href="/login">LOGIN</a>
               </button>
 
             </ul>
