@@ -4,10 +4,11 @@ import Home from "./Home/Home";
 import Footer from "./Footer/Footer";
 import { GrMap } from "react-icons/gr"
 import { FaRoute, FaRegCommentDots } from "react-icons/fa"
-
-
+import Map2 from '../Map/Map2'
+import { withScriptjs } from "react-google-maps"
 const RoutePage = () => {
 
+    const MapLoaderR = withScriptjs(Map2);
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState('');
     const addComment = (comment) => {
@@ -31,10 +32,12 @@ const RoutePage = () => {
                     <i><h1>ROTA DETAYLARI BURADA YER ALACAK </h1>  </i>
                     <br />
                     <div className="route-soltaraf">
-                        <div className="route-durum"> <h3><FaRoute />  ROTA BİLGİLERİ, DURUMU </h3></div>
-
-                        <br />   <br /> <br />  <br /> <br />
-
+                    <h3><FaRoute />  ROTA BİLGİLERİ, DURUMU </h3>
+                        <div className="route-durum"> 
+                        </div>
+                        
+    
+                        <br />  
                         <div className="route-yorum">
                             <br />
                             <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
@@ -91,7 +94,11 @@ const RoutePage = () => {
 
                     </div>
                     <div className="route-sagtaraf">
-
+                    <MapLoaderR className='route-sagtaraf-map'
+          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+          loadingElement={<div style={{ height: "1000px" }} />}
+        />
+              
 
 
                     </div>

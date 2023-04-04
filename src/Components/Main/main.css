@@ -279,16 +279,3 @@ border-radius: 5em;
 
 }
 
-.route-sagtaraf{
-    width: 70%;
-    float: left;
-    border: 1px solid gray;
-    height: 100%;
-}
-
-.route-soltaraf{
-  width: 30%;
-    float: left;
-    border: 1px solid gray;
-    height: 100%;
-}

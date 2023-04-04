@@ -27,8 +27,8 @@ class Map2 extends Component {
 componentDidMount() {
     const directionsService = new google.maps.DirectionsService();
 
-    const origin = { lat:40.610519 , lng:43.099110};
-    const destination = { lat: 38.503490, lng: 43.396450};
+    const origin = { lat:40.730190 , lng: 31.600210};
+    const destination = { lat: 41.026089, lng: 40.518929};
 
     directionsService.route(
         {
@@ -37,15 +37,29 @@ componentDidMount() {
             travelMode: google.maps.TravelMode.DRIVING,
             waypoints: [
                 {
-                    location: new google.maps.LatLng(39.901501, 41.264549)
+                    location: new google.maps.LatLng(40.839989,  31.155060)
                 },
                 {
-                    location: new google.maps.LatLng(38.740189,41.494919)
+                    location: new google.maps.LatLng(41.450508,31.789339)
                 },
                 {
-                    location: new google.maps.LatLng(38.400569,42.109502)
+                    location: new google.maps.LatLng(41.625839,32.329342)
+                },
+                {
+                    location: new google.maps.LatLng(41.289452,36.339279)
+                },
+                {
+                    location: new google.maps.LatLng(41.37805, 33.77528)
+                },
+                {
+                    location: new google.maps.LatLng(42.02683, 35.16253)
+                },
+                {
+                    location: new google.maps.LatLng(40.985860,37.879800)
+                },
+                {
+                    location: new google.maps.LatLng(41.002071,39.719219)
                 }
-               
             ]
         },
         (result, status) => {
@@ -85,7 +99,7 @@ render() {
 
             
             <GoogleMapExample
-                containerElement={<div style={{ height: `500px`, width: "800px"}} />}
+                containerElement={<div style={{ height: `1099px`, width: `100%`}} />}
                 mapElement={<div style={{ height: `100%` }} />}
             />
 
