@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import './main.css'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
@@ -27,10 +27,10 @@ import { BsListTask } from 'react-icons/bs'
 import { TbApps } from 'react-icons/tb'
 import { GiCampingTent } from 'react-icons/gi'
 import { GiTreeBranch } from 'react-icons/gi'
-import {MdFastfood, MdMuseum } from 'react-icons/md'
+import { MdFastfood, MdMuseum } from 'react-icons/md'
 import { FaMosque, FaUmbrellaBeach } from 'react-icons/fa'
-import {BsFillStarFill} from 'react-icons/bs'
-import {FaRoute,FaSkiing} from 'react-icons/fa'
+import { BsFillStarFill } from 'react-icons/bs'
+import { FaRoute, FaSkiing } from 'react-icons/fa'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Map2 from '../../Map/Map2'
@@ -229,7 +229,7 @@ const Main = () => {
 
 
 
- 
+
 
 
   return (
@@ -252,9 +252,9 @@ const Main = () => {
 
           {/* FILTER KISMI */}
           <div data-aos="fade-down" className="pr">
-                <img src={banner} className='banner'></img>
-              
-                
+            <img src={banner} className='banner'></img>
+
+
 
           </div>
 
@@ -391,31 +391,31 @@ const Main = () => {
           </h3>
         </div>
 
-      {/* FİLTRELEME */}
+        {/* FİLTRELEME */}
         <div className='range-filter' >
           <div className='range-filter-one'>
             <h3> Min Cost: {fees}$</h3>
             <input type="range" onInput={handleInputFees} min="0" max="1500" step="10" />
           </div>
-      
+
           <div className='range-filter-one'>
-            
-           <h3> Min Rating: {rating}</h3>
+
+            <h3> Min Rating: {rating}</h3>
             <input type="range" onInput={handleInputRating} min="0" max="5" />
           </div>
           <div className='input-div'>
-            <br/><br/><br/>
-           
-          <input 
-                  className='input-search'
-                  type="text"
-                 placeholder='Search route here...'
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  
-                />
-                
-        </div>
-        
+            <br /><br /><br />
+
+            <input
+              className='input-search'
+              type="text"
+              placeholder='Search route here...'
+              onChange={(e) => setSearchTerm(e.target.value)}
+
+            />
+
+          </div>
+
 
 
         </div>
@@ -450,7 +450,7 @@ const Main = () => {
             onClick={() => filterResult('ADVENTURE')}
             className="type-filters-btns">
             <h2><FaSkiing className="icon" /></h2>
-            ADVENTURE  
+            ADVENTURE
 
           </button>
 
@@ -475,8 +475,8 @@ const Main = () => {
             <h2><FaUmbrellaBeach className="icon" /></h2>
             BEACH
           </button>
-          </div>
-          
+        </div>
+
 
         <br />
 
@@ -532,7 +532,7 @@ const Main = () => {
 
                       <div className="fees flex">
                         <div className="grade">
-                          <span><BsFillStarFill style={{color: "#fff700",}}/>  {rating}</span>
+                          <span><BsFillStarFill style={{ color: "#fff700", }} />  {rating}</span>
                         </div>
 
 
