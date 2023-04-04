@@ -42,13 +42,13 @@ const RoutePage = () => {
                    <div className="route-yorum"> 
                    <br/> 
                    <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
-                   <input
+                   <textarea name="message" rows="4" cols="50"
                    
                    className="input-yorum"
                     type='text'
                     placeholder="Yorum yapabilirsiniz..."
                     value={message} onChange={handleChange}
-                    />
+                    ></textarea>
                    <button
                     className="btn-yorum"
                     onClick={yorumyap}
