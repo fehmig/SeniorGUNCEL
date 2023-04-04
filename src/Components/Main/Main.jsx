@@ -30,7 +30,7 @@ import { GiTreeBranch } from 'react-icons/gi'
 import {MdFastfood, MdMuseum } from 'react-icons/md'
 import { FaMosque, FaUmbrellaBeach } from 'react-icons/fa'
 import {BsFillStarFill} from 'react-icons/bs'
-import {FaRoute} from 'react-icons/fa'
+import {FaRoute,FaSkiing} from 'react-icons/fa'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Map2 from '../../Map/Map2'
@@ -449,7 +449,7 @@ const Main = () => {
 
             onClick={() => filterResult('ADVENTURE')}
             className="type-filters-btns">
-            <h2><GiTreeBranch className="icon" /></h2>
+            <h2><FaSkiing className="icon" /></h2>
             ADVENTURE  
 
           </button>
