@@ -29,7 +29,8 @@ import { GiCampingTent } from 'react-icons/gi'
 import { GiTreeBranch } from 'react-icons/gi'
 import {MdFastfood, MdMuseum } from 'react-icons/md'
 import { FaMosque, FaUmbrellaBeach } from 'react-icons/fa'
-
+import {BsFillStarFill} from 'react-icons/bs'
+import {FaRoute} from 'react-icons/fa'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Map2 from '../../Map/Map2'
@@ -44,7 +45,7 @@ import ordu from '../../Assets/ordu.jpg'
 import trabzon from '../../Assets/trabzon.jpg'
 import samsun from '../../Assets/samsun.jpg'
 import sinop from '../../Assets/sinop.jpg'
-
+import banner from './banner.jpg'
 
 const Veri = [
   {
@@ -250,48 +251,11 @@ const Main = () => {
 
 
           {/* FILTER KISMI */}
-          <div data-aos="fade-down" className="cardDiv grid">
+          <div data-aos="fade-down" className="pr">
+                <img src={banner} className='banner'></img>
+              
+                
 
-
-            <div className="destinationInput">
-              <label htmlFor="city">Search your destination:</label>
-              <div className="input flex">
-                <input type="text" placeholder='Enter location here...'
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-                <GrLocation className="icon" />
-              </div>
-              <br />
-            </div>
-
-
-
-
-            <div className="dateInput">
-              <label htmlFor="date">Select your date:</label>
-              <div className="input flex">
-                <input type="date" id="date" />
-
-              </div>
-            </div>
-
-
-            <div className="priceInput">
-              <div className="label_total flex">
-                <label htmlFor="cost">Cost</label>
-                <h3 className="total"></h3>
-              </div>
-              <div className="input flex">
-                <input type="range" max="2000" min="0" id="cost" />
-              </div>
-            </div>
-
-            <div className="searchOptions flex">
-
-              <span>MORE FILTERS <HiFilter /></span>
-
-
-            </div>
           </div>
 
 
@@ -429,16 +393,29 @@ const Main = () => {
 
       {/* FİLTRELEME */}
         <div className='range-filter' >
-          <div>
+          <div className='range-filter-one'>
             <h3> Min Cost: {fees}$</h3>
             <input type="range" onInput={handleInputFees} min="0" max="1500" step="10" />
           </div>
-
-          <div>
-            <h3> Min Rating: {rating}</h3>
+      
+          <div className='range-filter-one'>
+            
+           <h3> Min Rating: {rating}</h3>
             <input type="range" onInput={handleInputRating} min="0" max="5" />
           </div>
-
+          <div className='input-div'>
+            <br/><br/><br/>
+           
+          <input 
+                  className='input-search'
+                  type="text"
+                 placeholder='Search route here...'
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  
+                />
+                
+        </div>
+        
 
 
         </div>
@@ -498,10 +475,8 @@ const Main = () => {
             <h2><FaUmbrellaBeach className="icon" /></h2>
             BEACH
           </button>
-
-
-
-        </div>
+          </div>
+          
 
         <br />
 
@@ -557,7 +532,7 @@ const Main = () => {
 
                       <div className="fees flex">
                         <div className="grade">
-                          <span>{grade}<small><span>{rating}</span></small></span>
+                          <span><BsFillStarFill style={{color: "#fff700",}}/>  {rating}</span>
                         </div>
 
 
