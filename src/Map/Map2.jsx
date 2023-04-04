@@ -7,7 +7,7 @@ import {
 } from "react-google-maps";
 
 /*global google*/
-
+   const id  = "a4b18cf73174034c"
 
    const containerStyle = {
      width: '645px',
@@ -77,13 +77,12 @@ componentDidMount() {
 
 render() {
     const GoogleMapExample = withGoogleMap(props => (
-
       
         <GoogleMap
            
             defaultCenter={{ lat: 40.730190, lng:31.600210  }}
             defaultZoom={4}
-            
+            mapId={id}
         >
             <DirectionsRenderer
                 directions={this.state.directions}

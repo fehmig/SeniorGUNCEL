@@ -6,7 +6,7 @@ import {GrMap} from "react-icons/gr"
 import {FaRoute} from "react-icons/fa"
 
 
-const About = () => {
+const Forum = () => {
 
     return(
         <>
@@ -14,19 +14,20 @@ const About = () => {
         <>
         
         <Navbar/>
-       <br/> <br/> <br/> <br/> <br/>
-                <div className="routepage">
+       <br/> <br/> <br/>
+                <div className="about-page">
                        <i><h1>FORUM SAYFASI</h1>  </i>
-                   <br/> <br/> <br/> <br/> <br/>
+                   <br/> <br/> 
 
-
-                   <div className="forum">
-                       <h3> </h3>
+                   <div className="about">
+                       
                    
                    </div>
                    
                    
                </div> 
+               <br/> <br/> 
+
       <Footer/>
                
        </>      
@@ -35,4 +36,4 @@ const About = () => {
         )
 }
 
-export default About
+export default Forum

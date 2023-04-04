@@ -15,7 +15,7 @@ const Packages = () => {
         
         <Navbar/>
        <br/> <br/> <br/> <br/> <br/>
-                <div className="routepage">
+                <div className="packages-page">
                        <i><h1>POPÜLER ROTALAR, ROTA ÖNERİLERİ BURADA GÖZÜKECEK </h1>  </i>
                    <br/> <br/> <br/> <br/> <br/>
 
