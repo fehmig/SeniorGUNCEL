@@ -2,107 +2,100 @@ import React, { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import Home from "./Home/Home";
 import Footer from "./Footer/Footer";
-import {GrMap} from "react-icons/gr"
-import {FaRoute, FaRegCommentDots} from "react-icons/fa"
+import { GrMap } from "react-icons/gr"
+import { FaRoute, FaRegCommentDots } from "react-icons/fa"
 
 
 const RoutePage = () => {
 
-    const[yorum, setYorum]=useState("")
-    const[message, setMessage] = useState("")
-    const handleChange = (event) => {
-        setMessage(event.target.value);
-  
-      
-      };
+    const [comments, setComments] = useState([]);
+    const [newComment, setNewComment] = useState('');
+    const addComment = (comment) => {
+        setComments([...comments, comment]);
+        setNewComment(''); // yeni yorumu temizle
+    };
 
-      const yorumyap = () => {
-        setYorum(message)
-      }
 
-    return(
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        addComment(newComment);
+    };
+    return (
         <>
-        
-        <>
-        
-        <Navbar/>
-       <br/> <br/> <br/> <br/> <br/>
+
+            <>
+
+                <Navbar />
+                <br /> <br /> <br /> <br /> <br />
                 <div className="routepage">
-                       <i><h1>ROTA DETAYLARI BURADA YER ALACAK </h1>  </i>
-                   <br/> <br/> <br/> <br/> <br/>
-                   <div className="route-harita">
-                       <h3><GrMap/>  HARİTA</h3>
-                   
-                   </div>
-                   
-                   <div className="route-durum"> <h3><FaRoute/>  ROTA BİLGİLERİ, DURUMU </h3></div>
-                  
-                   <br/>     <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/>  <br/> <br/> 
-                  
-                   <div className="route-yorum"> 
-                   <br/> 
-                   <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
-                   <textarea name="message" rows="4" cols="50"
-                   
-                   className="input-yorum"
-                    type='text'
-                    placeholder="Yorum yapabilirsiniz..."
-                    value={message} onChange={handleChange}
-                    ></textarea>
-                   <button
-                    className="btn-yorum"
-                    onClick={yorumyap}
-                   >
-                        YORUM YAP
+                    <i><h1>ROTA DETAYLARI BURADA YER ALACAK </h1>  </i>
+                    <br /> <br /> <br /> <br /> <br />
+                    <div className="route-harita">
+                        <h3><GrMap />  HARİTA</h3>
 
-                   </button>
-                            <br/> <br/>
-                       
-                            
-                        
-                   </div>
-                   <br/>
-                   <div className="route-yorum-goruntule"> <h3><u></u></h3>
-                            
-                            <br/> 
+                    </div>
+
+                    <div className="route-durum"> <h3><FaRoute />  ROTA BİLGİLERİ, DURUMU </h3></div>
+
+                    <br />     <br />  <br /> <br />  <br /> <br />  <br /> <br />  <br /> <br />  <br /> <br />  <br /> <br />  <br /> <br />  <br /> <br />
+
+                    <div className="route-yorum">
+                        <br />
+                        <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
+                        <form onSubmit={handleSubmit}>
+                            <textarea name="message" rows="4" cols="50"
+
+                                className="input-yorum"
+                                type='text'
+                                placeholder="Yorum yapabilirsiniz..."
+                                value={newComment}
+                                onChange={(e) => setNewComment(e.target.value)}
+                            ></textarea>
+                            <button
+                                type="submit"
+                                className="btn-yorum"
+
+                            >
+                                YORUM YAP
+
+                            </button>
+                        </form>
+                        <br /> <br />
+
+
+
+                    </div>
+                    <br />
+                    <div className="route-yorum-goruntule"> <h3><u></u></h3>
+
+                        <br />
                         <div className="yorumlar">
-                        
-                                <div>
-                                    <b>Kullanıcı1 :</b>
-                                    <br/>
-                                    <i>Çok güzel!</i>
-                                    <br/><br/>
-                                    <b>Kullanıcı2 :</b>
-                                    <br/>
-                                    <i>Keinlikle tavsiye ettiğim bir rotadır.</i>
-                                    <br/><br/>
-                                    <b>Kullanıcı3 :</b>
-                                    <br/>
-                                    <i>Tekrar görüşmek üzere!</i>
-                                    <br/><br/>
-                                    <b>Kullanıcı4 :</b>
-                                    <br/>
-                                    <i>Sırada Akdeniz var...</i>
-                                    <br/><br/>
-                                    <b>Kullanıcı5 :</b>
-                                    <br/>
-                                    <i>Yol durumunun belirtilmesi sayesinde rotamızın süresi azaldı!</i>
-                                    <br/><br/>
-                                    <b>Test Kullanıcı :</b>
-                                    <br/>
-                                    <i>{yorum}</i>
-                                </div>
+
+                            <div>
+                                <ul>
+                                    <li><b>Kullanıcı Adı: </b>Deneme Yorum</li>
+                                    <li><b>Kullanıcı Adı: </b>Deneme Yorum</li>
+                                    <li><b>Kullanıcı Adı: </b>Deneme Yorum</li>
+                                    {comments.map((comment, index) => (
+                                        <li key={index}><b>Kullanıcı Adı: </b>{comment}
+                                        
+                                        </li>
+                                        
+                                    ))}
+                                 
+                                </ul>
+                            </div>
                         </div>
-                            
-                        
-                   </div>
-               </div> 
-      <Footer/>
-               
-       </>      
-                
-        </>                
-        )
+
+
+                    </div>
+                </div>
+                <Footer />
+
+            </>
+
+        </>
+    )
 }
 
 export default RoutePage

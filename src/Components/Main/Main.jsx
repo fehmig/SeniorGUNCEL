@@ -45,7 +45,7 @@ import ordu from '../../Assets/ordu.jpg'
 import trabzon from '../../Assets/trabzon.jpg'
 import samsun from '../../Assets/samsun.jpg'
 import sinop from '../../Assets/sinop.jpg'
-import banner from './banner.jpg'
+import banner from './banner.png'
 
 const Veri = [
   {
@@ -241,7 +241,7 @@ const Main = () => {
         <div data-aos="fade-down" className="homeContent container">
           <div className="textDiv">
             <span className="smallText">
-              Our Packages
+              TURMEP
             </span>
             <h1 data-aos="fade-down" className="homeTitle">
               Search your Travel routes!
