@@ -47,6 +47,14 @@ import trabzon from '../../Assets/trabzon.jpg'
 import samsun from '../../Assets/samsun.jpg'
 import sinop from '../../Assets/sinop.jpg'
 import banner from './banner.png'
+import banner4 from '../../Assets/banner4.png'
+import banner5 from '../../Assets/banner5.png'
+import banner6 from '../../Assets/banner6.png'
+import BannerSlider from '../../BannerSlider'
+
+const images = [
+  banner4,banner5,banner6
+];
 
 const Veri = [
   {
@@ -254,7 +262,8 @@ const Main = () => {
 
           {/* FILTER KISMI */}
           <div data-aos="fade-down" className="pr">
-            <img src={banner} className='banner'></img>
+            {/* <img src={banner} className='banner'></img> */}
+            <BannerSlider images={images} duration={2000} />
 
 
 
