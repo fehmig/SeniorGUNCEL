@@ -47,7 +47,10 @@ const Forum = () => {
                     <div className="forum">
                         <div><h1 style={{ color: "hsl(199, 100%, 33%)", textShadow: '1px 1px 0 hsl(200 50% 30%)' }}>!KONU BAŞLIĞI AÇ</h1></div>
                         <br />
-                        <div className="forum-sol-sol">
+                        <div className="forum-solalt-sol">
+                            <br></br>
+                            <br></br>
+
                             <input
                                 className='input-forum'
                                 type="text"
@@ -74,7 +77,7 @@ const Forum = () => {
 
                             />
                         </div>
-                        <div className="forum-sol-sağ">
+                        <div className="forum-solalt-sağ">
                             <br /><br />
 
                             <textarea name="message" rows="4" cols="50"
