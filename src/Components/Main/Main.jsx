@@ -246,7 +246,7 @@ const Main = () => {
             </span>
             <h1 data-aos="fade-down" className="homeTitle">
               Search your Travel routes!
-              <FcSearch className="icon" />
+              
             </h1>
           </div>
 
@@ -479,9 +479,7 @@ const Main = () => {
             className="type-filters-btns">
             <h2><FaUmbrellaBeach className="icon" /></h2>
             BEACH
-          </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <FcSearch className="icon" />
+          </button>
         </div>
         
 
