@@ -524,10 +524,12 @@ body {
     flex-direction: column;
     border-radius: 1.5rem;
     clear:both;
+    text-align: center;
 }
 
 .input-forum{
     border-radius: 1.5rem;
+    text-align: center;
 }
 
 .forum-alt{
