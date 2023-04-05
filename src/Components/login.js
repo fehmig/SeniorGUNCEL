@@ -17,7 +17,7 @@ const Login = () => {
         <>
 
             <Navbar />
-            <br/> <br/> <br/> <br/> <br/>
+            <br/> 
            
             <div className="routepage">
                 <div className="video-background-login">

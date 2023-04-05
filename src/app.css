@@ -158,7 +158,7 @@ body {
 
 .routepage {
     width: 100%;
-    height: 1100px;
+    height: 100%;
     text-align: center;
     margin: auto;
 }
@@ -228,6 +228,8 @@ body {
     margin-bottom: 20px;
     float: left;
     border-radius: 1.5em;
+    box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
+
 }
 
 
@@ -311,9 +313,10 @@ body {
 }
 
 .video-background-login{
-    position: fixed;
+position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -357,6 +360,7 @@ body {
     padding: 50px;
     text-align: center;
     clear: both;
+    box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
 }
 
 .forum-page{
@@ -390,7 +394,7 @@ body {
     width: 100%;
     height:100%;
     text-align: center;
-    margin: 0;
+   
   
     border-radius: 1.5em;
 }
@@ -399,18 +403,19 @@ body {
     width: 100%;
     height: 750px;
     background-color: white;
- 
+    align-items: center;
     overflow: auto;
     direction:rtl;
     padding: 50px;
     text-align: center;
+    margin: auto;
 }
 
 .input-contact{
     border: none;
     background-color: rgb(229, 226, 226);
     height: 1em;
-    width:50em;
+    width:80%;
     border-radius: 7em;
     text-align: center;
     padding: 2em;
@@ -437,8 +442,11 @@ body {
 .contact-sol{
     width: 50%;
     float: left;
-   
+   display: flex;
     height: 100%;
+    position: relative;
+    box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
+    align-items: center;
 }
 
 .contact-sag{
@@ -446,17 +454,24 @@ body {
     float: left;
     height: 100%;
     background-color: white;
+    display: flex;
+    
+    box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
+   
 }
 
 .contact-adres{
     text-align: center;
+    width: 100%;
     margin: auto;
     background-color: white;
     height: 750px;
     padding-top: 100px;
+    
 }
 .contact-image{
-    width: 100%;
+    margin:auto;
+    width: 70%;
     height: 400px;
 }
 .forum-sol{
