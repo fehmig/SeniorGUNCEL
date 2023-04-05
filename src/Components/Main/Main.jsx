@@ -31,6 +31,7 @@ import { MdFastfood, MdMuseum } from 'react-icons/md'
 import { FaMosque, FaUmbrellaBeach } from 'react-icons/fa'
 import { BsFillStarFill } from 'react-icons/bs'
 import { FaRoute, FaSkiing } from 'react-icons/fa'
+import { FcSearch } from 'react-icons/fc'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Map2 from '../../Map/Map2'
@@ -245,6 +246,7 @@ const Main = () => {
             </span>
             <h1 data-aos="fade-down" className="homeTitle">
               Search your Travel routes!
+              <FcSearch className="icon" />
             </h1>
           </div>
 
@@ -409,12 +411,15 @@ const Main = () => {
             <input
               className='input-search'
               type="text"
-              placeholder='Search route here...'
+              placeholder='Search route here...'              
               onChange={(e) => setSearchTerm(e.target.value)}
 
             />
+            
 
           </div>
+          
+        
 
 
 
@@ -474,8 +479,11 @@ const Main = () => {
             className="type-filters-btns">
             <h2><FaUmbrellaBeach className="icon" /></h2>
             BEACH
-          </button>
+          </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <FcSearch className="icon" />
         </div>
+        
 
 
         <br />
