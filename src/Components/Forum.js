@@ -91,6 +91,7 @@ const Forum = () => {
                             <button className="btn-yorum">SEND</button>
 
                         </div>
+                        <br></br>
 
 
 
@@ -103,17 +104,17 @@ const Forum = () => {
                         <br />
                         <br></br>
                         <br></br>
-                        <button className="btn-yorum">KONUYA GİT</button>
+                        <button className="btn-yorum">KONUYA GİT</button>&nbsp;&nbsp;&nbsp;
                         Paketleri nasıl satın alabiliriz detaylı bir video var mı ? Teşekkürler
 
                         <br /><br />
 
-                        <button className="btn-yorum">KONUYA GİT</button>
+                        <button className="btn-yorum">KONUYA GİT</button>&nbsp;&nbsp;&nbsp;
                         Kendi rotamızı nasıl oluştururuz
 
                         <br /><br />
 
-                        <button className="btn-yorum">KONUYA GİT</button>
+                        <button className="btn-yorum">KONUYA GİT</button>&nbsp;&nbsp;&nbsp;
                         Ücret iadesi ne zaman oluyor
 
                         <br /><br />

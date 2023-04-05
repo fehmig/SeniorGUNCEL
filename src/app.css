@@ -480,14 +480,18 @@ body {
     width: 50%;
     float: left;
     text-align: center;
+    display: block;
+    clear:both;
+    
    
     height: 100%;
 
 }
 .forum-solalt-sağ{
     width: 50%;
-    float: left;
+    float: right;
     text-align: center;
+    display: block;
    
     height: 100%;
 
