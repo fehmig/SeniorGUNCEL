@@ -96,7 +96,7 @@ li {
 .type-filters {
     right: 0px;
     width: 50%;
-    
+
 }
 
 .type-filters-btns {
@@ -180,7 +180,7 @@ body {
     height: 400px;
     text-align: center;
     margin: 0;
-  
+
     margin-right: 20px;
     background-color: white;
     border-radius: 1.5em;
@@ -196,7 +196,8 @@ body {
     border-radius: 1.5em;
     margin-bottom: 48px;
 }
-.route-yorum-goruntule{
+
+.route-yorum-goruntule {
     width: 92%;
     margin-left: 20px;
     margin-right: 20px;
@@ -255,7 +256,7 @@ body {
     width: 80%;
     height: 200px;
     padding: 10px 15px;
-    border:0.5px solid black;
+    border: 0.5px solid black;
     background-color: #f8f8f8f8;
     border-radius: 1.5rem;
     transition: 0.4s;
@@ -290,59 +291,60 @@ body {
     margin-right: 50px;
 }
 
-.sonucv2{
+.sonucv2 {
     margin: 0;
-  padding: 0;
-  text-align: center;
-  border-radius: 1em;
-  width: 100%;
-  z-index: 1;
-  margin-top: 20%;
+    padding: 0;
+    text-align: center;
+    border-radius: 1em;
+    width: 100%;
+    z-index: 1;
+    margin-top: 20%;
 
-  
+
 }
 
 .input-login {
     border: none;
     background-color: rgb(229, 226, 226);
     height: 4em;
-    width:50%;
+    width: 50%;
     border-radius: 0.25em;
     text-align: center;
     padding: 2em;
 }
 
-.video-background-login{
-position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.video-background-login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-.route-sagtaraf-map{
+.route-sagtaraf-map {
     width: 100%;
     height: 100%;
 }
-.route-sagtaraf{
+
+.route-sagtaraf {
     width: 68%;
     float: left;
     margin-bottom: 20px;
     height: 100%;
 }
 
-.route-soltaraf{
-  width: 30%;
+.route-soltaraf {
+    width: 30%;
     float: left;
-    margin-left:20px;
+    margin-left: 20px;
     height: 100%;
 }
 
 .about-page {
     width: 100%;
-    height:100%;
+    height: 100%;
     text-align: center;
     margin: 0;
     clear: both;
@@ -350,132 +352,135 @@ position: fixed;
 }
 
 
-.about{
+.about {
     width: 100%;
     height: 500px;
     background-color: white;
     border-radius: 1.5em;
     overflow: auto;
-    direction:rtl;
+    direction: rtl;
     padding: 50px;
     text-align: center;
     clear: both;
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
 }
 
-.forum-page{
+.forum-page {
     width: 100%;
-    height:100%;
+    height: 100%;
     text-align: center;
     margin: 0;
-  
-   
-}
 
-.forum{
-    
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        border-radius: 1.5rem;
-        text-align: center;
-        margin: 0;
-        
-        float: left;
-        clear: both;
-       margin-bottom: 50px;
-        padding: 100px;
-        text-align: center;
-        flex-direction: column;
 
 }
 
-.contact-page{
+.forum {
+
     width: 100%;
-    height:100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 1.5rem;
     text-align: center;
-   
-  
+    margin: 0;
+
+    float: left;
+    clear: both;
+    margin-bottom: 50px;
+    padding: 100px;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+.contact-page {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+
     border-radius: 1.5em;
 }
 
-.contact{
+.contact {
     width: 100%;
     height: 750px;
     background-color: white;
     align-items: center;
     overflow: auto;
-    direction:rtl;
+    direction: rtl;
     padding: 50px;
     text-align: center;
     margin: auto;
 }
 
-.input-contact{
+.input-contact {
     border: none;
     background-color: rgb(229, 226, 226);
     height: 1em;
-    width:80%;
+    width: 80%;
     border-radius: 7em;
     text-align: center;
     padding: 2em;
     margin: auto;
-    border:1px solid hsl(199, 100%, 33%);
-    
+    border: 1px solid hsl(199, 100%, 33%);
+
 }
-.text-contact{
+
+.text-contact {
     direction: ltr;
     margin: auto;
     display: block;
     width: 50%;
     height: 150px;
     padding: 10px 15px;
-    border:0.5px solid hsl(199, 100%, 33%);
+    border: 0.5px solid hsl(199, 100%, 33%);
     background-color: rgb(229, 226, 226);
-    
+
     transition: 0.4s;
     margin-bottom: 10px;
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
 
 }
 
-.contact-sol{
+.contact-sol {
     width: 50%;
     float: left;
-   display: flex;
+    display: flex;
     height: 100%;
     position: relative;
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
     align-items: center;
 }
 
-.contact-sag{
+.contact-sag {
     width: 50%;
     float: left;
     height: 100%;
     background-color: white;
     display: flex;
-    
+
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
-   
+
 }
 
-.contact-adres{
+.contact-adres {
     text-align: center;
     width: 100%;
     margin: auto;
     background-color: white;
     height: 750px;
     padding-top: 100px;
-    
+
 }
-.contact-image{
-    margin:auto;
+
+.contact-image {
+    margin: auto;
     width: 70%;
     height: 400px;
 }
-.forum-sol{
-    overflow-y:auto;
+
+.forum-sol {
+    overflow-y: auto;
     width: auto;
     height: auto;
     float: left;
@@ -487,20 +492,21 @@ position: fixed;
     flex-direction: column;
     margin: auto;
     margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 70px;
+    margin-bottom: 30px;  /*sağdaki gibi boşluk footer 0 değil !*/
+    margin-left: 80px;
     margin-right: 60px;
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
 }
-.forum-sağ{
-    overflow-y:auto;
+
+.forum-sağ {
+    overflow-y: auto;
     width: auto;
     height: auto;
     float: left;
     text-align: center;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    /* height: 100%; */
     background-color: white;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -511,44 +517,47 @@ position: fixed;
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
 
 }
-.forum-solalt-sol{
+
+.forum-solalt-sol {
     width: 48%;
     float: left;
     text-align: center;
+    margin-right: 10px;
     border-radius: 1.5rem;
-    clear:both;
+    clear: both;
     background-color: white;
     display: flex;
     flex-direction: column;
-  
+
 
 }
-.forum-solalt-sağ{
+
+.forum-solalt-sağ {
     width: 48%;
     float: left;
     text-align: center;
-    margin-left:20px;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     border-radius: 1.5rem;
     background-color: white;
 }
 
-.text-forum{
+.text-forum {
     display: flex;
     flex-direction: column;
     border-radius: 1.5rem;
-    clear:both;
+    clear: both;
     text-align: center;
 }
 
-.input-forum{
+.input-forum {
     border-radius: 1.5rem;
     text-align: center;
 }
 
-.forum-alt{
-    justify-content:center ;
+.forum-alt {
+    justify-content: center;
     width: auto;
     height: auto;
     background-color: white;

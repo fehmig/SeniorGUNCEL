@@ -95,7 +95,6 @@ const Forum = () => {
 
                             </div>
                         </div>
-
                         <div className="forum-sağ">
                             <div className="forum">
                                 <div><h1 style={{ color: "hsl(199, 100%, 33%)", textShadow: '1px 1px 0 hsl(200 50% 30%)' }}>SIKÇA SORULAN SORULAR</h1></div>
