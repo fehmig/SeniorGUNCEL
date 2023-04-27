@@ -14,14 +14,14 @@ const Forum = () => {
             <>
 
                 <Navbar />
-                <br /> <br /> <br /><br /><br />
+                <br /> <br /> <br /><br />
                 <div className="forum-page">
-                    <i><h1>FORUM SAYFASI</h1>  </i>
+                    {/* <i><h1>FORUM SAYFASI</h1>  </i>
 
 
 
 
-                    <br />
+                    <br /> */}
 
                     <div className="forum">
 

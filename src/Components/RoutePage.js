@@ -29,15 +29,41 @@ const RoutePage = () => {
                 <Navbar />
                 <br /> <br /> <br />
                 <div className="routepage">
-                    <i><h1>ROTA DETAYLARI BURADA YER ALACAK </h1>  </i>
+                    {/* <i><h1>ROTA DETAYLARI BURADA YER ALACAK </h1>  </i> */}
                     <br />
                     <div className="route-soltaraf">
-                    <h3><FaRoute />  ROTA BİLGİLERİ, DURUMU </h3>
-                        <div className="route-durum"> 
+                        
+                        <div className="route-durum">
+                        <h3><FaRoute />  ROTA BİLGİLERİ, DURUMU </h3>
                         </div>
                         
-    
-                        <br />  
+                        <div className="route-yorum-goruntule"> <h3><u></u></h3>
+
+                            <br />
+                            <div className="yorumlar">
+                            
+
+                                <div>
+                                    <ul>
+                                        <li><b>Kullanıcı Adı: </b>Deneme Yorum</li>
+                                        <li><b>Kullanıcı Adı: </b>Deneme Yorum</li>
+                                        <li><b>Kullanıcı Adı: </b>Deneme Yorum</li>
+                                        {comments.map((comment, index) => (
+                                            <li key={index}><b>Kullanıcı Adı: </b>{comment}
+
+                                            </li>
+
+                                        ))}
+
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <br />
                         <div className="route-yorum">
                             <br />
                             <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
@@ -67,38 +93,16 @@ const RoutePage = () => {
                         </div>
 
                         <br /><br /><br /><br /><br />
-                        <div className="route-yorum-goruntule"> <h3><u></u></h3>
 
-                            <br />
-                            <div className="yorumlar">
-
-                                <div>
-                                    <ul>
-                                        <li><b>Kullanıcı Adı: </b>Deneme Yorum</li>
-                                        <li><b>Kullanıcı Adı: </b>Deneme Yorum</li>
-                                        <li><b>Kullanıcı Adı: </b>Deneme Yorum</li>
-                                        {comments.map((comment, index) => (
-                                            <li key={index}><b>Kullanıcı Adı: </b>{comment}
-
-                                            </li>
-
-                                        ))}
-
-                                    </ul>
-                                </div>
-                            </div>
-
-
-                        </div>
 
 
                     </div>
                     <div className="route-sagtaraf">
-                    <MapLoaderR className='route-sagtaraf-map'
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
-          loadingElement={<div style={{ height: "1000px" }} />}
-        />
-              
+                        <MapLoaderR className='route-sagtaraf-map'
+                            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+                            loadingElement={<div style={{ height: "1000px" }} />}
+                        />
+
 
 
                     </div>

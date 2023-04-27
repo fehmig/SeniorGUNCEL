@@ -34,8 +34,8 @@ li {
 }
 
 .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 .icon {
@@ -54,11 +54,11 @@ li {
 }
 
 .btn {
-    padding: .6rem 1.5rem;
+    padding: .6rem 7px;
     background: var(--gradientColor);
     border: none;
     outline: none;
-    border-radius: 3rem;
+    border-radius: 1em;
     cursor: pointer;
 }
 
@@ -77,11 +77,11 @@ li {
     position: absolute;
     right: 10px;
     bottom: 20px;
-    padding: .6rem 1.5rem;
+    padding: .6rem 7px;
     background: var(--gradientColor);
     border: none;
     outline: none;
-    border-radius: 3rem;
+    border-radius: 1em;
     cursor: pointer;
     color: white;
 }
@@ -89,7 +89,7 @@ li {
 .btn-filter {
     background-color: hsl(187, 85%, 43%);
     border: none;
-    border-radius: 3rem;
+    border-radius: 1em;
     cursor: pointer;
 }
 
@@ -102,10 +102,10 @@ li {
 .type-filters-btns {
     background: var(--gradientColor);
     border: none;
-    border-radius: 3rem;
+    border-radius: 1em;
     cursor: pointer;
     color: white;
-    margin-right: 1.5rem;
+    margin-right: 7px;
     padding: 0.4rem;
 }
 
@@ -170,20 +170,21 @@ body {
     margin: 0;
     border: 1px solid black;
     float: left;
-    border-radius: 1.5em;
+    border-radius: 10px;
 
 }
 
 .route-durum {
     float: left;
     width: 92%;
-    height: 400px;
+    height: 480px; /* buradaki tükseklik footer ile arasındaki boşluğu ayarlıyor dikkat!*/
     text-align: center;
     margin: 0;
+    margin-bottom: 20px;
 
     margin-right: 20px;
     background-color: white;
-    border-radius: 1.5em;
+    border-radius: 10px;
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
 }
 
@@ -193,19 +194,19 @@ body {
     text-align: center;
     margin: auto;
     float: left;
-    border-radius: 1.5em;
-    margin-bottom: 48px;
+    border-radius: 10px;
+    margin-bottom: 0px;
 }
 
 .route-yorum-goruntule {
     width: 92%;
     margin-left: 20px;
     margin-right: 20px;
-    height: 300px;
+    height: 350px;
     text-align: center;
     margin: auto;
     float: left;
-    border-radius: 1.5em;
+    border-radius: 10px;
     background-color: white;
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
 
@@ -228,7 +229,7 @@ body {
     margin-left: 20px;
     margin-bottom: 20px;
     float: left;
-    border-radius: 1.5em;
+    border-radius: 10px;
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
 
 }
@@ -242,9 +243,9 @@ body {
     width: 80%;
     height: 200px;
     padding: 10px 15px;
-    border:0.5px solid black;
+    border:0.7px solid black;
     background-color: #f8f8f8f8;
-    border-radius: 1.5rem;
+    border-radius: 7px;
     transition: 0.4s;
     margin-bottom: 10px;
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
@@ -254,11 +255,11 @@ body {
     margin: auto;
     display: block;
     width: 80%;
-    height: 200px;
+    height: 120px;
     padding: 10px 15px;
-    /* border:0.5px solid black; */
+    /* border:0.7px solid black; */
     background-color: #f8f8f8f8;
-    border-radius: 1.5rem;
+    border-radius: 7px;
     transition: 0.4s;
     margin-bottom: 10px;
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
@@ -266,11 +267,11 @@ body {
 }
 
 .btn-yorum {
-    padding: .6rem 1.5rem;
+    padding: .6rem 7px;
     background: var(--gradientColor);
     border: none;
     outline: none;
-    border-radius: 3rem;
+    border-radius: 1em;
     cursor: pointer;
     color: white;
 }
@@ -285,7 +286,7 @@ body {
     padding-left: 50px;
     padding-right: 50px;
     float: left;
-    border-radius: 1.5em;
+    border-radius: 10px;
     margin-left: 50px;
     overflow: auto;
     margin-right: 50px;
@@ -348,7 +349,7 @@ body {
     text-align: center;
     margin: 0;
     clear: both;
-    border-radius: 1.5em;
+    border-radius: 10px;
 }
 
 
@@ -356,7 +357,7 @@ body {
     width: 100%;
     height: 500px;
     background-color: white;
-    border-radius: 1.5em;
+    border-radius: 10px;
     overflow: auto;
     direction: rtl;
     padding: 50px;
@@ -379,7 +380,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: white;
-    border-radius: 1.5rem;
+    border-radius: 7px;
     text-align: center;
     margin: 0;
 
@@ -398,7 +399,7 @@ body {
     text-align: center;
 
 
-    border-radius: 1.5em;
+    border-radius: 10px;
 }
 
 .contact {
@@ -418,7 +419,7 @@ body {
     background-color: rgb(229, 226, 226);
     height: 1em;
     width: 80%;
-    border-radius: 7em;
+    border-radius: 1em;
     text-align: center;
     padding: 2em;
     margin: auto;
@@ -433,9 +434,9 @@ body {
     width: 50%;
     height: 150px;
     padding: 10px 15px;
-    border: 0.5px solid hsl(199, 100%, 33%);
+    border: 0.7px solid hsl(199, 100%, 33%);
     background-color: rgb(229, 226, 226);
-    border-radius: 7em;
+    border-radius: 1em;
     transition: 0.4s;
     margin-bottom: 10px;
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
@@ -450,6 +451,8 @@ body {
     position: relative;
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
     align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .contact-sag {
@@ -460,6 +463,10 @@ body {
     display: flex;
 
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+
 
 }
 
@@ -487,7 +494,7 @@ body {
     text-align: center;
     position: relative;
     background-color: white;
-    border-radius: 1.5rem;
+    border-radius:7px;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -513,7 +520,7 @@ body {
     margin-left: 60px;
     margin-right: 60px;
     position: relative;
-    border-radius: 1.5rem;
+    border-radius: 7px;
     box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
 
 }
@@ -523,7 +530,7 @@ body {
     float: left;
     text-align: center;
     margin-right: 10px;
-    border-radius: 1.5rem;
+    border-radius: 7px;
     clear: both;
     background-color: white;
     display: flex;
@@ -539,20 +546,20 @@ body {
     margin-left: 10px;
     display: flex;
     flex-direction: column;
-    border-radius: 1.5rem;
+    border-radius: 7px;
     background-color: white;
 }
 
 .text-forum {
     display: flex;
     flex-direction: column;
-    border-radius: 1.5rem;
+    border-radius: 7px;
     clear: both;
     text-align: center;
 }
 
 .input-forum {
-    border-radius: 1.5rem;
+    border-radius: 7px;
     text-align: center;
 }
 
@@ -561,5 +568,5 @@ body {
     width: auto;
     height: auto;
     background-color: white;
-    border-radius: 1.5rem;
+    border-radius: 7px;
 }

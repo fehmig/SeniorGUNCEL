@@ -68,6 +68,7 @@ const Veri = [
     fees: 700,
     btnValue: 1,
     date: "23.07.2023",
+    tag: "karadeniz",
     description: "The area is north of Turkey. It takes its name from the Black Sea in the north. The Black Sea climatic conditions are effective in the region. It is rainy every season. The annual temperature difference is small. Summers are cool, winters are warm. The Black Sea is the highest rainfall areas of Turkey. Enjoy the green, enjoy your travel route!"
 
   },
@@ -84,6 +85,7 @@ const Veri = [
     rating: 2.2,
     fees: 600,
     type: "ADVENTURE",
+    
     description: 'Eastern Anatolia is a region in Turkey.It occupies the mountainous east of the country and has the harshest winters.Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east'
   },
 
