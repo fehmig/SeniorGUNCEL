@@ -16,7 +16,7 @@ const About = () => {
         <Navbar/>
        <br/> <br/> <br/> <br/> <br/>
                 <div className="about-page">
-                       <i><h1>HAKKIMIZDA SAYFASI</h1>  </i>
+                       {/* <i><h1>HAKKIMIZDA SAYFASI</h1>  </i> */}
                    <br/> 
 
 
