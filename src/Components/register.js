@@ -68,8 +68,7 @@ const Register = () => {
         <>
 {/* 
             <Navbar /> */}
-            <br/> 
-           
+            
             <div className="routepage">
                 <div className="video-background-login">
                   <video src={video} autoPlay loop muted type="video/mp4"></video>
@@ -104,7 +103,7 @@ const Register = () => {
                             Already have an account!    <button className="btn-yorum" onClick={gotologin}>Login!  </button> 
                         </div>
                         
-                           <br />  <br />    <br />  
+                           
 
                        
                     </form>
