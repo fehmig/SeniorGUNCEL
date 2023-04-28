@@ -51,7 +51,10 @@ import banner4 from '../../Assets/banner4.png'
 import banner5 from '../../Assets/banner5.png'
 import banner6 from '../../Assets/banner6.png'
 import BannerSlider from '../../BannerSlider'
-
+import {useCookies} from 'react-cookie'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import { ToastContainer, toast } from "react-toastify";
 const images = [
   banner4,banner5,banner6
 ];
@@ -201,7 +204,34 @@ const Main = () => {
   }, [])
 
 
+  const navigate = useNavigate()
 
+  const [cookies, setCookies, removeCookie] = useCookies()
+  
+  useEffect(()=> {
+    const verifyUser = async () => {
+        if(!cookies.jwt){
+          navigate("/")
+        } else {
+          const {data} = await axios.post (
+            "http://localhost:4000", {}, 
+            {withCredentials: true}
+          )
+          if(!data.status) {
+            removeCookie("jwt");
+            navigate("/")
+          } else toast(`HI ${data.user}`, {theme:"dark"})
+        }
+    }
+    verifyUser();
+  }, [cookies, navigate, removeCookie])
+  
+  
+  
+  const logout = () => {
+    navigate("/");
+  }
+  
 
 
   const [isOpen, setIsOpen] = useState(false);

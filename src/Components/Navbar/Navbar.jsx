@@ -24,7 +24,7 @@ const Navbar = () => {
           <div className={active}>
             <ul onClick={removeNav} className="navLists flex">
               <li className="navItem">
-                <a href="/" className="navLink">Home</a>
+                <a href="/home" className="navLink">Home</a>
               </li>
               <li className="navItem">
                 <a href="/routes" className="navLink">Routes</a>
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <a href="/contact" className="navLink">Contact</a>
               </li>
               <button className="btn">
-                <a href="/login">LOGIN</a>
+                <a href="/">LOGIN</a>
               </button>
 
             </ul>
