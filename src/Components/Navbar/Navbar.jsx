@@ -49,7 +49,7 @@ const Navbar = () => {
        <header className="header flex">
         
           <div className="logoDiv">
-            <a href="/" className="logo flex"><h1><MdOutlineTravelExplore className='icon' />  Turmep.</h1></a>
+            <a href="/home" className="logo flex"><h1><MdOutlineTravelExplore className='icon' />  Turmep.</h1></a>
           </div>
 
           <div className={active}>

@@ -71,11 +71,11 @@ const Login = () => {
 
             {/* <Navbar /> */}
       
-            <div className="routepage">
+            <div className="logpage">
                 <div className="video-background-login">
                   <video src={video} autoPlay loop muted type="video/mp4"></video>
                 </div>
-                <div className="sonucv2">
+                <div className="sonucv3">
                 <div >
                         <h1 style={{color:'white',  textShadow: '.2em .1em 0 hsl(200 50% 30%)'}}><MdOutlineTravelExplore className='icon' /><b>Turmep.</b> </h1 >
                         </div>

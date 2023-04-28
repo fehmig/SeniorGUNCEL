@@ -233,7 +233,11 @@ const Main = () => {
     navigate("/");
   }
   
-
+  const gotoroutes = () => {
+    
+    navigate("/routes");
+  }
+  
 
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
@@ -574,15 +578,15 @@ const Main = () => {
                     <div className="cardInfo">
                       <h4 className="destTitle">{destTitle}</h4>
                       <span className="continent flex">
-                        <HiOutlineLocationMarker className="icon" />
-                        <span className="name">{location}</span>
+                        
+                        <span className="name"><HiOutlineLocationMarker className="icon" />{location}</span>
                         <span className='date'>{date}</span>
                         <small><span className='traveltype'>{type}</span></small>
                       </span>
 
                       <div className="fees flex">
                         <div className="grade">
-                          <span><BsFillStarFill style={{ color: "#fff700", }} />  {rating}</span>
+                          <span><BsFillStarFill style={{ color: " hsl(199, 100%, 33%)", fontSize:"1.5rem"}} /> <b style={{ color: " hsl(199, 100%, 33%)", fontSize:"1.2rem"}}> {rating}</b></span>
                         </div>
 
 
@@ -597,12 +601,13 @@ const Main = () => {
                         {description}
                       </div>
 
-
+                  <div className='butons-card'> 
                       <button
-                        className='btn '
+                        className='btn-card-details'
+                        onClick={gotoroutes}
                       >
-                        <a href='/routes'>Details</a>
-                        <HiClipboardList className="icon" />
+                      Details
+                        <HiClipboardList className="icon-details" />
                       </button>
 
 
@@ -611,12 +616,12 @@ const Main = () => {
                       <button
 
                         onClick={() => setIsOpen(true)}
-                        className='btn-map '
+                        className='btn-card-map'
                       >
                         Map
                         <FiMapPin classname="icon" />
                       </button>
-
+                      </div>
                     </div>
                   </div>
 

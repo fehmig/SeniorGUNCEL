@@ -41,14 +41,7 @@
   padding: 2rem;
 }
 
-:root .date{
-  padding-left: 5rem;
-  padding-right: 5rem;
-  color: var(--textColor);
-  font-weight: 400;
-  font-size: 14px;
 
-}
 :root .modal{
   width: 1180px;
   height: 505px;
@@ -126,15 +119,33 @@
 }
 :root .main .secContent .singleDestination .cardInfo .continent {
   gap: 0.5rem;
+  display: flex;
+  justify-content: space-between; /* öğeleri sol, orta ve sağa yaslamak için */
+  align-items: center; /* öğeleri dikey olarak hizalayın */
 }
 :root .main .secContent .singleDestination .cardInfo .continent .icon {
   color: var(--textColor);
   font-size: 18px;
+  text-align: left;
+ margin-right: 3px;
 }
 :root .main .secContent .singleDestination .cardInfo .continent .name {
   color: var(--textColor);
   font-weight: 400;
   font-size: 14px;
+  text-align: left;
+}
+:root .main .secContent .singleDestination .cardInfo .continent .date {
+  color: var(--textColor);
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+}
+:root .main .secContent .singleDestination .cardInfo .continent .traveltype {
+  color: var(--textColor);
+  font-weight: 400;
+  font-size: 14px;
+  text-align: right;
 }
 :root .main .secContent .singleDestination .cardInfo .fees {
   width: 100%;
@@ -161,7 +172,7 @@
   font-size: 10px;
 }
 :root .main .secContent .singleDestination .cardInfo .fees .price {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--blackColor);
 }
 :root .main .secContent .singleDestination .cardInfo .desc {
