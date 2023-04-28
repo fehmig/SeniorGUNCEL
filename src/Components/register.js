@@ -98,7 +98,7 @@ const Register = () => {
                         <div style={{color:'white',  textShadow: '.1em .1em 0 hsl(200 50% 30%)'}}>
                             <br/>
                            
-                            Already have an account!    <a href="/">Login</a>  
+                            Already have an account!    <button className="btn"><a href="/">Login!</a>  </button> 
                         </div>
                         
                            <br />  <br />    <br />  <br />    

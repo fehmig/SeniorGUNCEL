@@ -62,9 +62,8 @@ const Login = () => {
 
         <>
 
-            <Navbar />
-            <br/> 
-           
+            {/* <Navbar /> */}
+      
             <div className="routepage">
                 <div className="video-background-login">
                   <video src={video} autoPlay loop muted type="video/mp4"></video>
@@ -92,10 +91,10 @@ const Login = () => {
                         <div style={{color:'white',  textShadow: '.1em .1em 0 hsl(200 50% 30%)'}}>
                             <br/>
                            
-                            Do not have an account?   <a href="/register">Register!</a>  
+                            Do not have an account?  <button className="btn"><a href="/register">Register!</a>  </button> 
                         </div>
                     </form>
-
+                    <ToastContainer/>
             
                 </div>
 

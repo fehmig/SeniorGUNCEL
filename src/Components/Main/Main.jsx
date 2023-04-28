@@ -219,8 +219,8 @@ const Main = () => {
           )
           if(!data.status) {
             removeCookie("jwt");
-            navigate("/")
-          } else toast(`HI ${data.user}`, {theme:"dark"})
+            navigate("/") 
+          } else toast(`Hello! ${data.user} `, {theme:"dark"} )
         }
     }
     verifyUser();
@@ -229,6 +229,7 @@ const Main = () => {
   
   
   const logout = () => {
+    removeCookie("jwt");
     navigate("/");
   }
   
@@ -522,7 +523,9 @@ const Main = () => {
             BEACH
           </button>
         </div>
-        
+        <div>
+          <ToastContainer/>
+        </div>
 
 
         <br />

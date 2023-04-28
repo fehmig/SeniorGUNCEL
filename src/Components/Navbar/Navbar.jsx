@@ -1,10 +1,41 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './navbar.css'
 import {AiFillCloseCircle} from 'react-icons/ai'
 import {TbGridDots} from 'react-icons/tb'
 import {MdOutlineTravelExplore} from 'react-icons/md'
+import {useCookies} from 'react-cookie'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import { ToastContainer, toast } from "react-toastify";
 
 const Navbar = () => {
+    
+  const logout = () => {
+    removeCookie("jwt");
+    navigate("/");
+  }
+  
+  const navigate = useNavigate()
+
+  const [cookies, setCookies, removeCookie] = useCookies()
+  
+  useEffect(()=> {
+    const verifyUser = async () => {
+        if(!cookies.jwt){
+          navigate("/")
+        } else {
+          const {data} = await axios.post (
+            "http://localhost:4000", {}, 
+            {withCredentials: true}
+          )
+          if(!data.status) {
+            removeCookie("jwt");
+            navigate("/")
+          } else toast(`HI ${data.user}`, {theme:"dark"})
+        }
+    }
+    verifyUser();
+  }, [cookies, navigate, removeCookie])
 
   const [active, setActive]  = useState('navBar')
   const showNav = ()=>{
@@ -42,8 +73,8 @@ const Navbar = () => {
               <li className="navItem">
                 <a href="/contact" className="navLink">Contact</a>
               </li>
-              <button className="btn">
-                <a href="/">LOGIN</a>
+              <button className="btn" onClick={logout}>
+                <a href="/">LOGOUT</a>
               </button>
 
             </ul>
