@@ -6,7 +6,7 @@ import video from './video.mp4'
 import 'aos/dist/aos.css'
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-
+import {MdOutlineTravelExplore} from 'react-icons/md'
 //
 
 
@@ -27,7 +27,9 @@ const Register = () => {
 
     const generateError = (err) => toast.error(err, {position: "bottom-right"})
     
-
+    const gotologin = () => {
+        navigate("/")
+    }
 
 
     const handleSubmit = async (e) => {
@@ -64,8 +66,8 @@ const Register = () => {
 
 
         <>
-
-            <Navbar />
+{/* 
+            <Navbar /> */}
             <br/> 
            
             <div className="routepage">
@@ -73,6 +75,7 @@ const Register = () => {
                   <video src={video} autoPlay loop muted type="video/mp4"></video>
                 </div>
                 <div className="sonucv2">
+                <h1 style={{color:'white',  textShadow: '.2em .1em 0 hsl(200 50% 30%)'}}><MdOutlineTravelExplore className='icon' /><b>Turmep.</b> </h1 >
                 <h1  style={{color:'white',  textShadow: '.2em .1em 0 hsl(200 50% 30%)'}}> Welcome to Register Page!</h1>
                     <form onSubmit={(e) =>handleSubmit(e) } >
                     <br /> <br />
@@ -98,10 +101,10 @@ const Register = () => {
                         <div style={{color:'white',  textShadow: '.1em .1em 0 hsl(200 50% 30%)'}}>
                             <br/>
                            
-                            Already have an account!    <button className="btn"><a href="/">Login!</a>  </button> 
+                            Already have an account!    <button className="btn-yorum" onClick={gotologin}>Login!  </button> 
                         </div>
                         
-                           <br />  <br />    <br />  <br />    
+                           <br />  <br />    <br />  
 
                        
                     </form>

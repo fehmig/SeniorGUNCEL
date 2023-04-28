@@ -31,7 +31,7 @@ const Navbar = () => {
           if(!data.status) {
             removeCookie("jwt");
             navigate("/")
-          } else toast(`HI ${data.user}`, {theme:"dark"})
+          } else toast(`Merhaba! ${data.user}`, {theme:"dark"})
         }
     }
     verifyUser();

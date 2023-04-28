@@ -7,6 +7,8 @@ import Register from "./register";
 import axios from 'axios'
 import {useNavigate} from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import {useCookies} from 'react-cookie'
+import {MdOutlineTravelExplore} from 'react-icons/md'
 
 
 
@@ -20,7 +22,12 @@ const Login = () => {
         password: "",
     })
 
-
+    const [cookies, setCookies, removeCookie] = useCookies()
+    const gotoregister = () => {
+        
+            navigate("/register")
+          
+    }
 
     const generateError = (err) => toast.error(err, {position: "bottom-right"})
     
@@ -69,6 +76,9 @@ const Login = () => {
                   <video src={video} autoPlay loop muted type="video/mp4"></video>
                 </div>
                 <div className="sonucv2">
+                <div >
+                        <h1 style={{color:'white',  textShadow: '.2em .1em 0 hsl(200 50% 30%)'}}><MdOutlineTravelExplore className='icon' /><b>Turmep.</b> </h1 >
+                        </div>
                 <h1  style={{color:'white',  textShadow: '.2em .1em 0 hsl(200 50% 30%)'}}> Welcome to Login Page!</h1>
                     <form  onSubmit={(e) =>handleSubmit(e) }>
                     <br /> <br />
@@ -91,7 +101,7 @@ const Login = () => {
                         <div style={{color:'white',  textShadow: '.1em .1em 0 hsl(200 50% 30%)'}}>
                             <br/>
                            
-                            Do not have an account?  <button className="btn"><a href="/register">Register!</a>  </button> 
+                            Do not have an account?  <button className="btn-yorum" onClick={gotoregister}>Register! </button> 
                         </div>
                     </form>
                     <ToastContainer/>
