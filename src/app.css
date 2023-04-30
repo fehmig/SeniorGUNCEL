@@ -218,8 +218,8 @@ body {
 
     margin-right: 20px;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
+    
+   
 }
 
 .route-yorum {
@@ -240,9 +240,7 @@ body {
     text-align: center;
     margin: auto;
     float: left;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
+    
 
 }
 
@@ -375,6 +373,9 @@ body {
     float: left;
     margin-left: 20px;
     height: 100%;
+    background-color: white;
+    align-items: center;
+    text-align: center;
 }
 
 .about-page {
@@ -665,3 +666,6 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1))
     }
+
+   
+   

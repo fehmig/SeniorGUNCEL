@@ -35,10 +35,11 @@ const RoutePage = () => {
                         
                         <div className="route-durum">
                         <h3><FaRoute />  ROTA BİLGİLERİ, DURUMU </h3>
+                        
                         </div>
                         
                         <div className="route-yorum-goruntule"> <h3><u></u></h3>
-
+                        <hr></hr>
                             <br />
                             <div className="yorumlar">
                             
@@ -65,6 +66,7 @@ const RoutePage = () => {
 
                         <br />
                         <div className="route-yorum">
+                        <hr></hr>
                             <br />
                             <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
                             <form onSubmit={handleSubmit}>

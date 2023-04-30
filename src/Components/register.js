@@ -117,7 +117,7 @@ const Register = () => {
 
                         />
                        <br /> <br />
-                        <button type="submit" className="btn-yorum">REGISTER</button>
+                        <button type="submit" className="btn-yorum" >REGISTER</button>
                         <br />  <br /> 
                         <div style={{color:'white',  textShadow: '.1em .1em 0 hsl(200 50% 30%)'}}>
                             <br/>
