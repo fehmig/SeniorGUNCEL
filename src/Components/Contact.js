@@ -69,6 +69,8 @@ const Contact = () => {
 
                     </div>
                 </div>
+                {/* <div class="vertical-line"></div>  dikey çizgi deneme çabası*/}
+
 
                 <div className="contact-sag">
                     <div className="contact-adres">

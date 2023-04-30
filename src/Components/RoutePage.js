@@ -27,13 +27,14 @@ const RoutePage = () => {
             <>
 
                 <Navbar />
-                <br /> <br /> <br />
+                <br /> <br /> 
                 <div className="routepage">
                     {/* <i><h1>ROTA DETAYLARI BURADA YER ALACAK </h1>  </i> */}
                     <br />
                     <div className="route-soltaraf">
-                        
+                    <br></br>
                         <div className="route-durum">
+                        <hr></hr>
                         <h3><FaRoute />  ROTA BİLGİLERİ, DURUMU </h3>
                         
                         </div>
@@ -89,6 +90,7 @@ const RoutePage = () => {
                                 <br />
                             </form>
                             <br /> <br />
+                            <hr></hr>
 
 
 

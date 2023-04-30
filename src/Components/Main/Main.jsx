@@ -596,6 +596,11 @@ const Main = () => {
                         </div>
 
                       </div>
+                      {/* hem üstüne hem altına çiziyor */}
+                      <div className="fees flex">
+                        
+tagler burada yer alıcak
+                      </div>
 
 
                       <div className="desc">

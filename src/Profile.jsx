@@ -4,6 +4,7 @@ import {useCookies} from 'react-cookie'
 import axios from 'axios'
 import { useNavigate, Link } from 'react-router-dom'
 import ProfileName from "./Components/Navbar/Navbar"
+import video from 'C:/Users/bilalberispak/Desktop/SENIOR/SeniorGUNCEL/src/Assets/video.mp4'
 
 const Profile = () => {
  
@@ -38,9 +39,11 @@ const Profile = () => {
     <>
     <div>
         <Navbar/>
- 
+        
                 <br /> <br /> <br /><br />
+                
         {profilename}'s Profile Page
+        <video src={video} autoPlay loop muted type="video/mp4"></video>
         </div>
     </>
   );

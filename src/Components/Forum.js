@@ -15,6 +15,7 @@ const Forum = () => {
 
                 <Navbar />
                 <br /> <br /> <br /><br />
+                <hr></hr>
                 <div className="forum-page">
                     {/* <i><h1>FORUM SAYFASI</h1>  </i>
 
@@ -23,7 +24,7 @@ const Forum = () => {
 
                     <br /> */}
 
-                    <div className="forum">
+                    <div className="forum-üst">
 
                         <hr></hr>
                         <br></br>
@@ -40,9 +41,10 @@ const Forum = () => {
 
 
                     </div>
+                    <hr></hr>
                     <div className="forum-alt">
                         <div className="forum-sol">
-                            <div className="forum">
+                            <div className="forum-sol-sol">
                                 <div><h1 style={{ color: "hsl(199, 100%, 33%)", textShadow: '1px 1px 0 hsl(200 50% 30%)' }}>KONU BAŞLIĞI AÇ!</h1></div>
                                 <br />
                                 <div className="forum-solalt-sol">
@@ -89,14 +91,18 @@ const Forum = () => {
                                     <button className="btn-yorum">SEND</button>
 
                                 </div>
+                                {/* <hr></hr> */}
+                                
 
 
 
 
                             </div>
+                            <hr></hr>
                         </div>
+                        {/* <hr></hr> */}
                         <div className="forum-sağ">
-                            <div className="forum">
+                            <div className="forum-sağ-sağ">
                                 <div><h1 style={{ color: "hsl(199, 100%, 33%)", textShadow: '1px 1px 0 hsl(200 50% 30%)' }}>SIKÇA SORULAN SORULAR</h1></div>
                                 <br />
 
@@ -119,6 +125,7 @@ const Forum = () => {
 
 
                             </div>
+                            <hr></hr>
 
 
                         </div>
