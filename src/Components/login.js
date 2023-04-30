@@ -20,6 +20,8 @@ const Login = () => {
 
         email: "",
         password: "",
+        name:"",
+        surname:""
     })
 
     const [cookies, setCookies, removeCookie] = useCookies()

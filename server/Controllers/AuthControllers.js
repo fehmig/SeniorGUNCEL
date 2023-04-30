@@ -39,9 +39,9 @@ module.exports.register = async(req,res,next) => {
 
 
     try{
-        const {email,password} = req.body
+        const {email,password, name, surname} = req.body
         const user = await UserModel.create({
-            email, password
+            email, password, name, surname
         })
         const token = createToken(user._id);
 
@@ -64,10 +64,10 @@ module.exports.register = async(req,res,next) => {
 };
 module.exports.login = async(req,res,next) => {
     try{
-        const {email,password} = req.body
-        console.log(email,password)
+        const {email,password,name, surname} = req.body
+        console.log(email,password, name, surname)
         const user = await UserModel.login(
-            email, password
+            email, password, name, surname
     )
         const token = createToken(user._id);
 

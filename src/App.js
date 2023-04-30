@@ -16,7 +16,7 @@ import Contact from './Components/Contact'
 import Login from './Components/login'
 import Register from './Components/register'
 import "react-toastify/dist/ReactToastify.css"
-
+import Profile from './Profile'
 
 
 const App = () => {
@@ -30,7 +30,8 @@ const App = () => {
         <Route path="/forum" element={<Forum/>} />
         <Route path="/contact" element={<Contact/>} /> 
         <Route path="/home" element={<MainPage/>} />      
-        <Route path="/register" element={<Register/>} />     
+        <Route path="/register" element={<Register/>} />
+        <Route path="/profile" element={<Profile/>} />         
       </Routes>
     </Router>
   )

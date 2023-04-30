@@ -36,7 +36,6 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Map2 from '../../Map/Map2'
 import Map3 from '../../Map/Map3'
-
 import bolu from '../../Assets/bolu.jpg'
 import duzce from '../../Assets/düzce.jpg'
 import bartın from '../../Assets/bartın.jpg'
@@ -58,6 +57,7 @@ import { ToastContainer, toast } from "react-toastify";
 const images = [
   banner4,banner5,banner6
 ];
+
 
 const Veri = [
   {
@@ -233,8 +233,9 @@ const Main = () => {
     navigate("/");
   }
   
+
+
   const gotoroutes = () => {
-    
     navigate("/routes");
   }
   

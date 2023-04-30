@@ -3,9 +3,11 @@ import './navbar.css'
 import {AiFillCloseCircle} from 'react-icons/ai'
 import {TbGridDots} from 'react-icons/tb'
 import {MdOutlineTravelExplore} from 'react-icons/md'
+import {BiPowerOff} from "react-icons/bi"
+import {CgProfile} from "react-icons/cg"
 import {useCookies} from 'react-cookie'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { ToastContainer, toast } from "react-toastify";
 
 const Navbar = () => {
@@ -19,6 +21,9 @@ const Navbar = () => {
 
   const [cookies, setCookies, removeCookie] = useCookies()
   
+  const [profilename, setProfilename] = useState()
+
+
   useEffect(()=> {
     const verifyUser = async () => {
         if(!cookies.jwt){
@@ -31,11 +36,16 @@ const Navbar = () => {
           if(!data.status) {
             removeCookie("jwt");
             navigate("/")
-          } 
+          } else setProfilename(data.user)
         }
     }
     verifyUser();
   }, [cookies, navigate, removeCookie])
+
+
+
+
+
 
   const [active, setActive]  = useState('navBar')
   const showNav = ()=>{
@@ -49,33 +59,38 @@ const Navbar = () => {
        <header className="header flex">
         
           <div className="logoDiv">
-            <a href="/home" className="logo flex"><h1><MdOutlineTravelExplore className='icon' />  Turmep.</h1></a>
+            <Link to="/home" className="logo flex"><h1><MdOutlineTravelExplore className='icon' />  Turmep.</h1></Link>
           </div>
 
           <div className={active}>
             <ul onClick={removeNav} className="navLists flex">
               <li className="navItem">
-                <a href="/home" className="navLink">Home</a>
-              </li>
+                <Link to="/home" className="navLink">Home</Link>
+              </li> 
               <li className="navItem">
-                <a href="/routes" className="navLink">Routes</a>
+                <Link to="/routes" className="navLink">Routes</Link>
               </li>
-              <li className="navItem">
+              {/* <li className="navItem">
                 <a href="/packages" className="navLink">Packages</a>
+              </li> */}
+              <li className="navItem">
+                <Link to="/about" className="navLink">About </Link>
               </li>
               <li className="navItem">
-                <a href="/about" className="navLink">About </a>
-              </li>
-              <li className="navItem">
-                <a href="/forum" className="navLink">Forum</a>
+                <Link to="/forum" className="navLink">Forum</Link>
               </li>
              
               <li className="navItem">
-                <a href="/contact" className="navLink">Contact</a>
+                <Link to="/contact" className="navLink">Contact</Link>
               </li>
-              <button className="btn" onClick={logout}>
-                <a href="/">LOGOUT</a>
-              </button>
+                 
+              <li className="navItem">
+                <Link to="/profile" className="navLink"><CgProfile className='icon'/>{profilename}</Link>
+              </li>
+              < li className="navItem" >
+                <Link to="/"><BiPowerOff className="icon"/></Link>
+              </li>
+           
 
             </ul>
               <div onClick={removeNav} className="closeNavbar">
