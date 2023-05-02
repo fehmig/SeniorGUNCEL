@@ -4,7 +4,7 @@ import {AiFillCloseCircle} from 'react-icons/ai'
 import {TbGridDots} from 'react-icons/tb'
 import {MdOutlineTravelExplore} from 'react-icons/md'
 import {BiPowerOff} from "react-icons/bi"
-import {CgProfile} from "react-icons/cg"
+import {FaRegUser} from "react-icons/fa"
 import {useCookies} from 'react-cookie'
 import axios from 'axios'
 import { useNavigate, Link } from 'react-router-dom'
@@ -85,7 +85,7 @@ const Navbar = () => {
               </li>
                  
               <li className="navItem">
-                <Link to="/profile" className="navLink"><CgProfile className='icon'/>{profilename}</Link>
+                <Link to="/profile" className="navLink"><FaRegUser className='icon'/>{profilename}</Link>
               </li>
               < li className="navItem" >
                 <Link to="/"><BiPowerOff className="icon"/></Link>
