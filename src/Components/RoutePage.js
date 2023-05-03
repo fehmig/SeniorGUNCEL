@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar/Navbar";
 import Home from "./Home/Home";
 import Footer from "./Footer/Footer";
@@ -6,6 +6,13 @@ import { GrMap } from "react-icons/gr"
 import { FaRoute, FaRegCommentDots } from "react-icons/fa"
 import Map2 from '../Map/Map2'
 import { withScriptjs } from "react-google-maps"
+import axios from 'axios'
+import {useCookies} from 'react-cookie'
+import { useNavigate, Link } from 'react-router-dom'
+import { ToastContainer, toast } from "react-toastify";
+
+
+
 const RoutePage = () => {
 
     const MapLoaderR = withScriptjs(Map2);
@@ -16,17 +23,44 @@ const RoutePage = () => {
         setNewComment(''); // yeni yorumu temizle
     };
 
-
+    const [profilename, setProfilename] = useState()
+    const navigate = useNavigate()
+    const [cookies, setCookies, removeCookie] = useCookies()
     const handleSubmit = (e) => {
         e.preventDefault();
         addComment(newComment);
     };
+
+    useEffect(()=> {
+      const verifyUser = async () => {
+          if(!cookies.jwt){
+          
+            navigate("/")
+          } else {
+            const {data} = await axios.post (
+              "http://localhost:4000", {}, 
+              {withCredentials: true}
+            )
+            if(!data.status) {
+              removeCookie("jwt");
+            
+              navigate("/")
+            } else setProfilename(data.user)
+          }
+      }
+      verifyUser();
+    }, [cookies, navigate, removeCookie])
+  
+
+
+
     return (
         <>
 
             <>
 
                 <Navbar />
+                
                 <br /> <br /> 
                 <div className="routepage">
                     {/* <i><h1>ROTA DETAYLARI BURADA YER ALACAK </h1>  </i> */}
@@ -40,7 +74,9 @@ const RoutePage = () => {
                         </div>
                         
                         <div className="route-yorum-goruntule"> <h3><u></u></h3>
-                        <hr></hr>
+
+
+                         <hr></hr>
                             <br />
                             <div className="yorumlar">
                             
@@ -113,7 +149,7 @@ const RoutePage = () => {
 
                 </div>
 
-
+                
                 <Footer />
 
             </>

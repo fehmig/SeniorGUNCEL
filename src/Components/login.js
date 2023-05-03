@@ -52,7 +52,7 @@ const Login = () => {
                     if(email) generateError(email);
                     else if (password) generateError(password);
                 }else{
-                    navigate("/home")
+                    navigate("/")
                 }
             }
 

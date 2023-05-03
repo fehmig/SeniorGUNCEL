@@ -208,26 +208,50 @@ const Main = () => {
 
   const [cookies, setCookies, removeCookie] = useCookies()
   
-  useEffect(()=> {
-    const verifyUser = async () => {
-        if(!cookies.jwt){
-          navigate("/")
-        } else {
-          const {data} = await axios.post (
-            "http://localhost:4000", {}, 
-            {withCredentials: true}
-          )
-          if(!data.status) {
-            removeCookie("jwt");
-            navigate("/") 
-          } else toast(`Hello! ${data.user} `, {theme:"dark"} )
-        }
-    }
-    verifyUser();
-  }, [cookies, navigate, removeCookie])
+  // useEffect(()=> {
+  //   const verifyUser = async () => {
+  //       if(!cookies.jwt){
+  //         navigate("/")
+  //       } else {
+  //         const {data} = await axios.post (
+  //           "http://localhost:4000", {}, 
+  //           {withCredentials: true}
+  //         )
+  //         if(!data.status) {
+  //           removeCookie("jwt");
+  //           navigate("/") 
+  //         } else toast(`Hello! ${data.user} `, {theme:"dark"} )
+  //       }
+  //   }
+  //   verifyUser();
+  // }, [cookies, navigate, removeCookie])
   
   
   
+    
+      const verifyUser = async () => {
+          if(!cookies.jwt){
+            toast(`Rota Detaylarını GÖrüntülemek İçin Giriş Yapmalısın!`, {theme:"dark"})
+
+          } else {
+            const {data} = await axios.post (
+              "http://localhost:4000", {}, 
+              {withCredentials: true}
+            )
+            if(!data.status) {
+              removeCookie("jwt");
+              toast(`Rota Detaylarını GÖrüntülemek İçin Giriş Yapmalısın!`, {theme:"dark"})
+     
+            } else navigate("/routes")
+          }
+      }
+    
+  
+  
+
+
+
+
   const logout = () => {
     removeCookie("jwt");
     navigate("/");
@@ -392,19 +416,11 @@ const Main = () => {
       <ReactModal className="modal"
         isOpen={isOpen2}
 
-        onRequestClose={() => setIsOpen2(false)}
+      
 
       >
-        <div className="route-card">
-          <h3 className='title'> Eastern Anatolia Routes</h3>
-          <br />
-          <div className='route-card-info'>
-          </div>
-        </div>
-        <MapLoader2 className='haritalani'
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzxgEQmpTKYtZQlFePgzZ9Fky7AgTWa-s"
-          loadingElement={<div style={{ height: "500px" }} />}
-        />
+        
+        BUNU GÖRÜNTÜLEMEK İÇİN GİRİŞ YAPMALISINIZ.
 
 
       </ReactModal>
@@ -539,7 +555,7 @@ const Main = () => {
         {/* CARDS */}
         <div className="secContent grid">
 
-
+          
 
           {
 
@@ -573,7 +589,8 @@ const Main = () => {
                   <div key={id} data-aos="fade-up" className="singleDestination">
 
                     <div className="imageDiv">
-                      <a href='/routes'> <img src={imgSrc} ></img></a>
+                        
+                     <img onClick={verifyUser} src={imgSrc} ></img>
                     </div>
 
                     <div className="cardInfo">
@@ -610,7 +627,7 @@ tagler burada yer alıcak
                   <div className='butons-card'> 
                       <button
                         className='btn-card-details'
-                        onClick={gotoroutes}
+                        onClick={verifyUser}
                       >
                       Details
                         <HiClipboardList className="icon-details" />

@@ -11,23 +11,25 @@ import { useNavigate, Link } from 'react-router-dom'
 import { ToastContainer, toast } from "react-toastify";
 
 const Navbar = () => {
-    
+  const [cookies, setCookies, removeCookie] = useCookies()
   const logout = () => {
-    removeCookie("jwt");
+    removeCookie("jwt")
     navigate("/");
+    toast(`Çıkış Yapıldı!`, {theme:"dark"})
   }
   
   const navigate = useNavigate()
 
-  const [cookies, setCookies, removeCookie] = useCookies()
+
   
   const [profilename, setProfilename] = useState()
 
+  const [isLogged, setIsLogged] = useState(false);
 
   useEffect(()=> {
     const verifyUser = async () => {
         if(!cookies.jwt){
-          navigate("/")
+          setIsLogged(false)
         } else {
           const {data} = await axios.post (
             "http://localhost:4000", {}, 
@@ -35,15 +37,35 @@ const Navbar = () => {
           )
           if(!data.status) {
             removeCookie("jwt");
-            navigate("/")
-          } else setProfilename(data.user)
+            setIsLogged(false)
+          } else {
+            setProfilename(data.user)
+            setIsLogged(true)
+            toast(`Giriş Yapıldı... Hello! ${data.user}`, {theme:"dark"})
+            
+          }
         }
     }
     verifyUser();
   }, [cookies, navigate, removeCookie])
 
 
+const goToRoutes = () => {
+  if(isLogged === true) {
+    navigate("/routes")
+  } else
+  toast(`Rota Detaylarını Görüntülemek İçin Giriş Yapınız!`, {theme:"dark"})
+            
+}
 
+
+const goToForm = () => {
+  if(isLogged === true) {
+    navigate("/forum")
+  } else
+  toast(`Forum Detaylarını Görüntülemek İçin Giriş Yapınız!`, {theme:"dark"})
+            
+}
 
 
 
@@ -59,16 +81,16 @@ const Navbar = () => {
        <header className="header flex">
         
           <div className="logoDiv">
-            <Link to="/home" className="logo flex"><h1><MdOutlineTravelExplore className='icon' />  Turmep.</h1></Link>
+            <Link to="/" className="logo flex"><h1><MdOutlineTravelExplore className='icon' />  Turmep.</h1></Link>
           </div>
 
           <div className={active}>
             <ul onClick={removeNav} className="navLists flex">
               <li className="navItem">
-                <Link to="/home" className="navLink">Home</Link>
+                <Link to="/" className="navLink">Home</Link>
               </li> 
-              <li className="navItem">
-                <Link to="/routes" className="navLink">Routes</Link>
+              <li onClick={goToRoutes}  className="navItem">
+               Routes
               </li>
               {/* <li className="navItem">
                 <a href="/packages" className="navLink">Packages</a>
@@ -76,20 +98,28 @@ const Navbar = () => {
               <li className="navItem">
                 <Link to="/about" className="navLink">About </Link>
               </li>
-              <li className="navItem">
-                <Link to="/forum" className="navLink">Forum</Link>
+              <li onClick={goToForm}  className="navItem">
+                Forum
               </li>
              
               <li className="navItem">
                 <Link to="/contact" className="navLink">Contact</Link>
               </li>
                  
-              <li className="navItem">
-                <Link to="/profile" className="navLink"><FaRegUser className='icon'/>{profilename}</Link>
-              </li>
+              
+              
               < li className="navItem" >
-                <Link to="/"><BiPowerOff className="icon"/></Link>
+              {isLogged ? (
+                <>
+                  <Link to="/profile" className="navLink"><FaRegUser className='icon'/>{profilename} </Link>
+                  <Link><BiPowerOff className="icon" onClick={logout} /></Link>
+                  </>
+                ) : (
+                  <Link to="/login"><button className='btn-map'>LOGIN</button></Link>  
+
+                  )}
               </li>
+              
            
 
             </ul>
