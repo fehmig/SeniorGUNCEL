@@ -4,7 +4,7 @@ import {useCookies} from 'react-cookie'
 import axios from 'axios'
 import { useNavigate, Link } from 'react-router-dom'
 import ProfileName from "./Components/Navbar/Navbar"
-import video from 'C:/Users/bilalberispak/Desktop/SENIOR/SeniorGUNCEL/src/Assets/video.mp4'
+import video from './Assets/video.mp4'
 
 const Profile = () => {
  
