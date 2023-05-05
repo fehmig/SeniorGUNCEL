@@ -30,8 +30,8 @@ const Profile = () => {
 
   const [cookies, setCookies, removeCookie] = useCookies()
 
-  const [profilename, setProfilename] = useState()
-
+  const [profilename, setProfilename] = useState("")
+  const [profilenamepic, setProfilenamepic] = useState("")
 
 
   useEffect(() => {
@@ -45,8 +45,13 @@ const Profile = () => {
         )
         if (!data.status) {
           removeCookie("jwt");
-          navigate("/")
-        } else setProfilename(data.user)
+          navigate("/login")
+        } else{
+           setProfilename(data.user)
+           setProfilenamepic(data.user.slice(0,2))
+          
+        }
+
       }
     }
     verifyUser();
@@ -67,12 +72,12 @@ const Profile = () => {
               {/* <h3>  {profilename}'s Profile Page </h3> */}
               <div className='profilfoto'>
                 {/* hacı buraya pofil ofotsu koyulacvak ona göre de css ayarlanacak */}
-                sdgfsdgfsdgsg
-
+                
+                     <span className='profilenamepic'>{profilenamepic}</span>   
               </div>
               <div className='profilfotoalt'>
               <br />
-              Bilal
+             <span style={{color:'white'}}>{profilename}</span>
               </div>
 
             </div>
@@ -94,7 +99,7 @@ const Profile = () => {
                   <label >Name</label>
                 </div>
                 <div className="içsatır">
-                  <p>{profilename}</p>
+                  <p >{profilename}</p>
                 </div>
               </div>
               <hr className='hr' />
@@ -115,10 +120,10 @@ const Profile = () => {
 
               <div className="satır">
                 <div className="içsatır">
-                  <label >Phone</label>
+                  <label >Favorite Route</label>
                 </div>
                 <div className="içsatır">
-                  <p>83444322771</p>
+                  <p>Black Sea</p>
                 </div>
               </div>
               <hr className='hr' />
@@ -127,10 +132,10 @@ const Profile = () => {
 
               <div className="satır">
                 <div className="içsatır">
-                  <label >profession</label>
+                  <label >Favorite Places</label>
                 </div>
                 <div className="içsatır">
-                  <p>Web developer</p>
+                  <p>Trabzon</p>
                 </div>
               </div>
 
