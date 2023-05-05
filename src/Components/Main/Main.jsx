@@ -50,12 +50,12 @@ import banner4 from '../../Assets/banner4.png'
 import banner5 from '../../Assets/banner5.png'
 import banner6 from '../../Assets/banner6.png'
 import BannerSlider from '../../BannerSlider'
-import {useCookies} from 'react-cookie'
+import { useCookies } from 'react-cookie'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from "react-toastify";
 const images = [
-  banner4,banner5,banner6
+  banner4, banner5, banner6
 ];
 
 
@@ -88,7 +88,7 @@ const Veri = [
     rating: 2.2,
     fees: 600,
     type: "ADVENTURE",
-    
+
     description: 'Eastern Anatolia is a region in Turkey.It occupies the mountainous east of the country and has the harshest winters.Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east'
   },
 
@@ -207,7 +207,7 @@ const Main = () => {
   const navigate = useNavigate()
 
   const [cookies, setCookies, removeCookie] = useCookies()
-  
+
   // useEffect(()=> {
   //   const verifyUser = async () => {
   //       if(!cookies.jwt){
@@ -225,29 +225,29 @@ const Main = () => {
   //   }
   //   verifyUser();
   // }, [cookies, navigate, removeCookie])
-  
-  
-  
-    
-      const verifyUser = async () => {
-          if(!cookies.jwt){
-            toast(`Rota Detaylarını GÖrüntülemek İçin Giriş Yapmalısın!`, {theme:"dark"})
 
-          } else {
-            const {data} = await axios.post (
-              "http://localhost:4000", {}, 
-              {withCredentials: true}
-            )
-            if(!data.status) {
-              removeCookie("jwt");
-              toast(`Rota Detaylarını GÖrüntülemek İçin Giriş Yapmalısın!`, {theme:"dark"})
-     
-            } else navigate("/routes")
-          }
-      }
-    
-  
-  
+
+
+
+  const verifyUser = async () => {
+    if (!cookies.jwt) {
+      toast(`Rota Detaylarını GÖrüntülemek İçin Giriş Yapmalısın!`, { theme: "dark" })
+
+    } else {
+      const { data } = await axios.post(
+        "http://localhost:4000", {},
+        { withCredentials: true }
+      )
+      if (!data.status) {
+        removeCookie("jwt");
+        toast(`Rota Detaylarını GÖrüntülemek İçin Giriş Yapmalısın!`, { theme: "dark" })
+
+      } else navigate("/routes")
+    }
+  }
+
+
+
 
 
 
@@ -256,13 +256,13 @@ const Main = () => {
     removeCookie("jwt");
     navigate("/");
   }
-  
+
 
 
   const gotoroutes = () => {
     navigate("/routes");
   }
-  
+
 
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
@@ -316,7 +316,7 @@ const Main = () => {
             </span>
             <h1 data-aos="fade-down" className="homeTitle">
               Search your Travel routes!
-              
+
             </h1>
           </div>
 
@@ -416,10 +416,10 @@ const Main = () => {
       <ReactModal className="modal"
         isOpen={isOpen2}
 
-      
+
 
       >
-        
+
         BUNU GÖRÜNTÜLEMEK İÇİN GİRİŞ YAPMALISINIZ.
 
 
@@ -474,15 +474,15 @@ const Main = () => {
             <input
               className='input-search'
               type="text"
-              placeholder='Search route here...'              
+              placeholder='Search route here...'
               onChange={(e) => setSearchTerm(e.target.value)}
 
             />
-            
+
 
           </div>
-          
-        
+
+
 
 
 
@@ -545,7 +545,7 @@ const Main = () => {
           </button>
         </div>
         <div>
-          <ToastContainer/>
+          <ToastContainer />
         </div>
 
 
@@ -555,7 +555,7 @@ const Main = () => {
         {/* CARDS */}
         <div className="secContent grid">
 
-          
+
 
           {
 
@@ -589,14 +589,14 @@ const Main = () => {
                   <div key={id} data-aos="fade-up" className="singleDestination">
 
                     <div className="imageDiv">
-                        
-                     <img onClick={verifyUser} src={imgSrc} ></img>
+
+                      <img onClick={verifyUser} src={imgSrc} ></img>
                     </div>
 
                     <div className="cardInfo">
                       <h4 className="destTitle">{destTitle}</h4>
                       <span className="continent flex">
-                        
+
                         <span className="name"><HiOutlineLocationMarker className="icon" />{location}</span>
                         <span className='date'>{date}</span>
                         <small><span className='traveltype'>{type}</span></small>
@@ -604,7 +604,7 @@ const Main = () => {
 
                       <div className="fees flex">
                         <div className="grade">
-                          <span><BsFillStarFill style={{ color: " hsl(199, 100%, 33%)", fontSize:"1.5rem"}} /> <b style={{ color: " hsl(199, 100%, 33%)", fontSize:"1.2rem"}}> {rating}</b></span>
+                          <span><BsFillStarFill style={{ color: " hsl(199, 100%, 33%)", fontSize: "1.5rem" }} /> <b style={{ color: " hsl(199, 100%, 33%)", fontSize: "1.2rem" }}> {rating}</b></span>
                         </div>
 
 
@@ -615,8 +615,8 @@ const Main = () => {
                       </div>
                       {/* hem üstüne hem altına çiziyor */}
                       <div className="fees flex">
-                        
-tagler burada yer alıcak
+
+                        tagler burada yer alıcak
                       </div>
 
 
@@ -624,26 +624,26 @@ tagler burada yer alıcak
                         {description}
                       </div>
 
-                  <div className='butons-card'> 
-                      <button
-                        className='btn-card-details'
-                        onClick={verifyUser}
-                      >
-                      Details
-                        <HiClipboardList className="icon-details" />
-                      </button>
+                      <div className='butons-card'>
+                        <button
+                          className='btn-card-details'
+                          onClick={verifyUser}
+                        >
+                          Details
+                          <HiClipboardList className="icon-details" />
+                        </button>
 
 
 
 
-                      <button
+                        <button
 
-                        onClick={() => setIsOpen(true)}
-                        className='btn-card-map'
-                      >
-                        Map
-                        <FiMapPin classname="icon" />
-                      </button>
+                          onClick={() => setIsOpen(true)}
+                          className='btn-card-map'
+                        >
+                          Map
+                          <FiMapPin classname="icon" />
+                        </button>
                       </div>
                     </div>
                   </div>
