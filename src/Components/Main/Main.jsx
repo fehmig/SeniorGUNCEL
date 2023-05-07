@@ -54,7 +54,7 @@ import { useCookies } from 'react-cookie'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from "react-toastify";
-import {Link} from "react-router-dom"
+import {Link, useParams} from "react-router-dom"
 const images = [
   banner4, banner5, banner6
 ];
@@ -205,6 +205,8 @@ const Main = () => {
   }, [])
 
 
+  const {id} = useParams();
+  const myVeri = Veri.find(v => v.id === parseInt(id));
   const navigate = useNavigate()
 
   const [cookies, setCookies, removeCookie] = useCookies()
@@ -243,7 +245,7 @@ const Main = () => {
         removeCookie("jwt");
         toast(`Rota Detaylarını GÖrüntülemek İçin Giriş Yapmalısın!`, { theme: "dark" })
 
-      } else navigate("/routes")
+      } else navigate(`/routes/${id}`)
     }
   }
 
@@ -266,14 +268,12 @@ const Main = () => {
 
 
   const [isOpen, setIsOpen] = useState(false);
-  const [isOpen2, setIsOpen2] = useState(false);
-  const [isOpen3, setIsOpen3] = useState(false);
+ 
 
 
 
   const MapLoader = withScriptjs(Map);
-  const MapLoader2 = withScriptjs(Map2);
-  const MapLoader3 = withScriptjs(Map3);
+
 
   const [fees, setFees] = useState(0);
   const [rating, setRating] = useState(0);
@@ -598,9 +598,9 @@ const Main = () => {
                       <div className='butons-card'>
                         <button
                           className='btn-card-details'
-                          onClick={verifyUser}
+                          // onClick={verifyUser}
                         >
-                         <Link to={`/routes/${id}`}>Details</Link> 
+                         <Link to={`/routes/${id}`} style={{color:'white'}}>Details</Link> 
                           <HiClipboardList className="icon-details" />
                         </button>
 

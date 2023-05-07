@@ -17,7 +17,7 @@ const RoutePage = () => {
 
 
     const {id} = useParams();
-    const myVeri = Veri.find(v => v.id === parseInt(id));;
+    const myVeri = Veri.find(v => v.id === parseInt(id));
 
     const MapLoaderR = withScriptjs(Map2);
     const [comments, setComments] = useState([]);
