@@ -115,7 +115,7 @@ const goToForm = () => {
                   <Link><BiPowerOff className="icon" onClick={logout} /></Link>
                   </>
                 ) : (
-                  <Link to="/login"><button className='btn-map'>LOGIN</button></Link>  
+                  <Link to="/login"><button className='btn-login'>LOGIN</button></Link>  
 
                   )}
               </li>

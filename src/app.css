@@ -875,4 +875,13 @@ body {
     }
 
    
-   
+   .btn-login{
+    width: 60px;
+    height: 40px;
+    background: var(--gradientColor);
+    border: none;
+    outline: none;
+    border-radius: 1em;
+    cursor: pointer;
+    color: white;
+   }

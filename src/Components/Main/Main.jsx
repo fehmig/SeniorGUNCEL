@@ -54,12 +54,13 @@ import { useCookies } from 'react-cookie'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from "react-toastify";
+import {Link} from "react-router-dom"
 const images = [
   banner4, banner5, banner6
 ];
 
 
-const Veri = [
+export const Veri = [
   {
     id: 1,
     imgSrc: img2,
@@ -413,37 +414,7 @@ const Main = () => {
 
 
 
-      <ReactModal className="modal"
-        isOpen={isOpen2}
-
-
-
-      >
-
-        BUNU GÖRÜNTÜLEMEK İÇİN GİRİŞ YAPMALISINIZ.
-
-
-      </ReactModal>
-
-
-      <ReactModal className="modal"
-        isOpen={isOpen3}
-
-        onRequestClose={() => setIsOpen3(false)}
-
-      >
-        <div className="route-card">
-          <h3 className='title'> Mediterrenian Routes</h3>
-          <br />
-          <div className='route-card-info'>
-          </div>
-        </div>
-        <MapLoader3 className='haritalani'
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzxgEQmpTKYtZQlFePgzZ9Fky7AgTWa-s"
-          loadingElement={<div style={{ height: "500px" }} />}
-        />
-
-      </ReactModal>
+      
 
 
       <section id='main' className='main section container'>
@@ -629,7 +600,7 @@ const Main = () => {
                           className='btn-card-details'
                           onClick={verifyUser}
                         >
-                          Details
+                         <Link to={`/routes/${id}`}>Details</Link> 
                           <HiClipboardList className="icon-details" />
                         </button>
 

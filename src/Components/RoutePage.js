@@ -8,12 +8,16 @@ import Map2 from '../Map/Map2'
 import { withScriptjs } from "react-google-maps"
 import axios from 'axios'
 import {useCookies} from 'react-cookie'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link, useParams } from 'react-router-dom'
 import { ToastContainer, toast } from "react-toastify";
-
+import { Veri } from "./Main/Main";
 
 
 const RoutePage = () => {
+
+
+    const {id} = useParams();
+    const myVeri = Veri.find(v => v.id === parseInt(id));;
 
     const MapLoaderR = withScriptjs(Map2);
     const [comments, setComments] = useState([]);
@@ -70,7 +74,7 @@ const RoutePage = () => {
                         <div className="route-durum">
                         <hr></hr>
                         <h3><FaRoute />  ROTA BİLGİLERİ, DURUMU </h3>
-                        
+                            <h1>{myVeri?.destTitle}</h1>
                         </div>
                         
                         <div className="route-yorum-goruntule"> <h3><u></u></h3>
