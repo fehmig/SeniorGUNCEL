@@ -5,6 +5,7 @@ import Footer from "./Footer/Footer";
 import { GrMap } from "react-icons/gr"
 import { FaRoute, FaRegCommentDots } from "react-icons/fa"
 import Map2 from '../Map/Map2'
+import Map3 from '../Map/Map3'
 import { withScriptjs } from "react-google-maps"
 import axios from 'axios'
 import {useCookies} from 'react-cookie'
@@ -19,7 +20,23 @@ const RoutePage = () => {
     const {id} = useParams();
     const myVeri = Veri.find(v => v.id === parseInt(id));
 
-    const MapLoaderR = withScriptjs(Map2);
+    const MapLoaderBlackSea= withScriptjs(Map2);
+    const MapLoaderAegean = withScriptjs(Map3);
+
+    const whichMap = () => {
+        if(myVeri.id === 1) {
+            return  <MapLoaderBlackSea className='route-sagtaraf-map'
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+            loadingElement={<div style={{ height: "1000px" }} />}
+        />
+        }else if(myVeri.id === 5){
+            return  <MapLoaderAegean className='route-sagtaraf-map'
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+            loadingElement={<div style={{ height: "1000px" }} />}
+        />
+        }
+    }
+    
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState('');
     const addComment = (comment) => {
@@ -142,10 +159,12 @@ const RoutePage = () => {
 
                     </div>
                     <div className="route-sagtaraf">
-                        <MapLoaderR className='route-sagtaraf-map'
+
+                                        {whichMap()}
+                        {/* <MapLoaderBlackSea className='route-sagtaraf-map'
                             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
                             loadingElement={<div style={{ height: "1000px" }} />}
-                        />
+                        /> */}
 
 
 

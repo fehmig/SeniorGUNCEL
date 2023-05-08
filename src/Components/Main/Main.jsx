@@ -74,7 +74,7 @@ export const Veri = [
     date: "23.07.2023",
     tag: "karadeniz",
     description: "The area is north of Turkey. It takes its name from the Black Sea in the north. The Black Sea climatic conditions are effective in the region. It is rainy every season. The annual temperature difference is small. Summers are cool, winters are warm. The Black Sea is the highest rainfall areas of Turkey. Enjoy the green, enjoy your travel route!"
-
+    
   },
 
 
