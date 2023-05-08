@@ -48,10 +48,10 @@ const Forum = () => {
                                 <div><h1 style={{ color: "hsl(199, 100%, 33%)", textShadow: '1px 1px 0 hsl(200 50% 30%)' }}>KONU BAŞLIĞI AÇ!</h1></div>
                                 <br />
                                 <div className="forum-solalt-sol">
-                                    <br></br>
-                                    <br></br>
+                                    {/* <br></br>
+                                    <br></br> */}
 
-                                    <input
+                                    {/* <input
                                         className='input-forum'
                                         type="text"
                                         placeholder='Name'
@@ -75,14 +75,46 @@ const Forum = () => {
                                         placeholder='E-Mail'
 
 
+                                    /> */}
+                                    <input
+                                        className='input-sol-forum'
+                                        type="text"
+                                        placeholder='Name'
+
+
+                                    />
+                                    <br />
+
+                                    <input
+                                        className='input-sol-forum'
+                                        type="text"
+                                        placeholder='Surname'
+
+
+                                    />
+                                    <br />
+
+                                    <input
+                                        className='input-sol-forum'
+                                        type="email"
+                                        placeholder='E-Mail'
+
+
                                     />
                                 </div>
                                 <div className="forum-solalt-sağ">
-                                    <br /><br />
+                                    {/* <br /><br /> */}
 
-                                    <textarea name="message" rows="4" cols="50"
+                                    {/* <textarea name="message" rows="4" cols="50"
 
                                         className="text-forum"
+                                        type='text'
+                                        placeholder="Message here..."
+
+                                    ></textarea> */}
+                                    <textarea name="message" rows="4" cols="50"
+
+                                        className="text-contact-forum"
                                         type='text'
                                         placeholder="Message here..."
 
@@ -92,7 +124,7 @@ const Forum = () => {
 
                                 </div>
                                 {/* <hr></hr> */}
-                                
+
 
 
 

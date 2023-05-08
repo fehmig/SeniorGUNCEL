@@ -657,7 +657,7 @@ body {
     height: 100%;
     text-align: center;
     margin: 0;
-    background-color: rgb(219, 39, 39);
+    background-color: rgb(255, 255, 255);
 }
 .forum-üst{
     width: 100%;
@@ -709,6 +709,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto;
+    
     /* margin-top: 30px;
     margin-bottom: 30px;   */
     /*sağdaki gibi boşluk footer 0 değil !*/
@@ -724,7 +725,6 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    /* height: 100%; */
     background-color: white;
     /* margin-top: 30px;
     margin-bottom: 30px;
@@ -780,6 +780,35 @@ body {
 
 
 }
+.input-sol-forum {
+    border: none;
+    background-color: rgb(229, 226, 226);
+    height: 1em;
+    width: 90%;
+    border-radius: 1em;
+    text-align: center;
+    padding: 2em;
+    margin: auto;
+    border: 1px solid hsl(199, 100%, 33%);
+
+}
+.text-contact-forum{
+    text-align: center;
+    direction: ltr;
+    margin: auto;
+    display: block;
+    width: 90%;
+    height: 150px;
+    padding: 10px 15px;
+    border: 0.7px solid hsl(199, 100%, 33%);
+    background-color: rgb(229, 226, 226);
+    border-radius: 1em;
+    transition: 0.4s;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
+
+}
+
 
 .forum-solalt-sağ {
     width: 48%;

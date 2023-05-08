@@ -111,7 +111,7 @@ const Profile = () => {
                   <label >Email</label>
                 </div>
                 <div className="içsatır">
-                  <p>sushant.gmail.com</p>
+                  <p>{profilename}@gmail.com</p>
                 </div>
               </div>
               <hr className='hr' />
