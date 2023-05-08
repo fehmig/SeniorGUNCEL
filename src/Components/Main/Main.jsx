@@ -245,7 +245,7 @@ const Main = () => {
         removeCookie("jwt");
         toast(`Rota Detaylarını GÖrüntülemek İçin Giriş Yapmalısın!`, { theme: "dark" })
 
-      } else navigate(`/routes/${id}`)
+      } else navigate(`/routes/${myVeri.id}`)
     }
   }
 
@@ -561,7 +561,7 @@ const Main = () => {
 
                     <div className="imageDiv">
 
-                      <img onClick={verifyUser} src={imgSrc} ></img>
+                      <img src={imgSrc} ></img>
                     </div>
 
                     <div className="cardInfo">
@@ -598,7 +598,7 @@ const Main = () => {
                       <div className='butons-card'>
                         <button
                           className='btn-card-details'
-                          // onClick={verifyUser}
+                          onClick={verifyUser}
                         >
                          <Link to={`/routes/${id}`} style={{color:'white'}}>Details</Link> 
                           <HiClipboardList className="icon-details" />

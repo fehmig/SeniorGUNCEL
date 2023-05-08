@@ -57,6 +57,7 @@ const RoutePage = () => {
           if(!cookies.jwt){
           
             navigate("/")
+            
           } else {
             const {data} = await axios.post (
               "http://localhost:4000", {}, 
