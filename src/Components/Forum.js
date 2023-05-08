@@ -51,7 +51,7 @@ const Forum = () => {
                                     <br></br>
                                     <br></br>
 
-                                    <input
+                                    {/* <input
                                         className='input-forum'
                                         type="text"
                                         placeholder='Name'
@@ -75,18 +75,51 @@ const Forum = () => {
                                         placeholder='E-Mail'
 
 
+                                    /> */}
+
+<input
+                                        className='input-sol-forum'
+                                        type="text"
+                                        placeholder='Name'
+
+
+                                    />
+                                    <br />
+
+                                    <input
+                                        className='input-sol-forum'
+                                        type="text"
+                                        placeholder='Surname'
+
+
+                                    />
+                                    <br />
+
+                                    <input
+                                        className='input-sol-forum'
+                                        type="email"
+                                        placeholder='E-Mail'
+
+
                                     />
                                 </div>
                                 <div className="forum-solalt-sağ">
                                     <br /><br />
 
-                                    <textarea name="message" rows="4" cols="50"
+                                    {/* <textarea name="message" rows="4" cols="50"
 
                                         className="text-forum"
                                         type='text'
                                         placeholder="Message here..."
 
-                                    ></textarea>
+                                    ></textarea> */}
+                                    <textarea name="message" rows="4" cols="50"
+
+className="text-contact-forum"
+type='text'
+placeholder="Message here..."
+
+></textarea>
                                     <br />
                                     <button className="btn-yorum">SEND</button>
 
