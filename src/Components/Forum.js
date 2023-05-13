@@ -76,7 +76,12 @@ const Forum = () => {
 
 
                                     /> */}
+<<<<<<< HEAD
                                     <input
+=======
+
+<input
+>>>>>>> f46fc7fc6696b26e3b4c474e4c43b889e802a011
                                         className='input-sol-forum'
                                         type="text"
                                         placeholder='Name'
@@ -114,11 +119,19 @@ const Forum = () => {
                                     ></textarea> */}
                                     <textarea name="message" rows="4" cols="50"
 
+<<<<<<< HEAD
                                         className="text-contact-forum"
                                         type='text'
                                         placeholder="Message here..."
 
                                     ></textarea>
+=======
+className="text-contact-forum"
+type='text'
+placeholder="Message here..."
+
+></textarea>
+>>>>>>> f46fc7fc6696b26e3b4c474e4c43b889e802a011
                                     <br />
                                     <button className="btn-yorum">SEND</button>
 

@@ -74,7 +74,7 @@ export const Veri = [
     date: "23.07.2023",
     tag: "karadeniz",
     description: "The area is north of Turkey. It takes its name from the Black Sea in the north. The Black Sea climatic conditions are effective in the region. It is rainy every season. The annual temperature difference is small. Summers are cool, winters are warm. The Black Sea is the highest rainfall areas of Turkey. Enjoy the green, enjoy your travel route!"
-
+    
   },
 
 
@@ -245,7 +245,7 @@ const Main = () => {
         removeCookie("jwt");
         toast(`Rota Detaylarını GÖrüntülemek İçin Giriş Yapmalısın!`, { theme: "dark" })
 
-      } else navigate(`/routes/${id}`)
+      } else navigate(`/routes/${myVeri.id}`)
     }
   }
 
@@ -561,7 +561,7 @@ const Main = () => {
 
                     <div className="imageDiv">
 
-                      <img onClick={verifyUser} src={imgSrc} ></img>
+                      <img src={imgSrc} ></img>
                     </div>
 
                     <div className="cardInfo">
@@ -598,7 +598,7 @@ const Main = () => {
                       <div className='butons-card'>
                         <button
                           className='btn-card-details'
-                          // onClick={verifyUser}
+                          onClick={verifyUser}
                         >
                          <Link to={`/routes/${id}`} style={{color:'white'}}>Details</Link> 
                           <HiClipboardList className="icon-details" />
