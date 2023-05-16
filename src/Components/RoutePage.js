@@ -177,8 +177,12 @@ const RoutePage = () => {
 
                 </div>
                 <br/><br/><br/> <br/><br/>
+                <h1>SIMILAR ROUTES</h1>
+              
                 <section id='home' className='home'>
+               
   <div className="secContent grid">
+    
                 {filteredData.map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue }) => (
                     <div key={id} data-aos="fade-up" className="singleDestination">
 
