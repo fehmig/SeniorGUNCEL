@@ -72,7 +72,7 @@ export const Veri = [
     fees: 700,
     btnValue: 1,
     date: "23.07.2023",
-    tag: "karadeniz",
+    tags: ["forest", "sea" , "food"],
     description: "The area is north of Turkey. It takes its name from the Black Sea in the north. The Black Sea climatic conditions are effective in the region. It is rainy every season. The annual temperature difference is small. Summers are cool, winters are warm. The Black Sea is the highest rainfall areas of Turkey. Enjoy the green, enjoy your travel route!"
     
   },
@@ -89,7 +89,7 @@ export const Veri = [
     rating: 2.2,
     fees: 600,
     type: "ADVENTURE",
-
+    tags: ["traditional", "historical" , "food"],
     description: 'Eastern Anatolia is a region in Turkey.It occupies the mountainous east of the country and has the harshest winters.Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east'
   },
 
@@ -119,6 +119,7 @@ export const Veri = [
     fees: 800,
     btnValue: 4,
     type: "ADVENTURE",
+    tags: ["architectural", "sea" , "food"],
     description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region!'
   },
 
@@ -134,6 +135,7 @@ export const Veri = [
     fees: 1100,
     btnValue: 5,
     type: "BEACH",
+    tags: ["beach", "sea" , "food"],
     description: 'A land of beautiful vistas over the sea, lovely evening breezes, and majestic sunsets, Western part of the country,including the Aegean Sea coast across from a wide arch of Greek islands and the adjoining inland areas.'
   },
 
@@ -149,6 +151,7 @@ export const Veri = [
     fees: 840,
     btnValue: 6,
     type: "HISTORICAL",
+    tags: ["architectural", "historical" , "mysterious"],
     description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks. '
   },
 
@@ -164,6 +167,7 @@ export const Veri = [
     fees: 790,
     btnValue: 3,
     type: "CAMPING",
+    tags: ["architectural", "historical" , "food"],
     description: ' Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.'
   },
 
@@ -179,6 +183,7 @@ export const Veri = [
     fees: 900,
     btnValue: 8,
     type: "FOOD",
+    tags: ["forest", "sea" , "food"],
     description: 'Southeastern Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.'
   },
 
@@ -194,6 +199,7 @@ export const Veri = [
     fees: 500,
     btnValue: 9,
     type: "HISTORICAL",
+    tags: ["history", "mysterious" , "architectural"],
     description: 'Famed as the oldest temple in the world, Göbekli Tepe has changed the way that archaeologists look at history. Its existence pre-dates farming and settlements, and so it proves that man had religion before he even lived in a village or a town. Dated to 9000 BCE and listed by UNESCO'
 
   },
@@ -553,7 +559,7 @@ const Main = () => {
 
 
 
-              .map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue }) => {
+              .map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue, tags }) => {
                 return (
 
 
@@ -587,7 +593,11 @@ const Main = () => {
                       {/* hem üstüne hem altına çiziyor */}
                       <div className="fees flex">
 
-                        tagler burada yer alıcak
+                      <div className="tags">
+                        {tags.map((tag, index) => (
+                        <span key={index} className="tag">#{tag} </span>
+                      ))}
+                      </div>
                       </div>
 
 
