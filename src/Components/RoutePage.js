@@ -95,14 +95,19 @@ const RoutePage = () => {
                         <br></br>
                         <div className="route-durum">
                             <hr></hr>
-                            <h3><FaRoute />  ROTA BİLGİLERİ, DURUMU </h3>
-                            <h1>{myVeri?.destTitle}</h1>
+                            
+                            <h1><FaRoute />  {myVeri?.destTitle}</h1>
+                            {myVeri.imgRoute.map((src, index) => (
+          <img style={{width:'500px' , height:'200px'}} key={index} src={src} alt={`Görsel ${index + 1}`} />
+        ))}
                         </div>
+                       
 
                         <div className="route-yorum-goruntule"> <h3><u></u></h3>
 
-
+                        <br/> <br/>
                             <hr></hr>
+                            
                             <br />
                             <div className="yorumlar">
 
