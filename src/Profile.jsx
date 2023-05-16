@@ -106,15 +106,6 @@ const Profile = () => {
 
 
 
-              <div className="satır">
-                <div className="içsatır">
-                  <label >Email</label>
-                </div>
-                <div className="içsatır">
-                  <p>sushant.gmail.com</p>
-                </div>
-              </div>
-              <hr className='hr' />
 
 
 
@@ -139,7 +130,7 @@ const Profile = () => {
                 </div>
               </div>
 
-
+              <hr className='hr' />
             </div>
           </div>
 

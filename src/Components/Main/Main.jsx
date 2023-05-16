@@ -234,7 +234,7 @@ const Main = () => {
 
   const verifyUser = async () => {
     if (!cookies.jwt) {
-      toast(`Rota Detaylarını GÖrüntülemek İçin Giriş Yapmalısın!`, { theme: "dark" })
+      toast(`Rota Detaylarını Görüntülemek İçin Giriş Yapmalısın!`, { theme: "dark" })
 
     } else {
       const { data } = await axios.post(
