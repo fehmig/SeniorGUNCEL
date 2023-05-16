@@ -8,7 +8,7 @@ import Map2 from '../Map/Map2'
 import Map3 from '../Map/Map3'
 import { withScriptjs } from "react-google-maps"
 import axios from 'axios'
-import {useCookies} from 'react-cookie'
+import { useCookies } from 'react-cookie'
 import { useNavigate, Link, useParams } from 'react-router-dom'
 import { ToastContainer, toast } from "react-toastify";
 import { Veri } from "./Main/Main";
@@ -17,26 +17,30 @@ import { Veri } from "./Main/Main";
 const RoutePage = () => {
 
 
-    const {id} = useParams();
+    const { id } = useParams();
     const myVeri = Veri.find(v => v.id === parseInt(id));
 
-    const MapLoaderBlackSea= withScriptjs(Map2);
+    const filteredData = Veri.filter((veri) => {
+        return veri.tags.some((tag) => myVeri.tags.includes(tag)) && veri.id !== myVeri.id;
+    });
+
+    const MapLoaderBlackSea = withScriptjs(Map2);
     const MapLoaderAegean = withScriptjs(Map3);
 
     const whichMap = () => {
-        if(myVeri.id === 1) {
-            return  <MapLoaderBlackSea className='route-sagtaraf-map'
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
-            loadingElement={<div style={{ height: "1000px" }} />}
-        />
-        }else if(myVeri.id === 5){
-            return  <MapLoaderAegean className='route-sagtaraf-map'
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
-            loadingElement={<div style={{ height: "1000px" }} />}
-        />
+        if (myVeri.id === 1) {
+            return <MapLoaderBlackSea className='route-sagtaraf-map'
+                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+                loadingElement={<div style={{ height: "1000px" }} />}
+            />
+        } else if (myVeri.id === 5) {
+            return <MapLoaderAegean className='route-sagtaraf-map'
+                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+                loadingElement={<div style={{ height: "1000px" }} />}
+            />
         }
     }
-    
+
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState('');
     const addComment = (comment) => {
@@ -52,27 +56,27 @@ const RoutePage = () => {
         addComment(newComment);
     };
 
-    useEffect(()=> {
-      const verifyUser = async () => {
-          if(!cookies.jwt){
-          
-            navigate("/")
-            
-          } else {
-            const {data} = await axios.post (
-              "http://localhost:4000", {}, 
-              {withCredentials: true}
-            )
-            if(!data.status) {
-              removeCookie("jwt");
-            
-              navigate("/")
-            } else setProfilename(data.user)
-          }
-      }
-      verifyUser();
+    useEffect(() => {
+        const verifyUser = async () => {
+            if (!cookies.jwt) {
+
+                navigate("/")
+
+            } else {
+                const { data } = await axios.post(
+                    "http://localhost:4000", {},
+                    { withCredentials: true }
+                )
+                if (!data.status) {
+                    removeCookie("jwt");
+
+                    navigate("/")
+                } else setProfilename(data.user)
+            }
+        }
+        verifyUser();
     }, [cookies, navigate, removeCookie])
-  
+
 
 
 
@@ -82,26 +86,26 @@ const RoutePage = () => {
             <>
 
                 <Navbar />
-                
-                <br /> <br /> 
+
+                <br /> <br />
                 <div className="routepage">
                     {/* <i><h1>ROTA DETAYLARI BURADA YER ALACAK </h1>  </i> */}
                     <br />
                     <div className="route-soltaraf">
-                    <br></br>
+                        <br></br>
                         <div className="route-durum">
-                        <hr></hr>
-                        <h3><FaRoute />  ROTA BİLGİLERİ, DURUMU </h3>
+                            <hr></hr>
+                            <h3><FaRoute />  ROTA BİLGİLERİ, DURUMU </h3>
                             <h1>{myVeri?.destTitle}</h1>
                         </div>
-                        
+
                         <div className="route-yorum-goruntule"> <h3><u></u></h3>
 
 
-                         <hr></hr>
+                            <hr></hr>
                             <br />
                             <div className="yorumlar">
-                            
+
 
                                 <div>
                                     <ul>
@@ -125,7 +129,7 @@ const RoutePage = () => {
 
                         <br />
                         <div className="route-yorum">
-                        <hr></hr>
+                            <hr></hr>
                             <br />
                             <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
                             <form onSubmit={handleSubmit}>
@@ -161,7 +165,7 @@ const RoutePage = () => {
                     </div>
                     <div className="route-sagtaraf">
 
-                                        {whichMap()}
+                        {whichMap()}
                         {/* <MapLoaderBlackSea className='route-sagtaraf-map'
                             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
                             loadingElement={<div style={{ height: "1000px" }} />}
@@ -172,14 +176,48 @@ const RoutePage = () => {
                     </div>
 
                 </div>
+                <br/><br/><br/> <br/><br/>
+                <section id='home' className='home'>
+  <div className="secContent grid">
+                {filteredData.map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue }) => (
+                    <div key={id} data-aos="fade-up" className="singleDestination">
 
-                
-                <Footer />
+                        <div className="imageDiv">
 
-            </>
+                            <img src={imgSrc} ></img>
+                        </div>
+
+                        <div className="cardInfo">
+                            <h4 className="destTitle">{destTitle}</h4>
+                            <span className="continent flex">
+
+                                <span className="name">{location}</span>
+                                
+                         
+                            </span>
+
+                            <div className="fees flex">
+                                <div className="grade">
+                                    <span>{rating}</span>
+                                </div>
+
+
+                               
+
+                            </div>
+                        </div>
+                        </div>
+      ))}
+
+</div>
+</section>
+<br/><br/><br/><br/><br/>
+                        <Footer />
+
+                    </>
 
         </>
-    )
+            )
 }
 
-export default RoutePage
+            export default RoutePage

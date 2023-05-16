@@ -119,7 +119,7 @@ export const Veri = [
     fees: 800,
     btnValue: 4,
     type: "ADVENTURE",
-    tags: ["architectural", "sea" , "food"],
+    tags: ["architectural"],
     description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region!'
   },
 
