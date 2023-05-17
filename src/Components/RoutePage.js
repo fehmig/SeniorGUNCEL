@@ -7,6 +7,7 @@ import { FaRoute, FaRegCommentDots } from "react-icons/fa"
 import Map2 from '../Map/Map2'
 import Map3 from '../Map/Map3'
 import Map4 from '../Map/map4'
+import Map5 from '../Map/map5'
 import { withScriptjs } from "react-google-maps"
 import axios from 'axios'
 import { useCookies } from 'react-cookie'
@@ -28,6 +29,7 @@ const RoutePage = () => {
     const MapLoaderBlackSea = withScriptjs(Map2);
     const MapLoaderAegean = withScriptjs(Map3);
     const MapLoaderIstanbul = withScriptjs(Map4);
+    const MapLoaderCappadocia = withScriptjs(Map5)
 
     const whichMap = () => {
         if (myVeri.id === 1) {
@@ -42,6 +44,11 @@ const RoutePage = () => {
             />
         } else if (myVeri.id === 4) {
             return <MapLoaderIstanbul className='route-sagtaraf-map'
+                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+                loadingElement={<div style={{ height: "1000px" }} />}
+            />
+        } else if (myVeri.id === 6) {
+            return <MapLoaderCappadocia className='route-sagtaraf-map'
                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
                 loadingElement={<div style={{ height: "1000px" }} />}
             />

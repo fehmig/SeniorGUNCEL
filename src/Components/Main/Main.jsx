@@ -61,6 +61,9 @@ import ayasofya from '../../Assets/ayasofya.jpg'
 import yerebatansarnıcı from '../../Assets/yerebatansarnıcı.jpg'
 import kızkulesi from '../../Assets/kızkulesi.jpg'
 import galata from '../../Assets/galata.jpg'
+import peribacaları from '../../Assets/peribacaları.jpg'
+import yeraltışehri from '../../Assets/yeraltışehri.jpg'
+import balonturu from '../../Assets/balonturu.jpg'
 
 
 import { useCookies } from 'react-cookie'
@@ -169,7 +172,7 @@ export const Veri = [
     btnValue: 6,
     type: "HISTORICAL",
     tags: ["architectural", "historical" , "mysterious"],
-    imgRoute: [bolu, duzce, bartın],
+    imgRoute: [peribacaları, balonturu, yeraltışehri],
     description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks. '
   },
 
