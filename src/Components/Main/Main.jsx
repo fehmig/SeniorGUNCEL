@@ -50,6 +50,19 @@ import banner4 from '../../Assets/banner4.png'
 import banner5 from '../../Assets/banner5.png'
 import banner6 from '../../Assets/banner6.png'
 import BannerSlider from '../../BannerSlider'
+import side from '../../Assets/side.jpeg'
+import egirdir from '../../Assets/egirdir.jpg'
+import aspendos from '../../Assets/aspendos.jpg'
+import adana from '../../Assets/adana.jpg'
+import kızılkule from '../../Assets/kızılkule.jpg'
+import kleopatra from '../../Assets/kleopatra.jpg'
+import mersinaynalıgöl from '../../Assets/mersinaynalıgöl.jpeg'
+import ayasofya from '../../Assets/ayasofya.jpg'
+import yerebatansarnıcı from '../../Assets/yerebatansarnıcı.jpg'
+import kızkulesi from '../../Assets/kızkulesi.jpg'
+import galata from '../../Assets/galata.jpg'
+
+
 import { useCookies } from 'react-cookie'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
@@ -73,7 +86,7 @@ export const Veri = [
     btnValue: 1,
     date: "23.07.2023",
     tags: ["forest", "sea" , "food"],
-    imgRoute: [bolu, duzce, bartın],
+    imgRoute: [bolu, duzce, zonguldak, bartın, sinop, samsun, ordu, trabzon, rize],
     description: "The area is north of Turkey. It takes its name from the Black Sea in the north. The Black Sea climatic conditions are effective in the region. It is rainy every season. The annual temperature difference is small. Summers are cool, winters are warm. The Black Sea is the highest rainfall areas of Turkey. Enjoy the green, enjoy your travel route!"
     
   },
@@ -113,7 +126,7 @@ export const Veri = [
   {
     id: 4,
     imgSrc: img6,
-    destTitle: 'Marmara',
+    destTitle: 'Istanbul',
     date: "05.04.2023",
     location: 'Turkey ',
     grade: 'RATING ',
@@ -122,7 +135,7 @@ export const Veri = [
     btnValue: 4,
     type: "ADVENTURE",
     tags: ["architectural"],
-    imgRoute: [bolu, duzce, bartın],
+    imgRoute: [ayasofya,yerebatansarnıcı,kızkulesi,galata],
     description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region!'
   },
 
@@ -130,7 +143,7 @@ export const Veri = [
   {
     id: 5,
     imgSrc: img5,
-    destTitle: 'Aegean',
+    destTitle: 'Mediterrenian',
     date: "07.08.2023",
     location: 'Turkey',
     grade: 'RATING',
@@ -139,7 +152,7 @@ export const Veri = [
     btnValue: 5,
     type: "BEACH",
     tags: ["beach", "sea" , "food"],
-    imgRoute: [bolu, duzce, bartın],
+    imgRoute: [egirdir, side,aspendos,kızılkule,kleopatra,mersinaynalıgöl,adana ],
     description: 'A land of beautiful vistas over the sea, lovely evening breezes, and majestic sunsets, Western part of the country,including the Aegean Sea coast across from a wide arch of Greek islands and the adjoining inland areas.'
   },
 
