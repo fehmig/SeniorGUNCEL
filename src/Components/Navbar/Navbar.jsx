@@ -89,9 +89,9 @@ const goToForm = () => {
               <li className="navItem">
                 <Link to="/" className="navLink">Home</Link>
               </li> 
-              <li onClick={goToRoutes}  className="navItem">
+              {/* <li onClick={goToRoutes}  className="navItem">
                Routes
-              </li>
+              </li> */}
               {/* <li className="navItem">
                 <a href="/packages" className="navLink">Packages</a>
               </li> */}

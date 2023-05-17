@@ -139,7 +139,7 @@ const Profile = () => {
                 </div>
               </div>
 
-
+              <hr className='hr' />
             </div>
           </div>
 

@@ -75,6 +75,11 @@
   bottom: 5px;
   z-index: -1;
 }
+.oneri{
+  margin-top: 100px;
+  justify-content: center;
+  gap: 1.5rem;
+}
 :root .main .secContent {
   justify-content: center;
   gap: 1.5rem;
