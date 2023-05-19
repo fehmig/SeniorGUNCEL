@@ -94,7 +94,7 @@ export const Veri = [
     date: "23.07.2023",
     tags: ["forest", "sea" , "food"],
     imgRoute: [bolu, duzce, zonguldak, bartın, sinop, samsun, ordu, trabzon, rize],
-    yorumlar: ["yorum1", "Karadeniz deneme yorum"],
+    yorumlar: ["yorum1", "Karadeniz deneme yorum", "Trabzon favori şehrim!"],
     description: "The area is north of Turkey. It takes its name from the Black Sea in the north. The Black Sea climatic conditions are effective in the region. It is rainy every season. The annual temperature difference is small. Summers are cool, winters are warm. The Black Sea is the highest rainfall areas of Turkey. Enjoy the green, enjoy your travel route!"
     
   },
@@ -144,7 +144,7 @@ export const Veri = [
     btnValue: 4,
     type: "ADVENTURE",
     tags: ["architectural"],
-    yorumlar: ["yorum4", "İstanbul deneme yorum"],
+    yorumlar: ["yorum4", "İstanbul deneme yorum", "Meşhur Galata Kulesi önünde fotoğraf çekilmeden olmaz...", "İstanbul'u dinliyorum, gözlerim kapalı:)"],
     imgRoute: [ayasofya,yerebatansarnıcı,kızkulesi,galata],
     description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region!'
   },
@@ -181,7 +181,7 @@ export const Veri = [
     type: "HISTORICAL",
     tags: ["architectural", "historical" , "mysterious"],
     imgRoute: [peribacaları, balonturu, yeraltışehri],
-    yorumlar: ["yorum6" ,  "Kapadokya deneme yorum"],
+    yorumlar: ["yorum6" ,  "Kapadokya deneme yorum" , "Balonlar harika!"],
     description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks. '
   },
 

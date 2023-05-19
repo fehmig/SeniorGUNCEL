@@ -99,7 +99,7 @@ const goToForm = () => {
                 <Link to="/about" className="navLink">About </Link>
               </li>
               <li onClick={goToForm}  className="navItem">
-                Forum
+               <div className="navLink">Forum</div> 
               </li>
              
               <li className="navItem">
