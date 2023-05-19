@@ -208,7 +208,7 @@ const RoutePage = () => {
                 </div>
                 <br /><br />
                 <div className="route-alttaraf">
-                    <h1 style={{ textAlign: 'center' }}>SIMILAR ROUTES</h1>
+                    <h1 style={{ textAlign: 'center' }}>RECOMMENDED ROUTES</h1>
 
                     <section id='main' className='main section container'>
 

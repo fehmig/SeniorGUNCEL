@@ -220,7 +220,7 @@ body {
     /* margin-right: 20px; */
     margin-left: 10px;
     margin-right: 10px;
-    background-color: white;
+    /* background-color: white; */
     overflow: auto;
     
    
@@ -236,7 +236,7 @@ body {
     /* margin-bottom: 0px; */
     margin-left: 10px;
     margin-right: 10px;
-    background-color: white;
+    /* background-color: white; */
 }
 
 .route-yorum-goruntule {
@@ -376,7 +376,7 @@ body {
     float: left;
     margin-bottom: 5px;
     height: 100%;
-    background-color: white;
+    /* background-color: white; */
     margin-bottom: 50px;
 }
 
@@ -386,7 +386,7 @@ body {
     /* margin-left: 10px;
     margin-right: 10px; */
     height: 100%;
-    background-color: white;
+    /* background-color: white; */
     align-items: center;
     text-align: center;
     margin-bottom: 50px;
