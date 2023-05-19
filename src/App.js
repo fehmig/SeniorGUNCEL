@@ -18,6 +18,8 @@ import Register from './Components/register'
 import "react-toastify/dist/ReactToastify.css"
 import Profile from './Profile'
 import ReactModal from 'react-modal'
+import CreateRoute from './CreateRoute'
+import DenemeMap from './Map/denemeMap'
 
 ReactModal.setAppElement('#root');
 
@@ -33,7 +35,8 @@ const App = () => {
         <Route path="/contact" element={<Contact/>} /> 
         <Route path="/login" element={<Login/>} />      
         <Route path="/register" element={<Register/>} />
-        <Route path="/profile" element={<Profile/>} />         
+        <Route path="/profile" element={<Profile/>} />     
+        <Route path="/create" element={<CreateRoute/>} />    
       </Routes>
     </Router>
   )

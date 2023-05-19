@@ -308,7 +308,10 @@ const Main = () => {
   const gotoroutes = () => {
     navigate("/routes");
   }
-
+  
+  const goToCreate = () => {
+    navigate("/create")
+  }
 
   const [isOpen, setIsOpen] = useState(false);
  
@@ -482,6 +485,13 @@ const whichModalMap = () => {
 
             <h3> Min Rating: {rating}</h3>
             <input type="range" onInput={handleInputRating} min="0" max="5" />
+          </div>
+
+          <div className='createButton'>
+            <Link to="/create"><button className='btn-create'>
+              + SEE YOUR OWN ROUTE 
+              </button> 
+              </Link>
           </div>
           <div className='input-div'>
             <br /><br /><br />
@@ -657,7 +667,7 @@ const whichModalMap = () => {
 
                         <button
 
-onClick={() => { setSelectedCardId(id); openModal(); }}
+                          onClick={() => { setSelectedCardId(id); openModal(); }}
                           className='btn-card-map'
                         >
                           Map

@@ -255,6 +255,19 @@
   
 }
 
+.btn-create{
+  width: 250px;
+  height: 50px;
+  background: var(--gradientColor);
+  border: none;
+  outline: none;
+  border-radius: 1em;
+  cursor: pointer;
+  color: white;
+  float: right;
+  
+}
+
 .province-card img{width: 100%; height: 100%; object-fit: cover;}
 
 .input-search{
