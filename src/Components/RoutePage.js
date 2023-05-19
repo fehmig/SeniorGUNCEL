@@ -14,6 +14,8 @@ import { useCookies } from 'react-cookie'
 import { useNavigate, Link, useParams } from 'react-router-dom'
 import { ToastContainer, toast } from "react-toastify";
 import { Veri } from "./Main/Main";
+import {HiOutlineLocationMarker} from "react-icons/hi"
+import {BsFillStarFill} from "react-icons/bs"
 
 
 const RoutePage = () => {
@@ -208,41 +210,57 @@ const RoutePage = () => {
                 <div className="route-alttaraf">
                     <h1 style={{ textAlign: 'center' }}>SIMILAR ROUTES</h1>
 
-                    <section id='home' className='home'>
+                    <section id='main' className='main section container'>
 
                         <div className="secContent grid">
 
-                            {filteredData.map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue }) => (
+                            {filteredData.map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue,tags }) => (
                                 <div key={id} data-aos="fade-up" className="singleDestination">
-
                                     <div className="imageDiv">
 
-                                    <Link to={`/routes/${id}`} style={{color:'white'}}><img src={imgSrc} ></img></Link>  
+                                    <Link to={`/routes/${id}`} style={{color:'white'}}> <img src={imgSrc} ></img></Link>   
                                     </div>
 
                                     <div className="cardInfo">
                                         <h4 className="destTitle">{destTitle}</h4>
                                         <span className="continent flex">
 
-                                            <span className="name">{location}</span>
-
-
+                                            <span className="name"><HiOutlineLocationMarker className="icon" />{location}</span>
+                                            <span className='date'>{date}</span>
+                                            <small><span className='traveltype'>{type}</span></small>
                                         </span>
 
                                         <div className="fees flex">
                                             <div className="grade">
-                                                <span>{rating}</span>
+                                                <span><BsFillStarFill style={{ color: " hsl(199, 100%, 33%)", fontSize: "1.5rem" }} /> <b style={{ color: " hsl(199, 100%, 33%)", fontSize: "1.2rem" }}> {rating}</b></span>
                                             </div>
-                                            
+
+
+                                            <div className="price">
+                                                <h5>${fees}</h5>
+                                            </div>
 
                                         </div>
-                       
+                                        {/* hem üstüne hem altına çiziyor */}
+                                        <div className="fees flex">
+
+                                            <div className="tags">
+                                                {tags.map((tag, index) => (
+                                                    <span key={index} className="tag">#{tag} </span>
+                                                ))}
+                                            </div>
+                                        </div>
+
+
+                                        <div className="desc">
+                                            {description}
+                                        </div>
 
                                     </div>
-                                </div>
+                                    </div>
                             ))}
 
-                        </div>
+                                </div>
                     </section>
                     <br /><br /><br /><br /><br />
                 </div>

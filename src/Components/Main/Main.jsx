@@ -107,7 +107,7 @@ export const Veri = [
     rating: 2.2,
     fees: 600,
     type: "ADVENTURE",
-    tags: ["traditional", "historical" , "food"],
+    tags: ["traditional", "historical" ],
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum2",  "Doğu Anadolu deneme yorum"],
     description: 'Eastern Anatolia is a region in Turkey.It occupies the mountainous east of the country and has the harshest winters.Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east'
@@ -157,7 +157,7 @@ export const Veri = [
     fees: 1100,
     btnValue: 5,
     type: "BEACH",
-    tags: ["beach", "sea" , "food"],
+    tags: ["beach", "sea" ],
     yorumlar: ["yorum5" ,  "Akdeniz deneme yorum"],
     imgRoute: [egirdir, side,aspendos,kızılkule,kleopatra,mersinaynalıgöl,adana ],
     description: 'A land of beautiful vistas over the sea, lovely evening breezes, and majestic sunsets, Western part of the country,including the Aegean Sea coast across from a wide arch of Greek islands and the adjoining inland areas.'
