@@ -372,15 +372,16 @@ body {
 }
 
 .route-sagtaraf {
-    width: 70%;
+    width: 60%;
     float: left;
     margin-bottom: 5px;
     height: 100%;
     background-color: white;
+    margin-bottom: 50px;
 }
 
 .route-soltaraf {
-    width: 30%;
+    width: 40%;
     float: left;
     /* margin-left: 10px;
     margin-right: 10px; */
@@ -388,8 +389,15 @@ body {
     background-color: white;
     align-items: center;
     text-align: center;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     
+}
+.route-alttaraf{
+    width: 100%;
+    float: left;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .about-page {

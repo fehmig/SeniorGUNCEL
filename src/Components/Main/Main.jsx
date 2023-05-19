@@ -90,6 +90,7 @@ export const Veri = [
     date: "23.07.2023",
     tags: ["forest", "sea" , "food"],
     imgRoute: [bolu, duzce, zonguldak, bartın, sinop, samsun, ordu, trabzon, rize],
+    yorumlar: ["yorum1", "Karadeniz deneme yorum"],
     description: "The area is north of Turkey. It takes its name from the Black Sea in the north. The Black Sea climatic conditions are effective in the region. It is rainy every season. The annual temperature difference is small. Summers are cool, winters are warm. The Black Sea is the highest rainfall areas of Turkey. Enjoy the green, enjoy your travel route!"
     
   },
@@ -108,6 +109,7 @@ export const Veri = [
     type: "ADVENTURE",
     tags: ["traditional", "historical" , "food"],
     imgRoute: [bolu, duzce, bartın],
+    yorumlar: ["yorum2",  "Doğu Anadolu deneme yorum"],
     description: 'Eastern Anatolia is a region in Turkey.It occupies the mountainous east of the country and has the harshest winters.Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east'
   },
 
@@ -138,6 +140,7 @@ export const Veri = [
     btnValue: 4,
     type: "ADVENTURE",
     tags: ["architectural"],
+    yorumlar: ["yorum4", "İstanbul deneme yorum"],
     imgRoute: [ayasofya,yerebatansarnıcı,kızkulesi,galata],
     description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region!'
   },
@@ -155,6 +158,7 @@ export const Veri = [
     btnValue: 5,
     type: "BEACH",
     tags: ["beach", "sea" , "food"],
+    yorumlar: ["yorum5" ,  "Akdeniz deneme yorum"],
     imgRoute: [egirdir, side,aspendos,kızılkule,kleopatra,mersinaynalıgöl,adana ],
     description: 'A land of beautiful vistas over the sea, lovely evening breezes, and majestic sunsets, Western part of the country,including the Aegean Sea coast across from a wide arch of Greek islands and the adjoining inland areas.'
   },
@@ -173,6 +177,7 @@ export const Veri = [
     type: "HISTORICAL",
     tags: ["architectural", "historical" , "mysterious"],
     imgRoute: [peribacaları, balonturu, yeraltışehri],
+    yorumlar: ["yorum6" ,  "Kapadokya deneme yorum"],
     description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks. '
   },
 
@@ -190,6 +195,7 @@ export const Veri = [
     type: "CAMPING",
     tags: ["architectural", "historical" , "food"],
     imgRoute: [bolu, duzce, bartın],
+    yorumlar: ["yorum3",  "Anadolu deneme yorum"],
     description: ' Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.'
   },
 
@@ -207,6 +213,7 @@ export const Veri = [
     type: "FOOD",
     tags: ["forest", "sea" , "food"],
     imgRoute: [bolu, duzce, bartın],
+    yorumlar: ["yorum8" ,  "Günedoğu Anadolu deneme yorum"],
     description: 'Southeastern Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.'
   },
 
@@ -224,6 +231,7 @@ export const Veri = [
     type: "HISTORICAL",
     tags: ["history", "mysterious" , "architectural"],
     imgRoute: [bolu, duzce, bartın],
+    yorumlar: ["yorum9",  "GöbekliTepe deneme yorum"],
     description: 'Famed as the oldest temple in the world, Göbekli Tepe has changed the way that archaeologists look at history. Its existence pre-dates farming and settlements, and so it proves that man had religion before he even lived in a village or a town. Dated to 9000 BCE and listed by UNESCO'
 
   },

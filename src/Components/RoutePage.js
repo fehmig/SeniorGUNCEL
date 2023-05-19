@@ -22,9 +22,12 @@ const RoutePage = () => {
     const { id } = useParams();
     const myVeri = Veri.find(v => v.id === parseInt(id));
 
+
     const filteredData = Veri.filter((veri) => {
         return veri.tags.some((tag) => myVeri.tags.includes(tag)) && veri.id !== myVeri.id;
     });
+
+
 
     const MapLoaderBlackSea = withScriptjs(Map2);
     const MapLoaderAegean = withScriptjs(Map3);
@@ -58,9 +61,20 @@ const RoutePage = () => {
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState('');
     const addComment = (comment) => {
+        const updatedVeri = Veri.map((veri) => {
+            if (veri.id === parseInt(id)) {
+                return {
+                    ...veri,
+                    yorumlar: [...veri.yorumlar, comment]
+                };
+            }
+            return veri;
+        });
         setComments([...comments, comment]);
-        setNewComment(''); // yeni yorumu temizle
+        setNewComment('');
+
     };
+
 
     const [profilename, setProfilename] = useState()
     const navigate = useNavigate()
@@ -109,37 +123,32 @@ const RoutePage = () => {
                         <br></br>
                         <div className="route-durum">
                             <hr></hr>
-                            
+
                             <h1><FaRoute />  {myVeri?.destTitle}</h1>
                             {myVeri.imgRoute.map((src, index) => (
-          <img style={{width:'500px' , height:'200px'}} key={index} src={src} alt={`Görsel ${index + 1}`} />
-        ))}
+                                <img style={{ width: '400px', height: '200px' }} key={index} src={src} alt={`Görsel ${index + 1}`} />
+                            ))}
                         </div>
-                       
+
 
                         <div className="route-yorum-goruntule"> <h3><u></u></h3>
 
-                        <br/> <br/>
+                            <br /> <br />
                             <hr></hr>
-                            
+
                             <br />
                             <div className="yorumlar">
-
-
                                 <div>
                                     <ul>
-                                        <li><b>Kullanıcı Adı: </b>Deneme Yorum</li>
-                                        <li><b>Kullanıcı Adı: </b>Deneme Yorum</li>
-                                        <li><b>Kullanıcı Adı: </b>Deneme Yorum</li>
-                                        {comments.map((comment, index) => (
-                                            <li key={index}><b>Kullanıcı Adı: </b>{comment}
-
+                                        {myVeri.yorumlar.map((comment, index) => (
+                                            <li key={index}>
+                                                <b>{profilename}: </b>
+                                                {comment}
                                             </li>
-
                                         ))}
-
                                     </ul>
                                 </div>
+
                             </div>
 
 
@@ -177,7 +186,7 @@ const RoutePage = () => {
 
                         </div>
 
-                        <br /><br /><br /><br /><br />
+                        <br /><br />
 
 
 
@@ -195,52 +204,54 @@ const RoutePage = () => {
                     </div>
 
                 </div>
-                <br/><br/><br/> <br/><br/>
-                <h1>SIMILAR ROUTES</h1>
-              
-                <section id='home' className='home'>
-               
-  <div className="secContent grid">
-    
-                {filteredData.map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue }) => (
-                    <div key={id} data-aos="fade-up" className="singleDestination">
+                <br /><br />
+                <div className="route-alttaraf">
+                    <h1 style={{ textAlign: 'center' }}>SIMILAR ROUTES</h1>
 
-                        <div className="imageDiv">
+                    <section id='home' className='home'>
 
-                            <img src={imgSrc} ></img>
-                        </div>
+                        <div className="secContent grid">
 
-                        <div className="cardInfo">
-                            <h4 className="destTitle">{destTitle}</h4>
-                            <span className="continent flex">
+                            {filteredData.map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue }) => (
+                                <div key={id} data-aos="fade-up" className="singleDestination">
 
-                                <span className="name">{location}</span>
-                                
-                         
-                            </span>
+                                    <div className="imageDiv">
 
-                            <div className="fees flex">
-                                <div className="grade">
-                                    <span>{rating}</span>
+                                    <Link to={`/routes/${id}`} style={{color:'white'}}><img src={imgSrc} ></img></Link>  
+                                    </div>
+
+                                    <div className="cardInfo">
+                                        <h4 className="destTitle">{destTitle}</h4>
+                                        <span className="continent flex">
+
+                                            <span className="name">{location}</span>
+
+
+                                        </span>
+
+                                        <div className="fees flex">
+                                            <div className="grade">
+                                                <span>{rating}</span>
+                                            </div>
+                                            
+
+                                        </div>
+                       
+
+                                    </div>
                                 </div>
+                            ))}
 
-
-                               
-
-                            </div>
                         </div>
-                        </div>
-      ))}
+                    </section>
+                    <br /><br /><br /><br /><br />
+                </div>
+                <Footer />
 
-</div>
-</section>
-<br/><br/><br/><br/><br/>
-                        <Footer />
-
-                    </>
+            </>
 
         </>
-            )
+    )
 }
 
-            export default RoutePage
+export default RoutePage
