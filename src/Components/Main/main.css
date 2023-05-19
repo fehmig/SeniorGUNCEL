@@ -19,10 +19,10 @@
 
 :root .haritalani{
     width: 805px;
-    height: 505px;
+    height: auto;
     border: 3px solid hsl(199, 100%, 33%);
     margin: auto;
-    margin-top: 200px;
+
     text-align: center;
 }
  .route-card{

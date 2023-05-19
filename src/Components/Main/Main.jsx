@@ -64,13 +64,17 @@ import galata from '../../Assets/galata.jpg'
 import peribacaları from '../../Assets/peribacaları.jpg'
 import yeraltışehri from '../../Assets/yeraltışehri.jpg'
 import balonturu from '../../Assets/balonturu.jpg'
-
-
+import Map4 from '../../Map/MapIstanbulDetail'
+import Map5 from '../../Map/map5'
 import { useCookies } from 'react-cookie'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from "react-toastify";
 import {Link, useParams} from "react-router-dom"
+import MapIstanbulModal from "../../Map/MapIstanbulModal"
+import MapKapModal from "../../Map/MapKapModal"
+import MapMeditModal from "../../Map/MapMeditModal"
+
 const images = [
   banner4, banner5, banner6
 ];
@@ -246,6 +250,7 @@ const Main = () => {
   const {id} = useParams();
   const myVeri = Veri.find(v => v.id === parseInt(id));
   const navigate = useNavigate()
+  const [selectedCardId, setSelectedCardId] = useState(null);
 
   const [cookies, setCookies, removeCookie] = useCookies()
 
@@ -336,10 +341,40 @@ const Main = () => {
   }
 
 
+  const openModal = () => {
+    setIsOpen(true);
+    console.log(selectedCardId)
+  };
 
 
-
-
+const selectedCard = Veri.find((card) => card.id === selectedCardId);
+const MapLoaderBlackSea = withScriptjs(Map);
+const MapLoaderAegean = withScriptjs(MapMeditModal);
+const MapLoaderIstanbul = withScriptjs(MapIstanbulModal);
+const MapLoaderCappadocia = withScriptjs(MapKapModal)
+const whichModalMap = () => {
+  if (selectedCardId===1) {
+      return <MapLoaderBlackSea className='haritalani'
+          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+          loadingElement={<div style={{ height: "500px" }} />}
+      />
+  } else if (selectedCardId===5) {
+      return <MapLoaderAegean className='haritalani'
+          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+          loadingElement={<div style={{ height: "500px" }} />}
+      />
+  } else if (selectedCardId === 4) {
+      return <MapLoaderIstanbul className='haritalani'
+          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+          loadingElement={<div style={{ height: "500px" }} />}
+      />
+  } else if (selectedCardId === 6) {
+      return <MapLoaderCappadocia className='haritalani'
+          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+          loadingElement={<div style={{ height: "500px" }} />}
+      />
+  }else return <div>ROTA MEVCUT DEĞİL</div>
+}
 
 
   return (
@@ -393,61 +428,32 @@ const Main = () => {
         onRequestClose={() => setIsOpen(false)}
 
       >
+
+      {selectedCard && (
+        <>
         <div className="route-card">
-          <h3 className='title'>Black Sea Routes</h3>
+          <h3 className='title'>{selectedCard.destTitle}</h3>
 
           <div className='route-card-info'>
-            <h4>Bolu<GrLocation /></h4>
-            <div className='province-card'>
-              <img src={bolu} />
-            </div>
-            <h4>Düzce<GrLocation /></h4>
-            <div className='province-card'>
-              <img src={duzce} />
-            </div>
-            <h4>Zonguldak<GrLocation /></h4>
-            <div className='province-card'>
-              <img src={zonguldak} />
-            </div>
-            <h4>Bartın <GrLocation /></h4>
-            <div className='province-card'>
-              <img src={bartın} />
-            </div>
-            <h4>Sinop<GrLocation /></h4>
-            <div className='province-card'>
-              <img src={sinop} />
-            </div>
-            <h4>Samsun<GrLocation /></h4>
-            <div className='province-card'>
-              <img src={samsun} />
-            </div>
-            <h4>Ordu<GrLocation /></h4>
-            <div className='province-card'>
-              <img src={ordu} />
-            </div>
-            <h4>Trabzon<GrLocation /></h4>
-            <div className='province-card'>
-              <img src={trabzon} />
-            </div>
-            <h4>Rize<GrLocation /></h4>
-            <div className='province-card'>
-              <img src={rize} />
-            </div>
+          {selectedCard.imgRoute.map((src, index) => (
+                                <img style={{ width: '300px', height: '150px' }} key={index} src={src} alt={`Görsel ${index + 1}`} />
+                            ))}
+           
           </div>
         </div>
-        <MapLoader className='haritalani'
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
-          loadingElement={<div style={{ height: "500px" }} />}
-        />
 
-        {/* <button 
-      className='buton-harita-kapama'
-      onClick={() => setIsOpen(false)}
-      >
+        <div className='haritalani'>
+                {whichModalMap()}
+        </div>
+              
+        </>
+         )}
+
+
+
 
         
-       < AiFillCloseCircle className="icon"/>
-      </button> */}
+
       </ReactModal>
 
 
@@ -651,7 +657,7 @@ const Main = () => {
 
                         <button
 
-                          onClick={() => setIsOpen(true)}
+onClick={() => { setSelectedCardId(id); openModal(); }}
                           className='btn-card-map'
                         >
                           Map

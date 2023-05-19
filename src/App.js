@@ -17,7 +17,9 @@ import Login from './Components/login'
 import Register from './Components/register'
 import "react-toastify/dist/ReactToastify.css"
 import Profile from './Profile'
+import ReactModal from 'react-modal'
 
+ReactModal.setAppElement('#root');
 
 const App = () => {
   return (

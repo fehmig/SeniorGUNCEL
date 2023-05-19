@@ -6,7 +6,7 @@ import { GrMap } from "react-icons/gr"
 import { FaRoute, FaRegCommentDots } from "react-icons/fa"
 import Map2 from '../Map/Map2'
 import Map3 from '../Map/Map3'
-import Map4 from '../Map/map4'
+import Map4 from '../Map/MapIstanbulDetail'
 import Map5 from '../Map/map5'
 import { withScriptjs } from "react-google-maps"
 import axios from 'axios'
