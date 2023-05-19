@@ -60,21 +60,28 @@ const DenemeMap = () => {
 
   return (
     <div className="createroute">
+        <div className="create-search">
       <div >
-        <label >Başlangıç:</label>
-        <input type="text" value={origin} onChange={(e) => setOrigin(e.target.value)} />
+        <label > <h3>Başlangıç:</h3></label>
+        <br/>
+        <input  className="input-create" type="text" value={origin} onChange={(e) => setOrigin(e.target.value)} />
       </div>
+      <br/>
       <div>
-        <label>Hedef:</label>
-        <input type="text" value={destination} onChange={(e) => setDestination(e.target.value)} />
+        <label><h3>Hedef:</h3></label>
+        <br/>
+        <input className="input-create" type="text" value={destination} onChange={(e) => setDestination(e.target.value)} />
       </div>
+      <br/>
       <div>
-        <button onClick={addWaypoint}>Yol Noktası Ekle</button>
+        <button className="btn-create" onClick={addWaypoint}>Yol Noktası Ekle</button>
+      </div>
+      <br/>
       </div>
       <MapComponent
         googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw&libraries=geometry,drawing,places`}
         loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `700px` }} />}
+        containerElement={<div style={{ height: `500px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       />
     </div>

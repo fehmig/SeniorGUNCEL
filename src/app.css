@@ -958,7 +958,32 @@ body {
 .createroute{
     align-items: center;
     justify-content: center;
-   width: 100%;
-   
     margin-bottom: 50px;
 }
+.input-search{
+    border: none;
+    background-color: rgb(229, 226, 226);
+    height: 4em;
+    width:50%;
+    border-radius: 1em;
+    text-align: center;
+    padding: 2em;
+    float: right;
+  }
+
+  .input-create{
+    border: none;
+    background-color: rgb(229, 226, 226);
+    height: 4em;
+    width:50%;
+    border-radius: 1em;
+    text-align: center;
+    padding: 2em;
+    
+  }
+  .create-search{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
