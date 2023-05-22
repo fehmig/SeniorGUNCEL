@@ -7,7 +7,7 @@ function CreateRoute() {
   return (
     <>
     <Navbar/>
-    <br/><br/><br/>
+    <br/><br/>
 
     <DenemeMap/>
    

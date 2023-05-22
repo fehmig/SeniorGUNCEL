@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar/Navbar";
-import Footer from "./Footer/Footer";
 import video from './video.mp4'
 import 'aos/dist/aos.css'
-import Register from "./register";
 import axios from 'axios'
 import {useNavigate} from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -107,25 +104,9 @@ const Login = () => {
                         </div>
                     </form>
                     <ToastContainer/>
-            
                 </div>
-
-                    
-
-
             </div>
-
-
-           
-
-
-
-
-
-
         </>
-
-
     )
 }
 

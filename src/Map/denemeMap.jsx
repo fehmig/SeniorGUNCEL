@@ -33,7 +33,7 @@ const DenemeMap = () => {
         );
       }
     };
-  
+
     if (origin.trim() !== "" && destination.trim() !== "") {
       calculateDirections();
     }
@@ -60,28 +60,23 @@ const DenemeMap = () => {
 
   return (
     <div className="createroute">
-        <div className="create-search">
-      <div >
-        <label > <h3>Başlangıç:</h3></label>
-        <br/>
-        <input  className="input-create" type="text" value={origin} onChange={(e) => setOrigin(e.target.value)} />
-      </div>
-      <br/>
-      <div>
-        <label><h3>Hedef:</h3></label>
-        <br/>
-        <input className="input-create" type="text" value={destination} onChange={(e) => setDestination(e.target.value)} />
-      </div>
-      <br/>
-      <div>
-        <button className="btn-create" onClick={addWaypoint}>Yol Noktası Ekle</button>
-      </div>
-      <br/>
+      <div className="create-search">
+        <div className="create-start" >
+          <label > <h3>Origin:</h3></label>
+          <input className="input-create" type="text" value={origin} onChange={(e) => setOrigin(e.target.value)} />
+        </div>
+        <div className="create-finish">
+          <label><h3>Destination:</h3></label>
+          <input className="input-create" type="text" value={destination} onChange={(e) => setDestination(e.target.value)} />
+        </div>
+        <div>
+          <button className="btn-create" onClick={addWaypoint}>Add Waypoint</button>
+        </div>
       </div>
       <MapComponent
         googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw&libraries=geometry,drawing,places`}
         loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `500px` }} />}
+        containerElement={<div style={{ height: `750px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       />
     </div>

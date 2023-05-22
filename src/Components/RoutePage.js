@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar/Navbar";
-import Home from "./Home/Home";
 import Footer from "./Footer/Footer";
-import { GrMap } from "react-icons/gr"
 import { FaRoute, FaRegCommentDots } from "react-icons/fa"
 import Map2 from '../Map/Map2'
 import Map3 from '../Map/Map3'
@@ -12,10 +10,9 @@ import { withScriptjs } from "react-google-maps"
 import axios from 'axios'
 import { useCookies } from 'react-cookie'
 import { useNavigate, Link, useParams } from 'react-router-dom'
-import { ToastContainer, toast } from "react-toastify";
 import { Veri } from "./Main/Main";
-import {HiOutlineLocationMarker} from "react-icons/hi"
-import {BsFillStarFill} from "react-icons/bs"
+import { HiOutlineLocationMarker } from "react-icons/hi"
+import { BsFillStarFill } from "react-icons/bs"
 
 
 const RoutePage = () => {
@@ -214,11 +211,11 @@ const RoutePage = () => {
 
                         <div className="secContent grid">
 
-                            {filteredData.map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue,tags }) => (
+                            {filteredData.map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue, tags }) => (
                                 <div key={id} data-aos="fade-up" className="singleDestination">
                                     <div className="imageDiv">
 
-                                    <Link to={`/routes/${id}`} style={{color:'white'}}> <img src={imgSrc} ></img></Link>   
+                                        <Link to={`/routes/${id}`} style={{ color: 'white' }}> <img src={imgSrc} ></img></Link>
                                     </div>
 
                                     <div className="cardInfo">
@@ -257,10 +254,10 @@ const RoutePage = () => {
                                         </div>
 
                                     </div>
-                                    </div>
+                                </div>
                             ))}
 
-                                </div>
+                        </div>
                     </section>
                     <br /><br /><br /><br /><br />
                 </div>

@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar/Navbar";
-import Home from "./Home/Home";
 import Footer from "./Footer/Footer";
 import BannerSlider from "../BannerSlider";
-import { FiSend } from 'react-icons/fi'
-import {MdOutlineTravelExplore} from 'react-icons/md'
-import contactimage from '../Assets/contact.png'
+import { MdOutlineTravelExplore } from 'react-icons/md'
 import banner1 from '../Assets/banner1.png'
 import banner2 from '../Assets/banner2.png'
 import banner3 from '../Assets/banner3.png'
@@ -13,17 +10,14 @@ const Contact = () => {
 
 
     const images = [
-        banner1,banner2,banner3
-      ];
-
-
+        banner1, banner2, banner3
+    ];
     return (
 
 
         <>
 
             <Navbar />
-            <br /> <br /> <br />
             <div className="contact-page">
                 <div className="contact-sol">
                     <div className="contact">
@@ -85,7 +79,7 @@ const Contact = () => {
 
                         </div>
                         <div >
-                        <h1><MdOutlineTravelExplore className='icon' /><b>Turmep.</b> </h1><h3> ©2023</h3> 
+                            <h1><MdOutlineTravelExplore className='icon' /><b>Turmep.</b> </h1><h3> ©2023</h3>
                         </div>
                     </div>
                 </div>
