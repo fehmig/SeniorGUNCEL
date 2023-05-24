@@ -49,6 +49,9 @@ import banner from './banner.png'
 import banner4 from '../../Assets/banner4.png'
 import banner5 from '../../Assets/banner5.png'
 import banner6 from '../../Assets/banner6.png'
+import anasayfa3 from '../../Assets/anasayfa3.png'
+import anasayfa2 from '../../Assets/anasayfa2.png'
+import anasayfa4 from '../../Assets/anasayfa4.png'
 import BannerSlider from '../../BannerSlider'
 import side from '../../Assets/side.jpeg'
 import egirdir from '../../Assets/egirdir.jpg'
@@ -76,7 +79,7 @@ import MapKapModal from "../../Map/MapKapModal"
 import MapMeditModal from "../../Map/MapMeditModal"
 
 const images = [
-  banner4, banner5, banner6
+   anasayfa2, anasayfa4, anasayfa3,
 ];
 
 
