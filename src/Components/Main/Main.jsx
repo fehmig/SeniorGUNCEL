@@ -405,7 +405,7 @@ const whichModalMap = () => {
           {/* FILTER KISMI */}
           <div data-aos="fade-down" className="pr">
             {/* <img src={banner} className='banner'></img> */}
-            <BannerSlider images={images} duration={2000} />
+            <BannerSlider images={images} duration={2500} />
 
 
 
