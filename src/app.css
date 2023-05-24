@@ -884,12 +884,12 @@ body {
 
 }
 
-.createroute {
+/* .createroute {
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
     background-color: hsl(0, 0%, 93%);
-}
+} */
 
 .input-search {
     border: none;
@@ -906,7 +906,7 @@ body {
     border: none;
     background-color: rgb(229, 226, 226);
     height: 4em;
-    width: 500px;
+    width: 90%;
     border-radius: 1em;
     text-align: center;
     padding: 2em;
@@ -943,7 +943,7 @@ body {
 }
 
 .btn-create {
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: hsl(0, 0%, 93%);
 
 }

@@ -92,17 +92,17 @@ const Footer = () => {
 
                <li className="footerList flex">
                   <FiChevronRight className="icon"/>
-                  Booking
+                  Tatil Sepeti
                </li>
 
                <li className="footerList flex">
                   <FiChevronRight className="icon"/>
-                  RentalCar
+                  En Uygun
                </li>
 
                <li className="footerList flex">
                   <FiChevronRight className="icon"/>
-                  HostelWorld
+                  Ets
                </li>
 
                <li className="footerList flex">
@@ -112,7 +112,7 @@ const Footer = () => {
 
                <li className="footerList flex">
                   <FiChevronRight className="icon"/>
-                  TripAdvisor
+                  Obilet
                </li>
            </div>
 
@@ -124,27 +124,27 @@ const Footer = () => {
 
                <li className="footerList flex">
                   <FiChevronRight className="icon"/>
-                  London
+                  İstanbul
                </li>
 
                <li className="footerList flex">
                   <FiChevronRight className="icon"/>
-                  California
+                  Ankara
                </li>
 
                <li className="footerList flex">
                   <FiChevronRight className="icon"/>
-                  Indonesia
+                  İzmir
                </li>
 
                <li className="footerList flex">
                   <FiChevronRight className="icon"/>
-                  Europe
+                  Bursa
                </li>
 
                <li className="footerList flex">
                   <FiChevronRight className="icon"/>
-                  Oceania
+                  Adana
                </li>
            </div>
          </div>
