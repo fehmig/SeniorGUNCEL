@@ -362,14 +362,14 @@ body {
     background-color: white;
 }
 .route-sagtaraf {
-    width: 60%;
+    width: 65%;
     float: left;
     margin-bottom: 5px;
     height: 100%;
     margin-bottom: 50px;
 }
 .route-soltaraf {
-    width: 40%;
+    width: 35%;
     float: left;
     height: 100%;
     align-items: center;
@@ -623,7 +623,10 @@ body {
     margin: 0;
     float: left;
     clear: both;
-    padding: 100px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 200px;
+    padding-right: 200px;
     text-align: center;
     flex-direction: column;
     background-color: hsl(0, 0%, 93%);
@@ -934,7 +937,7 @@ body {
     flex-direction: column;
     margin-right: 20px;
     margin-bottom: 20px;
-    margin-top: 15px;
+    margin-top: 3px;
     background-color: hsl(0, 0%, 93%);
 
 }

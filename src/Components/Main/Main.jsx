@@ -489,7 +489,7 @@ const whichModalMap = () => {
 
           <div className='createButton'>
             <Link to="/create"><button className='btn-create'>
-              + SEE YOUR OWN ROUTE 
+              + Create Yor Own Route 
               </button> 
               </Link>
           </div>

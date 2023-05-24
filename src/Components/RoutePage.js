@@ -117,7 +117,7 @@ const RoutePage = () => {
                 <br /> <br />
                 <div className="routepage">
                     {/* <i><h1>ROTA DETAYLARI BURADA YER ALACAK </h1>  </i> */}
-                    <br />
+                    {/* <br /> */}
                     <div className="route-soltaraf">
                         <br></br>
                         <div className="route-durum">
@@ -132,7 +132,8 @@ const RoutePage = () => {
 
                         <div className="route-yorum-goruntule"> <h3><u></u></h3>
 
-                            <br /> <br />
+                            <br /> 
+                            {/* <br /> */}
                             <hr></hr>
 
                             <br />
@@ -185,7 +186,8 @@ const RoutePage = () => {
 
                         </div>
 
-                        <br /><br />
+                        <br />
+                        {/* <br /> */}
 
 
 

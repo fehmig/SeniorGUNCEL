@@ -60,6 +60,13 @@ const DenemeMap = () => {
 
   return (
     <div className="createroute">
+      <br></br>
+      <MapComponent
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw&libraries=geometry,drawing,places`}
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `750px` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+      />
       <div className="create-search">
         <div className="create-start" >
           <label > <h3>Origin:</h3></label>
@@ -73,12 +80,6 @@ const DenemeMap = () => {
           <button className="btn-create" onClick={addWaypoint}>Add Waypoint</button>
         </div>
       </div>
-      <MapComponent
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw&libraries=geometry,drawing,places`}
-        loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `750px` }} />}
-        mapElement={<div style={{ height: `100%` }} />}
-      />
     </div>
   );
 };
