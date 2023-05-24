@@ -6,11 +6,15 @@ import { MdOutlineTravelExplore } from 'react-icons/md'
 import banner1 from '../Assets/banner1.png'
 import banner2 from '../Assets/banner2.png'
 import banner3 from '../Assets/banner3.png'
+import anasayfa3 from '../Assets/anasayfa3.png'
+import anasayfa2 from '../Assets/anasayfa2.png'
+import anasayfa4 from '../Assets/anasayfa4.png'
 const Contact = () => {
 
 
     const images = [
-        banner1, banner2, banner3
+        anasayfa2, anasayfa4, anasayfa3,
+
     ];
     return (
 
