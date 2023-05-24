@@ -79,7 +79,7 @@ const Contact = () => {
                         <br /> <br />
                         <div className="contact-image">
                             {/* <img src={contactimage} style={{ width: "100%", height: "400px" }}></img> */}
-                            <BannerSlider images={images} duration={2000} />
+                            <BannerSlider images={images} duration={2500} />
 
                         </div>
                         <div >
