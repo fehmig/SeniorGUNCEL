@@ -21,7 +21,7 @@ const Footer = () => {
         <video src={video2} loop autoPlay muted type="video/mp4"></video>
       </div>
      <div className="secContent container">
-      <div className="contactDiv flex">
+      {/* <div className="contactDiv flex">
         <div data-aos="fade-up" data-aos-duration="2000" className="text">
           <small>KEEP IN TOUCH</small>
           <h2>Travel with us</h2>
@@ -30,7 +30,7 @@ const Footer = () => {
           <input data-aos="fade-up" data-aos-duration="2000" type="text" placeholder='Enter Email Address' />
           <button data-aos="fade-up" data-aos-duration="3000" className='btn flex'  type='submit'>SEND  <FiSend className="icon"/></button>
         </div>
-      </div>
+      </div> */}
        
        <div className="footerCard flex">
          <div className="footerIntro flex">
