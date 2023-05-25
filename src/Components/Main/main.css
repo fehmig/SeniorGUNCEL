@@ -157,6 +157,19 @@
   border-top: 1.5px solid var(--greyText);
   border-bottom: 1.5px solid var(--greyText);
 }
+:root .main .secContent .singleDestination .cardInfo .fees2 {
+  width: 100%;
+  justify-content: space-between;
+  /* padding: 1rem; */
+  padding-top: 0;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  margin: 1rem 0;
+  /* border-top: 1.5px solid var(--greyText); */
+  border-bottom: 1.5px solid var(--greyText);
+}
 :root .main .secContent .singleDestination .cardInfo .fees .grade {
   color: var(--textColor);
   max-width: 100px;
@@ -181,6 +194,7 @@
   font-size: 13.5px;
   color: var(--textColor);
   font-weight: 500;
+  text-align: justify;
 }
 :root .main .secContent .singleDestination .cardInfo .btn {
   margin-top: 1rem;

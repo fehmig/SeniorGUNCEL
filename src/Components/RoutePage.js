@@ -37,22 +37,22 @@ const RoutePage = () => {
         if (myVeri.id === 1) {
             return <MapLoaderBlackSea className='route-sagtaraf-map'
                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
-                loadingElement={<div style={{ height: "1000px" }} />}
+                loadingElement={<div style={{ height: "100%" }} />}
             />
         } else if (myVeri.id === 5) {
             return <MapLoaderAegean className='route-sagtaraf-map'
                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
-                loadingElement={<div style={{ height: "1000px" }} />}
+                loadingElement={<div style={{ height: "100%" }} />}
             />
         } else if (myVeri.id === 4) {
             return <MapLoaderIstanbul className='route-sagtaraf-map'
                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
-                loadingElement={<div style={{ height: "1000px" }} />}
+                loadingElement={<div style={{ height: "100%" }} />}
             />
         } else if (myVeri.id === 6) {
             return <MapLoaderCappadocia className='route-sagtaraf-map'
                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
-                loadingElement={<div style={{ height: "1000px" }} />}
+                loadingElement={<div style={{ height: "100%" }} />}
             />
         }
     }
@@ -117,7 +117,6 @@ const RoutePage = () => {
                 <br /> <br />
                 <div className="routepage">
                     {/* <i><h1>ROTA DETAYLARI BURADA YER ALACAK </h1>  </i> */}
-                    {/* <br /> */}
                     <div className="route-soltaraf">
                         <br></br>
                         <div className="route-durum">
@@ -125,38 +124,28 @@ const RoutePage = () => {
 
                             <h1><FaRoute />  {myVeri?.destTitle}</h1>
                             {myVeri.imgRoute.map((src, index) => (
-                                <img style={{ width: '400px', height: '200px' }} key={index} src={src} alt={`Görsel ${index + 1}`} />
+                                <img style={{ width: '90%', height: '65%' }} key={index} src={src} alt={`Görsel ${index + 1}`} />
                             ))}
                         </div>
 
 
-                        <div className="route-yorum-goruntule"> <h3><u></u></h3>
-
-                            <br /> 
-                            {/* <br /> */}
+                        <div className="route-yorum-goruntule">
+                            <br />
                             <hr></hr>
-
                             <br />
                             <div className="yorumlar">
-                                <div>
-                                    <ul>
-                                        {myVeri.yorumlar.map((comment, index) => (
-                                            <li key={index}>
-                                                <b>{profilename}: </b>
-                                                {comment}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
+                                <ul>
+                                    {myVeri.yorumlar.map((comment, index) => (
+                                        <li key={index}>
+                                            <b>{profilename}: </b>
+                                            {comment}
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
-
-
                         </div>
-
-
-                        <br />
                         <div className="route-yorum">
+                            <br />
                             <hr></hr>
                             <br />
                             <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
@@ -172,25 +161,15 @@ const RoutePage = () => {
                                 <button
                                     type="submit"
                                     className="btn-yorum"
-
                                 >
                                     YORUM YAP
-
                                 </button>
                                 <br />
                             </form>
-                            <br /> <br />
+                            <br />
                             <hr></hr>
-
-
-
                         </div>
-
                         <br />
-                        {/* <br /> */}
-
-
-
                     </div>
                     <div className="route-sagtaraf">
 
@@ -199,13 +178,8 @@ const RoutePage = () => {
                             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
                             loadingElement={<div style={{ height: "1000px" }} />}
                         /> */}
-
-
-
                     </div>
-
                 </div>
-                <br /><br />
                 <div className="route-alttaraf">
                     <h1 style={{ textAlign: 'center' }}>RECOMMENDED ROUTES</h1>
 
@@ -219,10 +193,38 @@ const RoutePage = () => {
 
                                         <Link to={`/routes/${id}`} style={{ color: 'white' }}> <img src={imgSrc} ></img></Link>
                                     </div>
-
                                     <div className="cardInfo">
                                         <h4 className="destTitle">{destTitle}</h4>
                                         <span className="continent flex">
+
+
+
+                    {/* #######################Eski Hali################################# */}
+                                            {/* <span className="name"><HiOutlineLocationMarker className="icon" />{location}</span>
+                                            <span className='date'>{date}</span>
+                                            <small><span className='traveltype'>{type}</span></small>
+                                        </span>
+                                        <div className="fees flex">
+                                            <div className="grade">
+                                                <span><BsFillStarFill style={{ color: " hsl(199, 100%, 33%)", fontSize: "1.5rem" }} /> <b style={{ color: " hsl(199, 100%, 33%)", fontSize: "1.2rem" }}> {rating}</b></span>
+                                            </div>
+                                            <div className="price">
+                                                <h5>${fees}</h5>
+                                            </div>
+                                        </div>
+                                        <div className="fees flex">
+
+                                            <div className="tags">
+                                                {tags.map((tag, index) => (
+                                                    <span key={index} className="tag">#{tag} </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <div className="desc">
+                                            {description} */}
+                    {/* #######################Eski Hali################################# */}
+
+
 
                                             <span className="name"><HiOutlineLocationMarker className="icon" />{location}</span>
                                             <span className='date'>{date}</span>
@@ -240,16 +242,14 @@ const RoutePage = () => {
                                             </div>
 
                                         </div>
-                                        {/* hem üstüne hem altına çiziyor */}
-                                        <div className="fees flex">
-
+                                        <div className="fees2 flex">
                                             <div className="tags">
                                                 {tags.map((tag, index) => (
                                                     <span key={index} className="tag">#{tag} </span>
                                                 ))}
                                             </div>
-                                        </div>
 
+                                        </div>
 
                                         <div className="desc">
                                             {description}

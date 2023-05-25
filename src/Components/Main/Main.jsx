@@ -95,7 +95,7 @@ export const Veri = [
     fees: 700,
     btnValue: 1,
     date: "23.07.2023",
-    tags: ["forest", "sea" , "food"],
+    tags: ["forest", "sea" , "food" , "rain"],
     imgRoute: [bolu, duzce, zonguldak, bartın, sinop, samsun, ordu, trabzon, rize],
     yorumlar: ["yorum1", "Karadeniz deneme yorum", "Trabzon favori şehrim!"],
     description: "The area is north of Turkey. It takes its name from the Black Sea in the north. The Black Sea climatic conditions are effective in the region. It is rainy every season. The annual temperature difference is small. Summers are cool, winters are warm. The Black Sea is the highest rainfall areas of Turkey. Enjoy the green, enjoy your travel route!"
@@ -146,10 +146,10 @@ export const Veri = [
     fees: 800,
     btnValue: 4,
     type: "ADVENTURE",
-    tags: ["architectural"],
+    tags: ["architectural","cultural"],
     yorumlar: ["yorum4", "İstanbul deneme yorum", "Meşhur Galata Kulesi önünde fotoğraf çekilmeden olmaz...", "İstanbul'u dinliyorum, gözlerim kapalı:)"],
     imgRoute: [ayasofya,yerebatansarnıcı,kızkulesi,galata],
-    description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region!'
+    description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region! The Beautiful city in Marmara'
   },
 
 
@@ -167,7 +167,7 @@ export const Veri = [
     tags: ["beach", "sea" ],
     yorumlar: ["yorum5" ,  "Akdeniz deneme yorum"],
     imgRoute: [egirdir, side,aspendos,kızılkule,kleopatra,mersinaynalıgöl,adana ],
-    description: 'A land of beautiful vistas over the sea, lovely evening breezes, and majestic sunsets, Western part of the country,including the Aegean Sea coast across from a wide arch of Greek islands and the adjoining inland areas.'
+    description: 'A land of beautiful vistas over the sea, lovely evening breezes, and majestic sunsets, Western part of the country,including the Aegean Sea coast across from a wide arch of Greek islands and the adjoining inland areas.A land of beautiful vistas over the sea,A land of beautiful vistas over the sea,A land of beautiful vistas over the sea'
   },
 
 
@@ -182,10 +182,10 @@ export const Veri = [
     fees: 840,
     btnValue: 6,
     type: "HISTORICAL",
-    tags: ["architectural", "historical" , "mysterious"],
+    tags: ["architectural", "historical" ],
     imgRoute: [peribacaları, balonturu, yeraltışehri],
     yorumlar: ["yorum6" ,  "Kapadokya deneme yorum" , "Balonlar harika!"],
-    description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks. '
+    description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks, Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape. Kapadokya. '
   },
 
 
@@ -200,10 +200,10 @@ export const Veri = [
     fees: 790,
     btnValue: 3,
     type: "CAMPING",
-    tags: ["architectural", "historical" , "food"],
+    tags: [ "historical" , "food"],
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum3",  "Anadolu deneme yorum"],
-    description: ' Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.'
+    description: ' Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east. Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country.'
   },
 
 
@@ -221,7 +221,7 @@ export const Veri = [
     tags: ["forest", "sea" , "food"],
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum8" ,  "Günedoğu Anadolu deneme yorum"],
-    description: 'Southeastern Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.'
+    description: 'Southeastern Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.Southeastern Anatolia is a region in Turkey.'
   },
 
 
@@ -236,7 +236,7 @@ export const Veri = [
     fees: 500,
     btnValue: 9,
     type: "HISTORICAL",
-    tags: ["history", "mysterious" , "architectural"],
+    tags: ["mysterious" , "architectural", "historical"],
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum9",  "GöbekliTepe deneme yorum"],
     description: 'Famed as the oldest temple in the world, Göbekli Tepe has changed the way that archaeologists look at history. Its existence pre-dates farming and settlements, and so it proves that man had religion before he even lived in a village or a town. Dated to 9000 BCE and listed by UNESCO'
@@ -392,12 +392,9 @@ const whichModalMap = () => {
         <div data-aos="fade-down" className="homeContent container">
           <div className="textDiv">
             <span className="smallText">
-              TURMEP
+              TURMEP.
             </span>
-            <h1 data-aos="fade-down" className="homeTitle">
-              Search your Travel routes!
-
-            </h1>
+            <h1 style={{ fontSize:"35px" }}> Search Your Travel Routes !</h1>
           </div>
 
 
@@ -407,20 +404,15 @@ const whichModalMap = () => {
             {/* <img src={banner} className='banner'></img> */}
             <BannerSlider images={images} duration={2500} />
 
-
-
           </div>
 
 
           <div data-aos="fade-up" className="homeFooterIcons flex">
+            <br></br>
             <div className="rightIcons">
               <FiFacebook className="icon" />
               <AiOutlineInstagram className="icon" />
               <SiTripadvisor className="icon" />
-            </div>
-            <div className="leftIcons">
-              <BsListTask className="icon" />
-              <TbApps className="icon" />
             </div>
           </div>
         </div>
@@ -455,26 +447,12 @@ const whichModalMap = () => {
         </>
          )}
 
-
-
-
-        
-
       </ReactModal>
-
-
-
-      
-
 
       <section id='main' className='main section container'>
         <div className="secTitle">
 
-
-
-          <h3 className="title">
-            Most visited routes
-          </h3>
+          <h1 style={{ fontSize:"30px" }}> Most visited routes</h1>
         </div>
 
         {/* FİLTRELEME */}
@@ -507,20 +485,11 @@ const whichModalMap = () => {
 
             />
 
-
           </div>
-
-
-
-
 
         </div>
 
         <div className="type-filters">
-
-
-
-
 
           <button
 
@@ -531,14 +500,10 @@ const whichModalMap = () => {
           </button>
 
           <button
-
-
             onClick={() => filterResult('CAMPING')}
             className="type-filters-btns">
             <h2><GiCampingTent className="icon" /></h2>
             CAMPING
-
-
           </button>
 
           <button
@@ -575,18 +540,10 @@ const whichModalMap = () => {
         <div>
           <ToastContainer />
         </div>
-
-
         <br />
-
-
         {/* CARDS */}
         <div className="secContent grid">
-
-
-
           {
-
             Data
               .filter((val) => {
                 if (searchTerm == "") {
@@ -608,11 +565,8 @@ const whichModalMap = () => {
                 } else return null
               })
 
-
-
               .map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue, tags }) => {
                 return (
-
 
                   <div key={id} data-aos="fade-up" className="singleDestination">
 
@@ -638,19 +592,17 @@ const whichModalMap = () => {
 
                         <div className="price">
                           <h5>${fees}</h5>
-                        </div>
+                        </div>                                          
 
                       </div>
-                      {/* hem üstüne hem altına çiziyor */}
-                      <div className="fees flex">
-
+                      <div className="fees2 flex">
                       <div className="tags">
                         {tags.map((tag, index) => (
                         <span key={index} className="tag">#{tag} </span>
                       ))}
                       </div>
+                      
                       </div>
-
 
                       <div className="desc">
                         {description}
@@ -665,9 +617,6 @@ const whichModalMap = () => {
                           <HiClipboardList className="icon-details" />
                         </button>
 
-
-
-
                         <button
 
                           onClick={() => { setSelectedCardId(id); openModal(); }}
@@ -679,10 +628,6 @@ const whichModalMap = () => {
                       </div>
                     </div>
                   </div>
-
-
-
-
                 )
               })
           }

@@ -98,9 +98,10 @@ const Login = () => {
                         <button type="submit" className="btn-yorum">LOGIN</button>
                         <br />  <br /> 
                         <div style={{color:'white',  textShadow: '.1em .1em 0 hsl(200 50% 30%)'}}>
-                            <br/>
-                           
-                            Do not have an account?  <button className="btn-yorum" onClick={gotoregister}>Register! </button> 
+                            {/* <br/> */}
+                            <button className="btn-yorum" onClick={gotoregister}>Sign Up! </button>
+                            <br/> 
+                            Do not have an account? 
                         </div>
                     </form>
                     <ToastContainer/>
