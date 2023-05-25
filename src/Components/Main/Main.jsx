@@ -138,7 +138,7 @@ export const Veri = [
   {
     id: 4,
     imgSrc: img6,
-    destTitle: 'Istanbul',
+    destTitle: 'İstanbul',
     date: "05.04.2023",
     location: 'Turkey ',
     grade: 'RATING ',
@@ -434,7 +434,7 @@ const whichModalMap = () => {
 
           <div className='route-card-info'>
           {selectedCard.imgRoute.map((src, index) => (
-                                <img style={{ width: '300px', height: '150px' }} key={index} src={src} alt={`Görsel ${index + 1}`} />
+                                <img style={{ width: '95%', height: '20%' }} key={index} src={src} alt={`Görsel ${index + 1}`} />
                             ))}
            
           </div>

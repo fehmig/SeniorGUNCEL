@@ -18,36 +18,45 @@
 
 
 :root .haritalani{
-    width: 805px;
+    width: 65%;
     height: auto;
     margin: auto;
     text-align: center;
     box-shadow: 0 4px 60px rgba(0, 0, 0, 0.549);
+    border-radius: 1em;
+
 }
  .route-card{
-  background-color:white;
-  width: 380px;
-  height: 500px;
+  background-color:hsl(0, 0%, 93%);
+  width: 35%;
+  height: auto;
   overflow: auto;
-  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.549);  
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.549); 
+    border-radius: 1em;
+
 }
 
 .route-card .route-card-info{
   text-align: center;
-  margin: auto;
-  padding: 2rem;
+  margin: auto;  
+  padding: 1rem;
+  /* padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem; */
 }
 
 
 :root .modal{
-  width: 1180px;
+  width: 67%;
   height: 505px;
   border: 2px solid  rgba(140, 140, 141, 0.549);
   margin: auto;
   margin-top: 200px;
   text-align: center;
   display: flex;
-  border-radius: 6px;
+  /* border-radius: 6px; */
+  border-radius: 1em;
+
   box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
 }
 

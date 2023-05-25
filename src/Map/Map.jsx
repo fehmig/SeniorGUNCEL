@@ -99,8 +99,8 @@ render() {
 
             
             <GoogleMapExample
-                containerElement={<div style={{ height: `500px`, width: "800px"}} />}
-                mapElement={<div style={{ height: `100%` }} />}
+                containerElement={<div style={{ height: `499px`, width: "810px" }} />}
+                mapElement={<div style={{ height: `100%` , borderRadius: "1em"}} />}
             />
 
             
