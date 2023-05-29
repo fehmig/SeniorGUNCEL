@@ -44,6 +44,9 @@ import banner6 from '../../Assets/banner6.png'
 import anasayfa3 from '../../Assets/anasayfa3.png'
 import anasayfa2 from '../../Assets/anasayfa2.png'
 import anasayfa4 from '../../Assets/anasayfa4.png'
+import anasayfa7 from '../../Assets/anasayfa7.png'
+import anasayfa8 from '../../Assets/anasayfa8.png'
+import anasayfa9 from '../../Assets/anasayfa9.png'
 import BannerSlider from '../../BannerSlider'
 import side from '../../Assets/side.jpeg'
 import egirdir from '../../Assets/egirdir.jpg'
@@ -132,7 +135,7 @@ export const Veri = [
     btnValue: 4,
     type: "ADVENTURE",
     tags: ["architectural", "cultural"],
-    yorumlar: ["yorum4", "İstanbul deneme yorum", "Meşhur Galata Kulesi önünde fotoğraf çekilmeden olmaz...", "İstanbul'u dinliyorum, gözlerim kapalı:)"],
+    yorumlar: ["yorum4", "Meşhur Galata Kulesi önünde fotoğraf çekilmeden olmaz...", "İstanbul'u dinliyorum, gözlerim kapalı:)"],
     imgRoute: [ayasofya, yerebatansarnıcı, kızkulesi, galata],
     description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region! The Beautiful city in Marmara'
   },
@@ -147,7 +150,7 @@ export const Veri = [
     fees: 500,
     btnValue: 5,
     type: "BEACH",
-    tags: ["beach", "sea"],
+    tags: ["beach", "sea", "sun"],
     yorumlar: ["yorum5", "Akdeniz deneme yorum"],
     imgRoute: [egirdir, side, aspendos, kızılkule, kleopatra, mersinaynalıgöl, adana],
     description: 'A land of beautiful vistas over the sea, lovely evening breezes, and majestic sunsets, Western part of the country,including the Aegean Sea coast across from a wide arch of Greek islands and the adjoining inland areas.A land of beautiful vistas over the sea,A land of beautiful vistas over the sea,A land of beautiful vistas over the sea'
