@@ -137,7 +137,7 @@ export const Veri = [
     tags: ["architectural", "cultural"],
     yorumlar: ["yorum4", "Meşhur Galata Kulesi önünde fotoğraf çekilmeden olmaz...", "İstanbul'u dinliyorum, gözlerim kapalı:)"],
     imgRoute: [ayasofya, yerebatansarnıcı, kızkulesi, galata],
-    description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region! The Beautiful city in Marmara'
+    description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region! The Beautiful city in Marmara. İStanbul has a lot of culturel and historical places.'
   },
   {
     id: 5,
@@ -169,7 +169,7 @@ export const Veri = [
     tags: ["architectural", "historical"],
     imgRoute: [peribacaları, balonturu, yeraltışehri],
     yorumlar: ["yorum6", "Kapadokya deneme yorum", "Balonlar harika!"],
-    description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks, Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape. Kapadokya. '
+    description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks, Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape. Kapadokya. Also Kapadokya has  a lot of different places '
   },
   {
     id: 3,
@@ -201,7 +201,7 @@ export const Veri = [
     tags: ["forest", "sea", "food"],
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum8", "Günedoğu Anadolu deneme yorum"],
-    description: 'Southeastern Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.Southeastern Anatolia is a region in Turkey.'
+    description: 'Southeastern Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.Southeastern Anatolia is a region in Turkey. Also there are a lot of places.'
   },
   {
     id: 9,
@@ -217,7 +217,7 @@ export const Veri = [
     tags: ["mysterious", "architectural", "historical"],
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum9", "GöbekliTepe deneme yorum"],
-    description: 'Famed as the oldest temple in the world, Göbekli Tepe has changed the way that archaeologists look at history. Its existence pre-dates farming and settlements, and so it proves that man had religion before he even lived in a village or a town. Dated to 9000 BCE and listed by UNESCO'
+    description: 'Famed as the oldest temple in the world, Göbekli Tepe has changed the way that archaeologists look at history. Its existence pre-dates farming and settlements, and so it proves that man had religion before he even lived in a village or a town. Dated to 9000 BCE and listed by UNESCO. Göbeklitepe has a lot of historical mausoleum. '
 
   },
 ]

@@ -117,7 +117,7 @@ const RoutePage = () => {
                     <div className="route-yorum-goruntule">
                         <br />
                         <hr></hr>
-                        <br />
+                        {/* <br /> */}
                         <div className="yorumlar">
                             <ul>
                                 {myVeri.yorumlar.map((comment, index) => (
@@ -169,7 +169,7 @@ const RoutePage = () => {
                                         <img src={imgSrc} alt={`Görsel ${id}`} />
                                     </Link>
                                 </div>
-                                <div className="cardInfo">
+                                {/* <div className="cardInfo">
                                     <h4 className="destTitle">{destTitle}</h4>
                                     <span className="continent flex">
                                         <span className="name">
@@ -209,6 +209,32 @@ const RoutePage = () => {
                                         </div>
                                     </div>
                                     <div className="desc">{description}</div>
+                                </div> */}
+                                <div className="cardInfo">
+                                    <h4 className="destTitle">{destTitle}</h4>
+                                    <span className="continent flex">
+                                        <span className="name"><HiOutlineLocationMarker className="icon" />{location}</span>
+                                        <span className='date'>{date}</span>
+                                        <small><span className='traveltype'>{type}</span></small>
+                                    </span>
+                                    <div className="fees flex">
+                                        <div className="grade">
+                                            <span><BsFillStarFill style={{ color: " hsl(199, 100%, 33%)", fontSize: "1.5rem" }} /> <b style={{ color: " hsl(199, 100%, 33%)", fontSize: "1.2rem" }}> {rating}</b></span>
+                                        </div>
+                                        <div className="price">
+                                            <h5>${fees}</h5>
+                                        </div>
+                                    </div>
+                                    <div className="fees2 flex">
+                                        <div className="tags">
+                                            {tags.map((tag, index) => (
+                                                <span key={index} className="tag">#{tag} </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className="desc">
+                                        {description}
+                                    </div>
                                 </div>
                             </div>
                         ))}
