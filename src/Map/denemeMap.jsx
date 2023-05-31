@@ -199,7 +199,9 @@ const DenemeMap = () => {
             Add Waypoint
           </button>
         </div>
-        {/* {routeDistance && <p>{routeDistance} km</p>} */}
+        <div className="km-hesaplama">
+          {routeDistance && <p>{routeDistance} km</p>}
+        </div>
       </div>
     </div>
   );
