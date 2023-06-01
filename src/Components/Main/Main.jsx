@@ -12,6 +12,13 @@ import img6 from '../../Assets/img (6).jpg'
 import img7 from '../../Assets/img (7).jpg'
 import img8 from '../../Assets/img (14).jpg'
 import img9 from '../../Assets/img (9).jpg'
+import img34 from '../../Assets/img34.jpg'
+import img33 from '../../Assets/img33.jpg'
+import img38 from '../../Assets/img38.jpg'
+import img37 from '../../Assets/img37.jpg'
+import img36 from '../../Assets/img36.jpeg'
+import img35 from '../../Assets/img35.jpg'
+
 import 'aos/dist/aos.css'
 import Map from '../../Map/Map'
 import { withScriptjs } from "react-google-maps"
@@ -80,11 +87,11 @@ const images = [
 export const Veri = [
   {
     id: 1,
-    imgSrc: img2,
+    imgSrc: img33,
     destTitle: 'Black Sea',
     location: 'Turkey',
     grade: 'RATING',
-    rating: 4.7,
+    rating: 4.3,
     type: "CAMPING",
     fees: 700,
     btnValue: 1,
@@ -96,20 +103,20 @@ export const Veri = [
 
   },
   {
-    id: 2,
-    imgSrc: img8,
-    destTitle: 'Eastern Anatolia',
+    id: 6,
+    imgSrc: balonturu,
+    destTitle: 'Cappadocia',
+    date: "05.02.2023",
     location: 'Turkey',
-    grade: 'RATING',
-    btnValue: 2,
-    date: "04.03.2023",
-    rating: 2.2,
-    fees: 600,
-    type: "ADVENTURE",
-    tags: ["traditional", "historical"],
-    imgRoute: [bolu, duzce, bartın],
-    yorumlar: ["yorum2", "Doğu Anadolu deneme yorum"],
-    description: 'Eastern Anatolia is a region in Turkey.It occupies the mountainous east of the country and has the harshest winters.Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east'
+    grade: 'RATING ',
+    rating: 4.0,
+    fees: 150,
+    btnValue: 6,
+    type: "HISTORICAL",
+    tags: ["architectural", "historical"],
+    imgRoute: [peribacaları, balonturu, yeraltışehri],
+    yorumlar: ["yorum6", "Kapadokya deneme yorum", "Balonlar harika!"],
+    description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks, Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape. Kapadokya. Also Kapadokya has  a lot of different places '
   },
   // {
   //   id: 3,
@@ -125,12 +132,12 @@ export const Veri = [
   // },
   {
     id: 4,
-    imgSrc: img6,
+    imgSrc: img34,
     destTitle: 'İstanbul',
     date: "05.04.2023",
     location: 'Turkey ',
     grade: 'RATING ',
-    rating: 2.7,
+    rating: 4.7,
     fees: 250,
     btnValue: 4,
     type: "ADVENTURE",
@@ -141,12 +148,12 @@ export const Veri = [
   },
   {
     id: 5,
-    imgSrc: img5,
+    imgSrc: side,
     destTitle: 'Mediterrenian',
     date: "07.08.2023",
     location: 'Turkey',
     grade: 'RATING',
-    rating: 3.5,
+    rating: 4.3,
     fees: 500,
     btnValue: 5,
     type: "BEACH",
@@ -156,24 +163,24 @@ export const Veri = [
     description: 'A land of beautiful vistas over the sea, lovely evening breezes, and majestic sunsets, Western part of the country,including the Aegean Sea coast across from a wide arch of Greek islands and the adjoining inland areas.A land of beautiful vistas over the sea,A land of beautiful vistas over the sea,A land of beautiful vistas over the sea'
   },
   {
-    id: 6,
-    imgSrc: img4,
-    destTitle: 'Cappadocia',
-    date: "05.02.2023",
+    id: 8,
+    imgSrc: img35,
+    destTitle: 'Southeastern Anatolia',
+    date: "05.04.2023",
     location: 'Turkey',
-    grade: 'RATING ',
-    rating: 4.0,
-    fees: 150,
-    btnValue: 6,
-    type: "HISTORICAL",
-    tags: ["architectural", "historical"],
-    imgRoute: [peribacaları, balonturu, yeraltışehri],
-    yorumlar: ["yorum6", "Kapadokya deneme yorum", "Balonlar harika!"],
-    description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks, Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape. Kapadokya. Also Kapadokya has  a lot of different places '
+    grade: 'RATING',
+    rating: 4.1,
+    fees: 800,
+    btnValue: 8,
+    type: "FOOD",
+    tags: ["forest", "sea", "food"],
+    imgRoute: [bolu, duzce, bartın],
+    yorumlar: ["yorum8", "Günedoğu Anadolu deneme yorum"],
+    description: 'Southeastern Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.Southeastern Anatolia is a region in Turkey. Also there are a lot of places.'
   },
   {
     id: 3,
-    imgSrc: img7,
+    imgSrc: img36,
     destTitle: 'Anatolia',
     date: "07.10.2023",
     location: 'Turkey',
@@ -188,29 +195,29 @@ export const Veri = [
     description: ' Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east. Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country.'
   },
   {
-    id: 8,
-    imgSrc: img9,
-    destTitle: 'Southeastern Anatolia',
-    date: "05.04.2023",
+    id: 2,
+    imgSrc: img37,
+    destTitle: 'Eastern Anatolia',
     location: 'Turkey',
     grade: 'RATING',
-    rating: 1.1,
-    fees: 800,
-    btnValue: 8,
-    type: "FOOD",
-    tags: ["forest", "sea", "food"],
+    btnValue: 2,
+    date: "04.03.2023",
+    rating: 3.5,
+    fees: 600,
+    type: "ADVENTURE",
+    tags: ["traditional", "historical"],
     imgRoute: [bolu, duzce, bartın],
-    yorumlar: ["yorum8", "Günedoğu Anadolu deneme yorum"],
-    description: 'Southeastern Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.Southeastern Anatolia is a region in Turkey. Also there are a lot of places.'
+    yorumlar: ["yorum2", "Doğu Anadolu deneme yorum"],
+    description: 'Eastern Anatolia is a region in Turkey.It occupies the mountainous east of the country and has the harshest winters.Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east'
   },
   {
     id: 9,
-    imgSrc: img,
+    imgSrc: img38,
     destTitle: 'Göbeklitepe',
     location: 'Turkey',
     grade: 'RATING ',
     date: "10.11.2023",
-    rating: 3.9,
+    rating: 4.0,
     fees: 200,
     btnValue: 9,
     type: "HISTORICAL",
