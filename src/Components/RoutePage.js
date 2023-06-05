@@ -17,15 +17,13 @@ import BannerSlider from '../BannerSlider'
 import bolu from '../Assets/bolu.jpg'
 import bartın from '../Assets/bartın.jpg'
 import trabzon from '../Assets/trabzon.jpg'
+import RouteSlider from "../RouteSlider";
 
 
 
 
 const RoutePage = () => {
 
-    const images = [
-        bolu, bartın, trabzon
-    ];
 
     const [veri, setVeri] = useState(Veri);
     const { id } = useParams();
@@ -153,10 +151,13 @@ const RoutePage = () => {
                         <br></br>
                         <div className="route-durum">
                             <hr></hr>
-                            <h1><FaRoute />  {myVeri?.destTitle}</h1>
+                            <div className="route-slider"  style={{ width: '100%', height: '400px', overflowX: 'hidden' }}>
+                            <RouteSlider images={myVeri.imgRoute} />
+                            </div>
+                            {/* <h1><FaRoute />  {myVeri?.destTitle}</h1>
                             {myVeri.imgRoute.map((src, index) => (
                                 <img style={{ width: '90%', height: '65%' }} key={index} src={src} alt={`Görsel ${index + 1}`} />
-                            ))}
+                            ))} */}
                         </div>
                         <div className="route-yorum-goruntule">
                             <br />
@@ -333,8 +334,12 @@ const RoutePage = () => {
                         </div>
                     </section>
                     <br /><br /><br /><br /><br />
+                    <div className="appslider">
+  
+    </div>
                 </div>
             </div>
+            
             <Footer />
         </>
     );
