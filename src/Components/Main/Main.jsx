@@ -407,7 +407,7 @@ const Main = () => {
           </div>
           <div className='createButton'>
             <Link to="/create"><button className='btn-create'>
-              + Create Yor Own Route
+              + See Your Own Route
             </button>
             </Link>
           </div>

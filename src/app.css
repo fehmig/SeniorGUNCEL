@@ -71,6 +71,12 @@ li {
     border-radius: 1em;
     cursor: pointer;
 }
+.btn-route-delete{
+    background: var(--gradientColor);
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
 
 .btn-card-details {
     padding: .6rem 7px;
@@ -947,6 +953,8 @@ body {
     display: flex;
     flex-direction: column;
     background-color: hsl(0, 0%, 93%);
+    margin-top: 4%;
+    margin-bottom: 4%;
 
 }
 
@@ -955,6 +963,7 @@ body {
     display: flex;
     flex-direction: row;
     background-color: hsl(0, 0%, 93%);
+    
 
 }
 
@@ -976,6 +985,22 @@ body {
 
 }
 
-.km-hesaplama {
-    margin-left: 1%;
-}
+@media (max-width: 768px) {
+    .routepage {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .route-soltaraf {
+      order: 1;
+      width: 100%;
+    }
+  
+    .route-sagtaraf {
+      order: 2;
+      width: 100%;
+    }
+    .route-alttaraf{
+        margin-top: 5%;
+    }
+  }

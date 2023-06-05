@@ -23,7 +23,7 @@ const Navbar = () => {
 
   
   const [profilename, setProfilename] = useState()
-
+  const [user, setUser] = useState(null);
   const [isLogged, setIsLogged] = useState(false);
 
   useEffect(()=> {
@@ -39,9 +39,9 @@ const Navbar = () => {
             removeCookie("jwt");
             setIsLogged(false)
           } else {
-            setProfilename(data.user)
+            setUser(data.user);
             setIsLogged(true)
-            toast(`Giriş Yapıldı... Hello! ${data.user}`, {theme:"dark"})
+            toast(`Giriş Yapıldı... Hello! ${data.user.name}`, {theme:"dark"})
             
           }
         }
@@ -111,7 +111,7 @@ const goToForm = () => {
               < li className="navItem" >
               {isLogged ? (
                 <>
-                  <Link to="/profile" className="navLink"><FaRegUser className='icon'/>{profilename} </Link>
+                  <Link to="/profile" className="navLink"><FaRegUser className='icon'/>{user && <span style={{ fontSize:16}}>{user.name}</span>} </Link>
                   <Link><BiPowerOff className="icon" onClick={logout} /></Link>
                   </>
                 ) : (

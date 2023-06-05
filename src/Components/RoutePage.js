@@ -20,6 +20,10 @@ const RoutePage = () => {
     const [veri, setVeri] = useState(Veri);
     const { id } = useParams();
     const myVeri = Veri.find(v => v.id === parseInt(id));
+    const [comments, setComments] = useState([]);
+    const [text, setText] = useState('');
+    const [username, setUsername] = useState('');
+    const [sendID, setSendID] = useState('');
 
 
     const filteredData = Veri.filter((veri) => {
@@ -63,8 +67,18 @@ const RoutePage = () => {
     const navigate = useNavigate();
     const [cookies, setCookies, removeCookie] = useCookies();
 
+    const fetchComments = async () => {
+        try {
+            const response = await axios.get(`http://localhost:4000/api/comments/${myVeri.id}`);
+            setComments(response.data);
+        } catch (error) {
+            console.error('Yorumlar getirilemedi:', error);
+        }
+    };
+
 
     useEffect(() => {
+
         const verifyUser = async () => {
             if (!cookies.jwt) {
                 navigate("/");
@@ -78,7 +92,9 @@ const RoutePage = () => {
                     removeCookie("jwt");
                     navigate("/");
                 } else {
-                    setProfilename(data.user);
+                    setProfilename(data.user.name);
+                    fetchComments()
+
                 }
             }
         };
@@ -86,24 +102,42 @@ const RoutePage = () => {
     }, [cookies, navigate, removeCookie]);
 
 
-    const handleCommentSubmit = (event) => {
+
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        if (commentText.trim() === "") {
+        if (!text.trim()) {
             return;
         }
-        // Save the comment in the backend or update the state accordingly
-        const updatedVeri = [...veri];
-        const myVeriIndex = updatedVeri.findIndex((v) => v.id === parseInt(id));
-        updatedVeri[myVeriIndex].yorumlar.push(commentText);
-        setVeri(updatedVeri);
-        setCommentText("");
+        try {
+            const newComment = { text, username: profilename, cardId: myVeri.id };
+            const response = await axios.post(`http://localhost:4000/api/comments/${myVeri.id}`, newComment);
+            setComments([...comments, response.data]);
+            setText('');
+            setUsername('');
+        } catch (error) {
+            console.error('Yorum gönderilemedi:', error);
+        }
     };
+
+    // const handleCommentSubmit = (event) => {
+    //     event.preventDefault();
+    //     if (commentText.trim() === "") {
+    //         return;
+    //     }
+    //     // Save the comment in the backend or update the state accordingly
+    //     const updatedVeri = [...veri];
+    //     const myVeriIndex = updatedVeri.findIndex((v) => v.id === parseInt(id));
+    //     updatedVeri[myVeriIndex].yorumlar.push(commentText);
+    //     setVeri(updatedVeri);
+    //     setCommentText("");
+    // };
 
 
     return (
         <>
             <Navbar />
             <br /> <br />
+            <div className="routepagetamami">
             <div className="routepage">
                 <div className="route-soltaraf">
                     <br></br>
@@ -119,11 +153,18 @@ const RoutePage = () => {
                         <hr></hr>
                         {/* <br /> */}
                         <div className="yorumlar">
-                            <ul>
+                            {/* <ul>
                                 {myVeri.yorumlar.map((comment, index) => (
                                     <li key={index}>
                                         <b>{profilename}: </b>
                                         {comment}
+                                    </li>
+                                ))}
+                            </ul> */}
+                            <ul>
+                                {comments.map((comment) => (
+                                    <li key={comment._id}>
+                                        <strong>{comment.username}:</strong> {comment.text}
                                     </li>
                                 ))}
                             </ul>
@@ -134,7 +175,7 @@ const RoutePage = () => {
                         <hr></hr>
                         <br />
                         <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
-                        <form onSubmit={handleCommentSubmit}>
+                        <form onSubmit={handleSubmit}>
                             <textarea
                                 name="message"
                                 rows="4"
@@ -142,9 +183,15 @@ const RoutePage = () => {
                                 className="input-yorum"
                                 type="text"
                                 placeholder="Yorum yapabilirsiniz..."
-                                value={commentText}
-                                onChange={(e) => setCommentText(e.target.value)}
+                                value={text}
+                                onChange={(event) => setText(event.target.value)}
                             ></textarea>
+                            {/* <input
+                                    type="text"
+                                    placeholder="Kullanıcı adı"
+                                    value={username}
+                                    onChange={(event) => setUsername(event.target.value)}
+                                    /> */}
                             <button type="submit" className="btn-yorum">
                                 YORUM YAP
                             </button>
@@ -241,6 +288,7 @@ const RoutePage = () => {
                     </div>
                 </section>
                 <br /><br /><br /><br /><br />
+            </div>
             </div>
             <Footer />
         </>

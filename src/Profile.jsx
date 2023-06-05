@@ -32,31 +32,34 @@ const Profile = () => {
 
   const [profilename, setProfilename] = useState("")
   const [profilenamepic, setProfilenamepic] = useState("")
-
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const verifyUser = async () => {
-      if (!cookies.jwt) {
-        navigate("/")
-      } else {
-        const { data } = await axios.post(
-          "http://localhost:4000", {},
+    const fetchUser = async () => {
+      try {
+        const response = await axios.post(
+          "http://localhost:4000",
+          {},
           { withCredentials: true }
-        )
-        if (!data.status) {
+        );
+        if (response.data.status) {
+          setUser(response.data.user);
+          setProfilename(response.data.user.name);
+          setProfilenamepic(response.data.user.name.slice(0, 2));
+        } else {
           removeCookie("jwt");
-          navigate("/login")
-        } else{
-           setProfilename(data.user)
-           setProfilenamepic(data.user.slice(0,2))
-          
+          navigate("/login");
         }
-
+      } catch (error) {
+        console.log(error);
+        removeCookie("jwt");
+        navigate("/login");
       }
-    }
-    verifyUser();
-  }, [cookies, navigate, removeCookie])
-
+    };
+  
+    fetchUser();
+  }, []);
+  
 
 
   return (
@@ -70,15 +73,14 @@ const Profile = () => {
           <div className='profil-arkaplan'>
             <div className="profil-üstsol">
               {/* <h3>  {profilename}'s Profile Page </h3> */}
-              <div className='profilfoto'>
-                {/* hacı buraya pofil ofotsu koyulacvak ona göre de css ayarlanacak */}
-                
-                     <span className='profilenamepic'>{profilenamepic}</span>   
-              </div>
-              <div className='profilfotoalt'>
-              <br />
-             <span style={{color:'white'}}>{profilename}</span>
-              </div>
+              <div className="profilfoto">
+  <span className="profilenamepic">{profilenamepic}</span>
+</div>
+<div className="profilfotoalt">
+  <br />
+  {user && <span style={{ color: "white" }}>{user.name}</span>}
+</div>
+
 
             </div>
             <div className="profil-üstsağ">
@@ -88,7 +90,7 @@ const Profile = () => {
 
                 </div>
                 <div className="içsatır">
-                  <p>987654321676</p>
+                {user && <span style={{ color: "black" }}>{user.id}</span>}
                 </div>
               </div>
 
@@ -104,54 +106,38 @@ const Profile = () => {
               </div>
               <hr className='hr' />
 
-
+              <div className="satır">
+                <div className="içsatır">
+                  <label >Surname</label>
+                </div>
+                <div className="içsatır">
+                  <p> {user && <span style={{ color: "black" }}>{user.surname}</span>}</p>
+                </div>
+              </div>
+              <hr className='hr' />
 
               <div className="satır">
                 <div className="içsatır">
                   <label >Email</label>
                 </div>
                 <div className="içsatır">
-                  <p>{profilename}@gmail.com</p>
+                  <p>{user && <span style={{ color: "black" }}>{user.email}</span>}</p>
                 </div>
               </div>
               <hr className='hr' />
 
-
-
-              <div className="satır">
-                <div className="içsatır">
-                  <label >Favorite Route</label>
-                </div>
-                <div className="içsatır">
-                  <p>Black Sea</p>
-                </div>
-              </div>
-              <hr className='hr' />
-
-
-
-              <div className="satır">
-                <div className="içsatır">
-                  <label >Favorite Places</label>
-                </div>
-                <div className="içsatır">
-                  <p>Trabzon</p>
-                </div>
-              </div>
-
-              <hr className='hr' />
             </div>
           </div>
 
           <br />
           <div className="profil-yorum">
             <br />
-            <button
+            {/* <button
               type="submit"
               className="btn-yorum"
             >
               EDIT PROFILE
-            </button>
+            </button> */}
             <br />
             <br />
           </div>
