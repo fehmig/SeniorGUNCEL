@@ -28,9 +28,12 @@ import video from '../../Assets/video.mp4'
 import { FiFacebook } from 'react-icons/fi'
 import { AiOutlineInstagram, AiOutlineMenuUnfold, AiOutlineHeart } from 'react-icons/ai'
 import { SiTripadvisor } from 'react-icons/si'
-import { GiCampingTent } from 'react-icons/gi'
-import { MdFastfood, MdMuseum } from 'react-icons/md'
-import { FaMosque, FaUmbrellaBeach } from 'react-icons/fa'
+import { GiCampingTent, GiCaravan, GiPalmTree, GiSuspensionBridge, GiTvTower } from 'react-icons/gi'
+import { GrTrain, } from 'react-icons/gr'
+
+import { MdFastfood, MdMuseum, MdOutlineMuseum, MdOutlineCastle } from 'react-icons/md'
+import { FaMosque, FaUmbrellaBeach, FaCaravan, FaShoppingCart, FaCocktail, FaRegSnowflake, } from 'react-icons/fa'
+import { BiCableCar, BiTrain } from 'react-icons/bi'
 import { BsFillStarFill } from 'react-icons/bs'
 import { FaSkiing } from 'react-icons/fa'
 import Aos from 'aos'
@@ -97,6 +100,7 @@ export const Veri = [
     btnValue: 1,
     date: "23.07.2023",
     tags: ["forest", "sea", "food", "rain"],
+    info: [<BiCableCar className="icon" />, <FaCaravan className="icon" />],
     imgRoute: [bolu, duzce, zonguldak, bartın, sinop, samsun, ordu, trabzon, rize],
     yorumlar: ["yorum1", "Karadeniz deneme yorum", "Trabzon favori şehrim!"],
     description: "The area is north of Turkey. It takes its name from the Black Sea in the north. The Black Sea climatic conditions are effective in the region. It is rainy every season. The annual temperature difference is small. Summers are cool, winters are warm. The Black Sea is the highest rainfall areas of Turkey. Enjoy the green, enjoy your travel route!"
@@ -114,6 +118,7 @@ export const Veri = [
     btnValue: 6,
     type: "HISTORICAL",
     tags: ["architectural", "historical"],
+    info: [< GiCampingTent className="icon" />, <FaCaravan className="icon" />],
     imgRoute: [peribacaları, balonturu, yeraltışehri],
     yorumlar: ["yorum6", "Kapadokya deneme yorum", "Balonlar harika!"],
     description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks, Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape. Kapadokya. Also Kapadokya has  a lot of different places '
@@ -142,6 +147,7 @@ export const Veri = [
     btnValue: 4,
     type: "ADVENTURE",
     tags: ["architectural", "cultural"],
+    info: [<GiSuspensionBridge className="icon" />, <FaShoppingCart className="icon" />],
     yorumlar: ["yorum4", "Meşhur Galata Kulesi önünde fotoğraf çekilmeden olmaz...", "İstanbul'u dinliyorum, gözlerim kapalı:)"],
     imgRoute: [ayasofya, yerebatansarnıcı, kızkulesi, galata],
     description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region! The Beautiful city in Marmara. İStanbul has a lot of culturel and historical places.'
@@ -158,6 +164,7 @@ export const Veri = [
     btnValue: 5,
     type: "BEACH",
     tags: ["beach", "sea", "sun"],
+    info: [<FaCocktail className="icon" />, <FaUmbrellaBeach className="icon" />, <GiPalmTree className="icon" />],
     yorumlar: ["yorum5", "Akdeniz deneme yorum"],
     imgRoute: [egirdir, side, aspendos, kızılkule, kleopatra, mersinaynalıgöl, adana],
     description: 'A land of beautiful vistas over the sea, lovely evening breezes, and majestic sunsets, Western part of the country,including the Aegean Sea coast across from a wide arch of Greek islands and the adjoining inland areas.A land of beautiful vistas over the sea,A land of beautiful vistas over the sea,A land of beautiful vistas over the sea'
@@ -174,6 +181,7 @@ export const Veri = [
     btnValue: 8,
     type: "FOOD",
     tags: ["forest", "sea", "food"],
+    info: <MdOutlineMuseum className="icon" />,
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum8", "Günedoğu Anadolu deneme yorum"],
     description: 'Southeastern Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.Southeastern Anatolia is a region in Turkey. Also there are a lot of places.'
@@ -190,6 +198,7 @@ export const Veri = [
     btnValue: 3,
     type: "CAMPING",
     tags: ["historical", "food"],
+    info: [<MdOutlineCastle className="icon" />, <GiTvTower className="icon" />],
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum3", "Anadolu deneme yorum"],
     description: ' Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east. Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country.'
@@ -206,6 +215,8 @@ export const Veri = [
     fees: 600,
     type: "ADVENTURE",
     tags: ["traditional", "historical"],
+    info: [<BiTrain className="icon" />, <FaRegSnowflake className="icon" />],
+
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum2", "Doğu Anadolu deneme yorum"],
     description: 'Eastern Anatolia is a region in Turkey.It occupies the mountainous east of the country and has the harshest winters.Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east'
@@ -222,6 +233,8 @@ export const Veri = [
     btnValue: 9,
     type: "HISTORICAL",
     tags: ["mysterious", "architectural", "historical"],
+    info: <MdOutlineMuseum className="icon" />,
+
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum9", "GöbekliTepe deneme yorum"],
     description: 'Famed as the oldest temple in the world, Göbekli Tepe has changed the way that archaeologists look at history. Its existence pre-dates farming and settlements, and so it proves that man had religion before he even lived in a village or a town. Dated to 9000 BCE and listed by UNESCO. Göbeklitepe has a lot of historical mausoleum. '
@@ -487,7 +500,7 @@ const Main = () => {
                 } else return null
               })
 
-              .map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue, tags }) => {
+              .map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue, tags, info }) => {
                 return (
 
                   <div key={id} data-aos="fade-up" className="singleDestination">
@@ -514,6 +527,11 @@ const Main = () => {
                           {tags.map((tag, index) => (
                             <span key={index} className="tag">#{tag} </span>
                           ))}
+                        </div>
+                        <div className="info">
+                          {/* <h6>{info}</h6> */}
+                          <span style={{ color: " hsl(1, 10%, 10%)", fontSize: "1.2rem" }}>{info}</span>
+
                         </div>
                       </div>
                       <div className="desc">

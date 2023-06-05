@@ -13,9 +13,19 @@ import { useNavigate, Link, useParams } from 'react-router-dom';
 import { Veri } from "./Main/Main";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { BsFillStarFill } from "react-icons/bs";
+import BannerSlider from '../BannerSlider'
+import bolu from '../Assets/bolu.jpg'
+import bartın from '../Assets/bartın.jpg'
+import trabzon from '../Assets/trabzon.jpg'
+
+
 
 
 const RoutePage = () => {
+
+    const images = [
+        bolu, bartın, trabzon
+    ];
 
     const [veri, setVeri] = useState(Veri);
     const { id } = useParams();
@@ -138,22 +148,22 @@ const RoutePage = () => {
             <Navbar />
             <br /> <br />
             <div className="routepagetamami">
-            <div className="routepage">
-                <div className="route-soltaraf">
-                    <br></br>
-                    <div className="route-durum">
-                        <hr></hr>
-                        <h1><FaRoute />  {myVeri?.destTitle}</h1>
-                        {myVeri.imgRoute.map((src, index) => (
-                            <img style={{ width: '90%', height: '65%' }} key={index} src={src} alt={`Görsel ${index + 1}`} />
-                        ))}
-                    </div>
-                    <div className="route-yorum-goruntule">
-                        <br />
-                        <hr></hr>
-                        {/* <br /> */}
-                        <div className="yorumlar">
-                            {/* <ul>
+                <div className="routepage">
+                    <div className="route-soltaraf">
+                        <br></br>
+                        <div className="route-durum">
+                            <hr></hr>
+                            <h1><FaRoute />  {myVeri?.destTitle}</h1>
+                            {myVeri.imgRoute.map((src, index) => (
+                                <img style={{ width: '90%', height: '65%' }} key={index} src={src} alt={`Görsel ${index + 1}`} />
+                            ))}
+                        </div>
+                        <div className="route-yorum-goruntule">
+                            <br />
+                            <hr></hr>
+                            {/* <br /> */}
+                            <div className="yorumlar">
+                                {/* <ul>
                                 {myVeri.yorumlar.map((comment, index) => (
                                     <li key={index}>
                                         <b>{profilename}: </b>
@@ -161,62 +171,62 @@ const RoutePage = () => {
                                     </li>
                                 ))}
                             </ul> */}
-                            <ul>
-                                {comments.map((comment) => (
-                                    <li key={comment._id}>
-                                        <strong>{comment.username}:</strong> {comment.text}
-                                    </li>
-                                ))}
-                            </ul>
+                                <ul>
+                                    {comments.map((comment) => (
+                                        <li key={comment._id}>
+                                            <strong>{comment.username}:</strong> {comment.text}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div className="route-yorum">
-                        <br />
-                        <hr></hr>
-                        <br />
-                        <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
-                        <form onSubmit={handleSubmit}>
-                            <textarea
-                                name="message"
-                                rows="4"
-                                cols="50"
-                                className="input-yorum"
-                                type="text"
-                                placeholder="Yorum yapabilirsiniz..."
-                                value={text}
-                                onChange={(event) => setText(event.target.value)}
-                            ></textarea>
-                            {/* <input
+                        <div className="route-yorum">
+                            <br />
+                            <hr></hr>
+                            <br />
+                            <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
+                            <form onSubmit={handleSubmit}>
+                                <textarea
+                                    name="message"
+                                    rows="4"
+                                    cols="50"
+                                    className="input-yorum"
+                                    type="text"
+                                    placeholder="Yorum yapabilirsiniz..."
+                                    value={text}
+                                    onChange={(event) => setText(event.target.value)}
+                                ></textarea>
+                                {/* <input
                                     type="text"
                                     placeholder="Kullanıcı adı"
                                     value={username}
                                     onChange={(event) => setUsername(event.target.value)}
                                     /> */}
-                            <button type="submit" className="btn-yorum">
-                                YORUM YAP
-                            </button>
-                        </form>
+                                <button type="submit" className="btn-yorum">
+                                    YORUM YAP
+                                </button>
+                            </form>
+                            <br />
+                            <hr></hr>
+                        </div>
                         <br />
-                        <hr></hr>
                     </div>
-                    <br />
+                    <div className="route-sagtaraf">
+                        {whichMap()}
+                    </div>
                 </div>
-                <div className="route-sagtaraf">
-                    {whichMap()}
-                </div>
-            </div>
-            <div className="route-alttaraf">
-                <h1 style={{ textAlign: 'center' }}>RECOMMENDED ROUTES</h1>
-                <section id='main' className='main section container'>
-                    <div className="secContent grid">
-                        {filteredData.map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue, tags }) => (
-                            <div key={id} data-aos="fade-up" className="singleDestination">
-                                <div className="imageDiv">
-                                    <Link to={`/routes/${id}`} style={{ color: 'white' }}>
-                                        <img src={imgSrc} alt={`Görsel ${id}`} />
-                                    </Link>
-                                </div>
-                                {/* <div className="cardInfo">
+                <div className="route-alttaraf">
+                    <h1 style={{ textAlign: 'center' }}>RECOMMENDED ROUTES</h1>
+                    <section id='main' className='main section container'>
+                        <div className="secContent grid">
+                            {filteredData.map(({ id, imgSrc, destTitle, location, grade, fees, description, date, rating, type, btnValue, tags, info }) => (
+                                <div key={id} data-aos="fade-up" className="singleDestination">
+                                    <div className="imageDiv">
+                                        <Link to={`/routes/${id}`} style={{ color: 'white' }}>
+                                            <img src={imgSrc} alt={`Görsel ${id}`} />
+                                        </Link>
+                                    </div>
+                                    {/* <div className="cardInfo">
                                     <h4 className="destTitle">{destTitle}</h4>
                                     <span className="continent flex">
                                         <span className="name">
@@ -257,7 +267,7 @@ const RoutePage = () => {
                                     </div>
                                     <div className="desc">{description}</div>
                                 </div> */}
-                                <div className="cardInfo">
+                                    {/* <div className="cardInfo">
                                     <h4 className="destTitle">{destTitle}</h4>
                                     <span className="continent flex">
                                         <span className="name"><HiOutlineLocationMarker className="icon" />{location}</span>
@@ -282,13 +292,48 @@ const RoutePage = () => {
                                     <div className="desc">
                                         {description}
                                     </div>
+                                </div> */}
+
+                                    <div className="cardInfo">
+                                        <h4 className="destTitle">{destTitle}</h4>
+                                        <span className="continent flex">
+                                            <span className="name"><HiOutlineLocationMarker className="icon" />{location}</span>
+                                            <span className='date'>{date}</span>
+                                            <small><span className='traveltype'>{type}</span></small>
+                                        </span>
+                                        <div className="fees flex">
+                                            <div className="grade">
+                                                <span><BsFillStarFill style={{ color: " hsl(199, 100%, 33%)", fontSize: "1.5rem" }} /> <b style={{ color: " hsl(199, 100%, 33%)", fontSize: "1.2rem" }}> {rating}</b></span>
+                                            </div>
+                                            <div className="price">
+                                                <h5>${fees}</h5>
+                                            </div>
+                                        </div>
+                                        <div className="fees2 flex">
+                                            <div className="tags">
+                                                {tags.map((tag, index) => (
+                                                    <span key={index} className="tag">#{tag} </span>
+                                                ))}
+                                            </div>
+                                            <div className="info">
+                                                {/* <h6>{info}</h6> */}
+                                                <span style={{ color: " hsl(1, 10%, 10%)", fontSize: "1.2rem" }}>{info}</span>
+
+                                            </div>
+                                        </div>
+                                        <div className="desc">
+                                            {description}
+                                        </div>
+                                    </div>
+
+
+
                                 </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-                <br /><br /><br /><br /><br />
-            </div>
+                            ))}
+                        </div>
+                    </section>
+                    <br /><br /><br /><br /><br />
+                </div>
             </div>
             <Footer />
         </>
