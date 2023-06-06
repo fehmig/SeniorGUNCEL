@@ -139,13 +139,17 @@ const RoutePage = () => {
     //     setVeri(updatedVeri);
     //     setCommentText("");
     // };
-
+    const hakkındaList = myVeri.hakkında.map((item, index) => (
+        <li key={index}>
+          <h4 style={{ marginLeft: 10, marginRight: 10 }}>{item}</h4>
+        </li>
+      ));
 
     return (
         <>
             <Navbar />
             <br /> <br />
-            <div className="routepagetamami">
+            <div className="routepagetamami" >
                 <div className="routepage">
                     <div className="route-soltaraf">
                         <br></br>
@@ -171,10 +175,10 @@ const RoutePage = () => {
                                 <br />
                             </div> */}
                             <div className="yorumlar">
-                            <h1 style={{ textAlign: 'center' }}>{myVeri.destTitle}</h1>
+                            <h1 style={{ textAlign: 'center', }}>{myVeri.destTitle}</h1>
                                 <ul>
                                     <li>
-                                        <h5>{myVeri.hakkında}</h5>
+                                        <h4 style={{marginLeft:10, marginRight:10}}><ul>{hakkındaList}</ul></h4>
                                     </li>
                                 </ul>
                             </div>

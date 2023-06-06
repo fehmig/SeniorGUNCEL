@@ -201,6 +201,7 @@ body {
     height: 100%;
     text-align: center;
     margin: auto;
+   
 
 
 }
@@ -270,8 +271,7 @@ body {
     float: left;
     /* border-radius: 10px; */
     /* margin-bottom: 0px; */
-    margin-left: 10px;
-    margin-right: 10px;
+ 
     /* background-color: white; */
 }
 
@@ -283,8 +283,7 @@ body {
     text-align: center;
     margin: auto;
     float: left;
-    margin-left: 10px;
-    margin-right: 10px;
+    
     /* overflow: auto; */
 }
 
