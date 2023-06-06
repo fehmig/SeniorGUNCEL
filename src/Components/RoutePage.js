@@ -151,27 +151,16 @@ const RoutePage = () => {
                         <br></br>
                         <div className="route-durum">
                             <hr></hr>
-                            <div className="route-slider"  style={{ width: '100%', height: '400px', overflowX: 'hidden' }}>
-                            <RouteSlider images={myVeri.imgRoute} />
+                            <div className="route-slider" style={{ width: '100%', height: '400px', overflowX: 'hidden' }}>
+                                <RouteSlider images={myVeri.imgRoute} captions={myVeri.yorumlar} />
                             </div>
-                            {/* <h1><FaRoute />  {myVeri?.destTitle}</h1>
-                            {myVeri.imgRoute.map((src, index) => (
-                                <img style={{ width: '90%', height: '65%' }} key={index} src={src} alt={`Görsel ${index + 1}`} />
-                            ))} */}
+
                         </div>
                         <div className="route-yorum-goruntule">
-                            <br />
                             <hr></hr>
-                            {/* <br /> */}
-                            <div className="yorumlar">
-                                {/* <ul>
-                                {myVeri.yorumlar.map((comment, index) => (
-                                    <li key={index}>
-                                        <b>{profilename}: </b>
-                                        {comment}
-                                    </li>
-                                ))}
-                            </ul> */}
+
+                            {/* <div className="yorumlar">
+
                                 <ul>
                                     {comments.map((comment) => (
                                         <li key={comment._id}>
@@ -179,35 +168,16 @@ const RoutePage = () => {
                                         </li>
                                     ))}
                                 </ul>
+                                <br />
+                            </div> */}
+                            <div className="yorumlar">
+                            <h1 style={{ textAlign: 'center' }}>{myVeri.destTitle}</h1>
+                                <ul>
+                                    <li>
+                                        <h5>{myVeri.hakkında}</h5>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
-                        <div className="route-yorum">
-                            <br />
-                            <hr></hr>
-                            <br />
-                            <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
-                            <form onSubmit={handleSubmit}>
-                                <textarea
-                                    name="message"
-                                    rows="4"
-                                    cols="50"
-                                    className="input-yorum"
-                                    type="text"
-                                    placeholder="Yorum yapabilirsiniz..."
-                                    value={text}
-                                    onChange={(event) => setText(event.target.value)}
-                                ></textarea>
-                                {/* <input
-                                    type="text"
-                                    placeholder="Kullanıcı adı"
-                                    value={username}
-                                    onChange={(event) => setUsername(event.target.value)}
-                                    /> */}
-                                <button type="submit" className="btn-yorum">
-                                    YORUM YAP
-                                </button>
-                            </form>
-                            <br />
                             <hr></hr>
                         </div>
                         <br />
@@ -227,74 +197,6 @@ const RoutePage = () => {
                                             <img src={imgSrc} alt={`Görsel ${id}`} />
                                         </Link>
                                     </div>
-                                    {/* <div className="cardInfo">
-                                    <h4 className="destTitle">{destTitle}</h4>
-                                    <span className="continent flex">
-                                        <span className="name">
-                                            <HiOutlineLocationMarker className="icon" />
-                                            {location}
-                                        </span>
-                                        <span className='date'>{date}</span>
-                                        <small>
-                                            <span className='traveltype'>{type}</span>
-                                        </small>
-                                    </span>
-                                    <div className="fees flex">
-                                        <div className="grade">
-                                            <span>
-                                                <BsFillStarFill
-                                                    style={{
-                                                        color: " hsl(199, 100%, 33%)",
-                                                        fontSize: "1.5rem"
-                                                    }}
-                                                />
-                                                <b style={{ color: " hsl(199, 100%, 33%)", fontSize: "1.2rem" }}>
-                                                    {rating}
-                                                </b>
-                                            </span>
-                                        </div>
-                                        <div className="price">
-                                            <h5>${fees}</h5>
-                                        </div>
-                                    </div>
-                                    <div className="fees flex">
-                                        <div className="tags">
-                                            {tags.map((tag, index) => (
-                                                <span key={index} className="tag">
-                                                    #{tag}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className="desc">{description}</div>
-                                </div> */}
-                                    {/* <div className="cardInfo">
-                                    <h4 className="destTitle">{destTitle}</h4>
-                                    <span className="continent flex">
-                                        <span className="name"><HiOutlineLocationMarker className="icon" />{location}</span>
-                                        <span className='date'>{date}</span>
-                                        <small><span className='traveltype'>{type}</span></small>
-                                    </span>
-                                    <div className="fees flex">
-                                        <div className="grade">
-                                            <span><BsFillStarFill style={{ color: " hsl(199, 100%, 33%)", fontSize: "1.5rem" }} /> <b style={{ color: " hsl(199, 100%, 33%)", fontSize: "1.2rem" }}> {rating}</b></span>
-                                        </div>
-                                        <div className="price">
-                                            <h5>${fees}</h5>
-                                        </div>
-                                    </div>
-                                    <div className="fees2 flex">
-                                        <div className="tags">
-                                            {tags.map((tag, index) => (
-                                                <span key={index} className="tag">#{tag} </span>
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className="desc">
-                                        {description}
-                                    </div>
-                                </div> */}
-
                                     <div className="cardInfo">
                                         <h4 className="destTitle">{destTitle}</h4>
                                         <span className="continent flex">
@@ -317,29 +219,69 @@ const RoutePage = () => {
                                                 ))}
                                             </div>
                                             <div className="info">
-                                                {/* <h6>{info}</h6> */}
                                                 <span style={{ color: " hsl(1, 10%, 10%)", fontSize: "1.2rem" }}>{info}</span>
-
                                             </div>
                                         </div>
                                         <div className="desc">
                                             {description}
                                         </div>
                                     </div>
-
-
-
                                 </div>
                             ))}
                         </div>
                     </section>
-                    <br /><br /><br /><br /><br />
+
                     <div className="appslider">
-  
-    </div>
+
+                    </div>
                 </div>
+                <div className="route-yorum2">
+                    <br />
+                    <hr></hr>
+                    <br />
+                    <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
+                    <form onSubmit={handleSubmit}>
+                        <textarea
+                            name="message"
+                            rows="4"
+                            cols="50"
+                            className="input-yorum"
+                            type="text"
+                            placeholder="Yorum yapabilirsiniz..."
+                            value={text}
+                            onChange={(event) => setText(event.target.value)}
+                        ></textarea>
+
+                        <button type="submit" className="btn-yorum">
+                            YORUM YAP
+                        </button>
+                    </form>
+                    <br />
+                    <hr></hr>
+                </div>
+                <div className="route-yorum-goruntule2">
+                    <br />
+                    {/* <hr></hr> */}
+                    <div className="yorumlar2">
+
+                        <ul>
+                            {comments.map((comment) => (
+                                <li key={comment._id}>
+                                    <strong>{comment.username}:</strong> {comment.text}
+                                </li>
+                            ))}
+                        </ul>
+                        <br />
+                        <br />
+
+                        <hr></hr>
+                        <br />
+
+                    </div>
+                </div>
+
             </div>
-            
+
             <Footer />
         </>
     );

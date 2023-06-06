@@ -102,7 +102,8 @@ export const Veri = [
     tags: ["forest", "sea", "food", "rain"],
     info: [<BiCableCar className="icon" />, <FaCaravan className="icon" />],
     imgRoute: [bolu, duzce, zonguldak, bartın, sinop, samsun, ordu, trabzon, rize],
-    yorumlar: ["yorum1", "Karadeniz deneme yorum", "Trabzon favori şehrim!"],
+    yorumlar: ["Gölcük / Bolu","Efteni Gölü / Düzce","Ereğli / Zonguldak","Amasra / Bartın", "Hamsilos Koyu / Sinop", "Onur Anıtı / Samsun","Ulugöl Tabiat Parkı / Ordu","Sümela Manastırı / Trabzon","Pokut Yaylası / Rize"],
+    hakkında:["Trabzon: Atatürk Köşkü, Uzungöl, Sümela Manastırı, Trabzon Kalesi, Hagia Sophia Müzesi.Rize: Ayder Yaylası, Çamlıhemşin, Kaçkar Dağları, Rize Kalesi, Zilkale.Artvin: Karagöl-Sahara Milli Parkı, Şavşat Karagöl, Borçka Karagöl Tabiat Parkı, Hopa, Artvin Kalesi.Amasya: Amasya Kalesi, Yalıboyu Evleri, Sultan II. Bayezid Külliyesi, Hazeranlar Konağı, Gümüşköy Köyü.Sinop: Sinop Kalesi, Boyabat Kalesi, İnceburun Feneri, Sinop Cezaevi Müzesi, Erfelek Şelaleleri.Samsun: Atatürk Anıtı, Bandırma Vapuru Müzesi, Piazza Alışveriş Merkezi, Amisos Tepesi, Samsun Sahil Bandı.Ordu: Boztepe, Ordu Teleferik, Gölköy, Perşembe Yaylası, Taşbaşı Kültür ve Turizm Festivali."],
     description: "The area is north of Turkey. It takes its name from the Black Sea in the north. The Black Sea climatic conditions are effective in the region. It is rainy every season. The annual temperature difference is small. Summers are cool, winters are warm. The Black Sea is the highest rainfall areas of Turkey. Enjoy the green, enjoy your travel route!"
 
   },
@@ -120,7 +121,8 @@ export const Veri = [
     tags: ["architectural", "historical"],
     info: [< GiCampingTent className="icon" />, <FaCaravan className="icon" />],
     imgRoute: [peribacaları, balonturu, yeraltışehri],
-    yorumlar: ["yorum6", "Kapadokya deneme yorum", "Balonlar harika!"],
+    yorumlar: ["Peri Bacaları / Göreme", "Balon Turu / Ürgüp", "Yeraltı Şehri / Derinkuyu"], 
+    hakkında:["Kapadokya'da Gezilecek Yerler:","1.	Peri Bacaları.","2.	Göreme Açık Hava Müzesi.","3.	Kaymaklı Yeraltı Şehri.","4.	Açıksaray.","5.	Balon Turları.","Kapadokya Konaklanacak Yerler:","1.Museum Hotel","2. Argos in Cappadocia","3. Kayakapı Premium Caves","4. Cappadocia Cave Suites","5. Sultan Cave Suites ","6.Kelebek Special Cave Hotel","Kapadokya ayrıca yöresel lezzetleri, el sanatları ve şaraplarıyla da ünlüdür. Bu bölgede yer alan şirin köyleri ziyaret ederek yerel kültürü ve yaşam tarzını deneyimleyebilirsiniz.Kapadokya, doğal ve tarihi güzellikleriyle birlikte mistik bir atmosfere sahiptir. Bu nedenle, ziyaretçiler için benzersiz ve unutulmaz bir destinasyondur."],
     description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks, Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape. Kapadokya. Also Kapadokya has  a lot of different places '
   },
   // {
@@ -148,7 +150,16 @@ export const Veri = [
     type: "ADVENTURE",
     tags: ["architectural", "cultural"],
     info: [<GiSuspensionBridge className="icon" />, <FaShoppingCart className="icon" />],
-    yorumlar: ["yorum4", "Meşhur Galata Kulesi önünde fotoğraf çekilmeden olmaz...", "İstanbul'u dinliyorum, gözlerim kapalı:)"],
+    yorumlar: ["Ayasofya / Fatih", "Yerebatan Sarnıcı / Fatih","Kız Kulesi / Üsküdar","Galata / Beyoğlu"],
+    hakkında:["Gezilecek Yerler: ",
+    "1. Ayasofya: İstanbul'un sembollerinden biri olan tarihi Ayasofya Cami, Osmanlı ve Bizans dönemlerine ait izleriyle büyüleyici bir yapıdır.",
+    "2. Topkapı Sarayı: Osmanlı İmparatorluğu'nun merkezi olan Topkapı Sarayı, muhteşem bahçeleri, sarayın içindeki zenginlikleri ve harem bölümüyle büyüleyici bir ziyaret noktasıdır.",
+    "3. Kapalıçarşı: Dünyanın en eski ve en büyük çarşılarından biri olan Kapalıçarşı, binlerce dükkanıyla alışveriş yapmak isteyenler için ideal bir yerdir.",
+    "4. Sultanahmet Camii (Mavi Camii): İstanbul'un simgesi haline gelmiş olan Sultanahmet Camii, muhteşem mavi seramiklerle süslenmiş iç mekanıyla dikkat çeker.",
+    "5. Galata Kulesi: İstanbul Boğazı ve şehrin panoramik manzarasını sunan Galata Kulesi'ne çıkarak muhteşem bir manzara keyfi yaşayabilirsiniz.",
+    "6. Taksim Meydanı ve İstiklal Caddesi: Şehrin modern yüzü olan Taksim Meydanı ve İstiklal Caddesi, restoranlar, kafeler, mağazalar ve gece hayatıyla canlı bir bölgedir.",
+    "7. Dolmabahçe Sarayı: Boğaz manzarası eşliğinde muhteşem bir tarihi saray olan Dolmabahçe Sarayı, göz alıcı iç mekanlarıyla görülmeye değerdir.",
+    "",],
     imgRoute: [ayasofya, yerebatansarnıcı, kızkulesi, galata],
     description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region! The Beautiful city in Marmara. İStanbul has a lot of culturel and historical places.'
   },
@@ -165,7 +176,8 @@ export const Veri = [
     type: "BEACH",
     tags: ["beach", "sea", "sun"],
     info: [<FaCocktail className="icon" />, <FaUmbrellaBeach className="icon" />, <GiPalmTree className="icon" />],
-    yorumlar: ["yorum5", "Akdeniz deneme yorum"],
+    yorumlar: ["Eğirdir / Isparta", "Side / Manavgat","Aspendos / Serik","Kızılkule / Alanya","Kleopatra Plajı / Alanya","Aynalı Göl / Mersin","Merkez Park / Adana",],
+    hakkında:["denemeeee"],
     imgRoute: [egirdir, side, aspendos, kızılkule, kleopatra, mersinaynalıgöl, adana],
     description: 'A land of beautiful vistas over the sea, lovely evening breezes, and majestic sunsets, Western part of the country,including the Aegean Sea coast across from a wide arch of Greek islands and the adjoining inland areas.A land of beautiful vistas over the sea,A land of beautiful vistas over the sea,A land of beautiful vistas over the sea'
   },
@@ -184,6 +196,8 @@ export const Veri = [
     info: <MdOutlineMuseum className="icon" />,
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum8", "Günedoğu Anadolu deneme yorum"],
+    hakkında:["denemeeee"],
+
     description: 'Southeastern Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.Southeastern Anatolia is a region in Turkey. Also there are a lot of places.'
   },
   {
@@ -201,6 +215,8 @@ export const Veri = [
     info: [<MdOutlineCastle className="icon" />, <GiTvTower className="icon" />],
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum3", "Anadolu deneme yorum"],
+    hakkında:["denemeeee"],
+
     description: ' Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east. Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country.'
   },
   {
@@ -219,6 +235,8 @@ export const Veri = [
 
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum2", "Doğu Anadolu deneme yorum"],
+    hakkında:["denemeeee"],
+
     description: 'Eastern Anatolia is a region in Turkey.It occupies the mountainous east of the country and has the harshest winters.Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east'
   },
   {
@@ -237,6 +255,8 @@ export const Veri = [
 
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum9", "GöbekliTepe deneme yorum"],
+    hakkında:["denemeeee"],
+
     description: 'Famed as the oldest temple in the world, Göbekli Tepe has changed the way that archaeologists look at history. Its existence pre-dates farming and settlements, and so it proves that man had religion before he even lived in a village or a town. Dated to 9000 BCE and listed by UNESCO. Göbeklitepe has a lot of historical mausoleum. '
 
   },
