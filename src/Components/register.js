@@ -59,16 +59,9 @@ const Register = () => {
         }
     }
 
-
-
-
     return (
 
-
         <>
-            {/* 
-            <Navbar /> */}
-
             <div className="logpage">
                 <div className="video-background-login">
                     <video src={video} autoPlay loop muted type="video/mp4"></video>
@@ -78,35 +71,34 @@ const Register = () => {
                     <h1 style={{ color: 'white', textShadow: '.2em .1em 0 hsl(200 50% 30%)' }}> Welcome to Register Page!</h1>
                     <form onSubmit={(e) => handleSubmit(e)} >
                         <br /> <br />
+
                         <input className="input-login"
                             type='text'
                             name='name'
                             placeholder="Name"
                             onChange={(e) => setValues({ ...values, [e.target.name]: e.target.value })}
-
-
                         />
 
                         <br /> <br />
+
                         <input className="input-login"
                             type='text'
                             name='surname'
                             placeholder="Surname"
                             onChange={(e) => setValues({ ...values, [e.target.name]: e.target.value })}
-
-
                         />
 
                         <br /> <br />
+
                         <input className="input-login"
                             type='email'
                             name='email'
                             placeholder="Email"
                             onChange={(e) => setValues({ ...values, [e.target.name]: e.target.value })}
-
-
                         />
+
                         <br /> <br />
+
                         <input className="input-login"
                             type='password'
                             name='password'

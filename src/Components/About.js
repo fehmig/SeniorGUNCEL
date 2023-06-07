@@ -16,9 +16,13 @@ const About = () => {
 
                         <div className="about">
                             <hr></hr>
-                            <i>Fehmi Günay Ve
-                                Bilal Berispak
-                            </i>
+                            <br /><br />
+
+                            <p>Fehmi Günay Ve Bilal Berispak</p>
+                            <p>Karabük Üniversitesi Bilgisayar Mühendisliği Öğrencileri</p>
+                            <p>2023 - 2022</p>
+                            <br /><br />
+
                             <hr></hr>
                         </div>
                     </div>

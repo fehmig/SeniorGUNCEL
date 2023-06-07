@@ -8,9 +8,9 @@ const Forum = () => {
         <>
             <>
                 <Navbar />
-                <br /> <br /> <br />
                 <hr></hr>
                 <div className="forum-page">
+                    
                     <div className="forum-üst">
 
                         <hr></hr>
@@ -18,6 +18,7 @@ const Forum = () => {
 
 
                         Paketleri nasıl satın alabiliriz detaylı bir video var mı ? Teşekkürler.
+
                         <br></br>
                         <br></br>
 
@@ -26,22 +27,15 @@ const Forum = () => {
 
 
                         Rotalar ile ilgil kullanıcı yorumlarını nereden görüntüleyebilirim ? Teşekkürler.
-                        <br></br>
-                        <br></br>
 
+                        <br></br>
+                        <br></br>
                         <hr></hr>
                         <br></br>
-
-
                         Kendi rotamızı nasıl oluştururuz? Teşekkürler.
                         <br></br>
                         <br></br>
-
                         <hr></hr>
-                        {/* <svg height="100" width="100">
-                            <line x1="0" y1="50" x2="100" y2="50" stroke="black" stroke-width="10" />
-                        </svg> */}
-
 
                     </div>
                     <hr></hr>
@@ -56,8 +50,6 @@ const Forum = () => {
                                         className='input-sol-forum'
                                         type="text"
                                         placeholder='Name'
-
-
                                     />
                                     <br />
 
@@ -65,8 +57,6 @@ const Forum = () => {
                                         className='input-sol-forum'
                                         type="text"
                                         placeholder='Surname'
-
-
                                     />
                                     <br />
 
@@ -74,8 +64,6 @@ const Forum = () => {
                                         className='input-sol-forum'
                                         type="email"
                                         placeholder='E-Mail'
-
-
                                     />
                                 </div>
                                 <div className="forum-solalt-sağ">
@@ -88,25 +76,17 @@ const Forum = () => {
 
                                     ></textarea>
                                     <br />
-                                    <button className="btn-yorum">SEND</button>
+                                    <button className="btn-yorum" style={{ width: "70%", margin: "0 auto" }}>SEND</button>
 
                                 </div>
 
-
-
-
-
-
                             </div>
-                            <hr></hr>
                         </div>
 
                         <div className="forum-sağ">
                             <div className="forum-sağ-sağ">
                                 <div><h1 style={{ color: "hsl(199, 100%, 33%)", textShadow: '1px 1px 0 hsl(200 50% 30%)' }}>SIKÇA SORULAN SORULAR</h1></div>
                                 <br />
-
-
 
                                 Paketleri nasıl satın alabiliriz detaylı bir video var mı ? Teşekkürler
                                 &nbsp;&nbsp;&nbsp;<button className="btn-yorum">KONUYA GİT</button>
@@ -123,13 +103,12 @@ const Forum = () => {
                                 <br /><br />
                                 <hr></hr>
 
-
                             </div>
-                            <hr></hr>
                         </div>
                     </div>
                 </div>
-                <br /> <br />
+                <hr></hr>
+                <br />
                 <Footer />
             </>
         </>

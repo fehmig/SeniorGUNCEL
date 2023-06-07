@@ -3,9 +3,6 @@ import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 import BannerSlider from "../BannerSlider";
 import { MdOutlineTravelExplore } from 'react-icons/md'
-import banner1 from '../Assets/banner1.png'
-import banner2 from '../Assets/banner2.png'
-import banner3 from '../Assets/banner3.png'
 import contact12 from '../Assets/contact12.png'
 import contact11 from '../Assets/contact11.png'
 import contact10 from '../Assets/contact10.png'
@@ -18,9 +15,7 @@ const Contact = () => {
     ];
     return (
 
-
         <>
-
             <Navbar />
             <div className="contact-page">
                 <div className="contact-sol">
@@ -32,7 +27,6 @@ const Contact = () => {
                             type="text"
                             placeholder='Name'
 
-
                         />
                         <br /><br />
 
@@ -40,8 +34,6 @@ const Contact = () => {
                             className='input-contact'
                             type="text"
                             placeholder='Surname'
-
-
                         />
                         <br /><br />
 
@@ -49,27 +41,20 @@ const Contact = () => {
                             className='input-contact'
                             type="email"
                             placeholder='E-Mail'
-
-
                         />
                         <br /><br />
 
                         <textarea name="message" rows="4" cols="50"
-
                             className="text-contact"
                             type='text'
                             placeholder="Message here..."
 
                         ></textarea>
                         <br />
-                        <button className="btn-yorum">SEND</button>
-
+                        <button className="btn-yorum" style={{ width: "40%", margin: "0 auto", fontSize: "1.1em" }}>SEND</button>
 
                     </div>
                 </div>
-                {/* <div class="vertical-line"></div>  dikey çizgi deneme çabası*/}
-
-
                 <div className="contact-sag">
                     <div className="contact-adres">
                         <div>
@@ -78,12 +63,10 @@ const Contact = () => {
                         </div>
                         <br /> <br />
                         <div className="contact-image">
-                            {/* <img src={contactimage} style={{ width: "100%", height: "400px" }}></img> */}
                             <BannerSlider images={images} duration={2500} />
-
                         </div>
                         <div >
-                            <h1><MdOutlineTravelExplore className='icon' /><b>Turmep.</b> </h1><h3> ©2023</h3>
+                            <h1><MdOutlineTravelExplore /><b>Turmep.</b> </h1><h3> ©2023</h3>
                         </div>
                     </div>
                 </div>

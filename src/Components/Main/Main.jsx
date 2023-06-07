@@ -3,39 +3,31 @@ import { useState } from 'react'
 import './main.css'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { HiClipboardList, } from 'react-icons/hi'
-import img from '../../Assets/img (12).jpg'
-import img2 from '../../Assets/img (2).jpg'
-import img3 from '../../Assets/img (3).jpg'
-import img4 from '../../Assets/img (4).jpg'
-import img5 from '../../Assets/img (13).jpg'
-import img6 from '../../Assets/img (6).jpg'
-import img7 from '../../Assets/img (7).jpg'
-import img8 from '../../Assets/img (14).jpg'
-import img9 from '../../Assets/img (9).jpg'
 import img34 from '../../Assets/img34.jpg'
 import img33 from '../../Assets/img33.jpg'
 import img38 from '../../Assets/img38.jpg'
 import img37 from '../../Assets/img37.jpg'
 import img36 from '../../Assets/img36.jpeg'
 import img35 from '../../Assets/img35.jpg'
-
 import 'aos/dist/aos.css'
 import Map from '../../Map/Map'
 import { withScriptjs } from "react-google-maps"
 import { FiMapPin } from "react-icons/fi"
 import ReactModal from 'react-modal';
 import video from '../../Assets/video.mp4'
-import { FiFacebook } from 'react-icons/fi'
-import { AiOutlineInstagram, AiOutlineMenuUnfold, AiOutlineHeart } from 'react-icons/ai'
+import { FiFacebook,FiCamera } from 'react-icons/fi'
+import { AiOutlineInstagram, AiOutlineMenuUnfold } from 'react-icons/ai'
 import { SiTripadvisor } from 'react-icons/si'
-import { GiCampingTent, GiCaravan, GiPalmTree, GiSuspensionBridge, GiTvTower } from 'react-icons/gi'
-import { GrTrain, } from 'react-icons/gr'
-
-import { MdFastfood, MdMuseum, MdOutlineMuseum, MdOutlineCastle } from 'react-icons/md'
-import { FaMosque, FaUmbrellaBeach, FaCaravan, FaShoppingCart, FaCocktail, FaRegSnowflake, } from 'react-icons/fa'
+import { GiCampingTent, GiPalmTree, GiSuspensionBridge, GiTvTower,  } from 'react-icons/gi'
+import { MdFastfood, MdOutlineMuseum, MdOutlineCastle, MdOutlineNoFood } from 'react-icons/md'
+import { FaMosque, FaUmbrellaBeach, FaCaravan, FaShoppingCart, FaCocktail, FaRegSnowflake, FaHotel,  } from 'react-icons/fa'
 import { BiCableCar, BiTrain } from 'react-icons/bi'
 import { BsFillStarFill } from 'react-icons/bs'
 import { FaSkiing } from 'react-icons/fa'
+import { TbLocation } from 'react-icons/tb'
+import { RiInformationLine } from 'react-icons/ri'
+
+
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import bolu from '../../Assets/bolu.jpg'
@@ -47,16 +39,9 @@ import ordu from '../../Assets/ordu.jpg'
 import trabzon from '../../Assets/trabzon.jpg'
 import samsun from '../../Assets/samsun.jpg'
 import sinop from '../../Assets/sinop.jpg'
-import banner from './banner.png'
-import banner4 from '../../Assets/banner4.png'
-import banner5 from '../../Assets/banner5.png'
-import banner6 from '../../Assets/banner6.png'
 import anasayfa3 from '../../Assets/anasayfa3.png'
 import anasayfa2 from '../../Assets/anasayfa2.png'
 import anasayfa4 from '../../Assets/anasayfa4.png'
-import anasayfa7 from '../../Assets/anasayfa7.png'
-import anasayfa8 from '../../Assets/anasayfa8.png'
-import anasayfa9 from '../../Assets/anasayfa9.png'
 import BannerSlider from '../../BannerSlider'
 import side from '../../Assets/side.jpeg'
 import egirdir from '../../Assets/egirdir.jpg'
@@ -72,8 +57,6 @@ import galata from '../../Assets/galata.jpg'
 import peribacaları from '../../Assets/peribacaları.jpg'
 import yeraltışehri from '../../Assets/yeraltışehri.jpg'
 import balonturu from '../../Assets/balonturu.jpg'
-import Map4 from '../../Map/MapIstanbulDetail'
-import Map5 from '../../Map/map5'
 import { useCookies } from 'react-cookie'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
@@ -100,9 +83,9 @@ export const Veri = [
     btnValue: 1,
     date: "23.07.2023",
     tags: ["forest", "sea", "food", "rain"],
-    info: [<BiCableCar className="icon" />, <FaCaravan className="icon" />],
+    info: [<h2><BiCableCar /> <FaCaravan /></h2>],
     imgRoute: [bolu, duzce, zonguldak, bartın, sinop, samsun, ordu, trabzon, rize],
-    yorumlar: ["Gölcük / Bolu","Efteni Gölü / Düzce","Ereğli / Zonguldak","Amasra / Bartın", "Hamsilos Koyu / Sinop", "Onur Anıtı / Samsun","Ulugöl Tabiat Parkı / Ordu","Sümela Manastırı / Trabzon","Pokut Yaylası / Rize"],
+    yorumlar: ["Gölcük / Bolu", "Efteni Gölü / Düzce", "Ereğli / Zonguldak", "Amasra / Bartın", "Hamsilos Koyu / Sinop", "Onur Anıtı / Samsun", "Ulugöl Tabiat Parkı / Ordu", "Sümela Manastırı / Trabzon", "Pokut Yaylası / Rize"],
     hakkında: [
       "Trabzon: Atatürk Köşkü",
       "Uzungöl",
@@ -155,39 +138,29 @@ export const Veri = [
     btnValue: 6,
     type: "HISTORICAL",
     tags: ["architectural", "historical"],
-    info: [< GiCampingTent className="icon" />, <FaCaravan className="icon" />],
+    info: [<h2>< GiCampingTent /> <FaCaravan /></h2>],
     imgRoute: [peribacaları, balonturu, yeraltışehri],
-    yorumlar: ["Peri Bacaları / Göreme", "Balon Turu / Ürgüp", "Yeraltı Şehri / Derinkuyu"], 
-     hakkında: [
-    "Kapadokya'da Gezilecek Yerler:",
-    "1. Peri Bacaları.",
-    "2. Göreme Açık Hava Müzesi.",
-    "3. Kaymaklı Yeraltı Şehri.",
-    "4. Açıksaray.",
-    "5. Balon Turları.",
-    "Kapadokya Konaklanacak Yerler:",
-    "1. Museum Hotel",
-    "2. Argos in Cappadocia",
-    "3. Kayakapı Premium Caves",
-    "4. Cappadocia Cave Suites",
-    "5. Sultan Cave Suites ",
-    "6. Kelebek Special Cave Hotel",
-    "Kapadokya ayrıca yöresel lezzetleri, el sanatları ve şaraplarıyla da ünlüdür. Bu bölgede yer alan şirin köyleri ziyaret ederek yerel kültürü ve yaşam tarzını deneyimleyebilirsiniz. Kapadokya, doğal ve tarihi güzellikleriyle birlikte mistik bir atmosfere sahiptir. Bu nedenle, ziyaretçiler için benzersiz ve unutulmaz bir destinasyondur."
-  ],
+    yorumlar: ["Peri Bacaları / Göreme", "Balon Turu / Ürgüp", "Yeraltı Şehri / Derinkuyu"],
+    hakkında: [
+      // "Kapadokya'da Gezilecek Yerler:",
+      <span ><TbLocation /> <FiCamera /> <MdOutlineNoFood/> 1. Peri Bacaları.</span>,
+      <span ><TbLocation /> <FiCamera /> <MdOutlineNoFood/> 2. Göreme Açık Hava Müzesi..</span>,
+      <span ><TbLocation /> <FiCamera /> <MdOutlineNoFood/> 3. Kaymaklı Yeraltı Şehri.</span>,
+      <span ><TbLocation /> <FiCamera /> 4. Açıksaray.</span>,
+      <span ><TbLocation /> <FiCamera /> 5. Balon Turları.</span>,
+      <br></br>,
+      // "Kapadokya Konaklanacak Yerler:",
+      <span> < FaHotel /> 1. Museum Hotel</span>,
+      <span> < FaHotel /> 2. Argos in Cappadocia</span>,
+      <span> < FaHotel /> 3. Kayakapı Premium Caves</span>,
+      <span> < FaHotel /> 4. Cappadocia Cave Suites</span>,
+      <span> < FaHotel /> 5. Sultan Cave Suites</span>,
+      <span> < FaHotel /> 6. Kelebek Special Cave Hotel</span>,
+      <br></br>,
+      <span>< RiInformationLine /> Kapadokya ayrıca yöresel lezzetleri, el sanatları ve şaraplarıyla da ünlüdür. Bu bölgede yer alan şirin köyleri ziyaret ederek yerel kültürü ve yaşam tarzını deneyimleyebilirsiniz. Kapadokya, doğal ve tarihi güzellikleriyle birlikte mistik bir atmosfere sahiptir. Bu nedenle, ziyaretçiler için benzersiz ve unutulmaz bir destinasyondur.</span>
+    ],
     description: 'Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape, underground cities, cave churches and houses carved in the rocks, Cappadocia (Turkish: Kapadokya) is an area in Central Anatolia in Turkey best known for its unique moon-like landscape. Kapadokya. Also Kapadokya has  a lot of different places '
   },
-  // {
-  //   id: 3,
-  //   imgSrc: img7,
-  //   destTitle: 'Mediterrenian',
-  //   date: "18.06.2023",
-  //   location: 'Turkey',
-  //   grade: 'RATING',
-  //   rating: 3.0,
-  //   fees: '$700',
-  //   type: "BEACH",
-  //   description: 'The Mediterranean coast in Southern Europe is always a good idea! From blue sea panoramas, gorgeous beaches and cute seaside towns... The southern countries of Europe definitely deserve a spot on your to-visit list. Are you ready to dream away to your future trip along the beautiful Mediterranean coast?'
-  // },
   {
     id: 4,
     imgSrc: img34,
@@ -200,17 +173,17 @@ export const Veri = [
     btnValue: 4,
     type: "ADVENTURE",
     tags: ["architectural", "cultural"],
-    info: [<GiSuspensionBridge className="icon" />, <FaShoppingCart className="icon" />],
-    yorumlar: ["Ayasofya / Fatih", "Yerebatan Sarnıcı / Fatih","Kız Kulesi / Üsküdar","Galata / Beyoğlu"],
-    hakkında:["Gezilecek Yerler: ",
-    "1. Ayasofya: İstanbul'un sembollerinden biri olan tarihi Ayasofya Cami, Osmanlı ve Bizans dönemlerine ait izleriyle büyüleyici bir yapıdır.",
-    "2. Topkapı Sarayı: Osmanlı İmparatorluğu'nun merkezi olan Topkapı Sarayı, muhteşem bahçeleri, sarayın içindeki zenginlikleri ve harem bölümüyle büyüleyici bir ziyaret noktasıdır.",
-    "3. Kapalıçarşı: Dünyanın en eski ve en büyük çarşılarından biri olan Kapalıçarşı, binlerce dükkanıyla alışveriş yapmak isteyenler için ideal bir yerdir.",
-    "4. Sultanahmet Camii (Mavi Camii): İstanbul'un simgesi haline gelmiş olan Sultanahmet Camii, muhteşem mavi seramiklerle süslenmiş iç mekanıyla dikkat çeker.",
-    "5. Galata Kulesi: İstanbul Boğazı ve şehrin panoramik manzarasını sunan Galata Kulesi'ne çıkarak muhteşem bir manzara keyfi yaşayabilirsiniz.",
-    "6. Taksim Meydanı ve İstiklal Caddesi: Şehrin modern yüzü olan Taksim Meydanı ve İstiklal Caddesi, restoranlar, kafeler, mağazalar ve gece hayatıyla canlı bir bölgedir.",
-    "7. Dolmabahçe Sarayı: Boğaz manzarası eşliğinde muhteşem bir tarihi saray olan Dolmabahçe Sarayı, göz alıcı iç mekanlarıyla görülmeye değerdir.",
-    "",],
+    info: [<h2><GiSuspensionBridge /> <FaShoppingCart /></h2>],
+    yorumlar: ["Ayasofya / Fatih", "Yerebatan Sarnıcı / Fatih", "Kız Kulesi / Üsküdar", "Galata / Beyoğlu"],
+    hakkında: ["Gezilecek Yerler: ",
+      "1. Ayasofya: İstanbul'un sembollerinden biri olan tarihi Ayasofya Cami, Osmanlı ve Bizans dönemlerine ait izleriyle büyüleyici bir yapıdır.",
+      "2. Topkapı Sarayı: Osmanlı İmparatorluğu'nun merkezi olan Topkapı Sarayı, muhteşem bahçeleri, sarayın içindeki zenginlikleri ve harem bölümüyle büyüleyici bir ziyaret noktasıdır.",
+      "3. Kapalıçarşı: Dünyanın en eski ve en büyük çarşılarından biri olan Kapalıçarşı, binlerce dükkanıyla alışveriş yapmak isteyenler için ideal bir yerdir.",
+      "4. Sultanahmet Camii (Mavi Camii): İstanbul'un simgesi haline gelmiş olan Sultanahmet Camii, muhteşem mavi seramiklerle süslenmiş iç mekanıyla dikkat çeker.",
+      "5. Galata Kulesi: İstanbul Boğazı ve şehrin panoramik manzarasını sunan Galata Kulesi'ne çıkarak muhteşem bir manzara keyfi yaşayabilirsiniz.",
+      "6. Taksim Meydanı ve İstiklal Caddesi: Şehrin modern yüzü olan Taksim Meydanı ve İstiklal Caddesi, restoranlar, kafeler, mağazalar ve gece hayatıyla canlı bir bölgedir.",
+      "7. Dolmabahçe Sarayı: Boğaz manzarası eşliğinde muhteşem bir tarihi saray olan Dolmabahçe Sarayı, göz alıcı iç mekanlarıyla görülmeye değerdir.",
+      "",],
     imgRoute: [ayasofya, yerebatansarnıcı, kızkulesi, galata],
     description: 'The Marmara Region in northwestern Turkey is the countrys bridge and connection to Europe, with Turkeys largest city, Istanbul, at its heart. You can follow the major industrial developments and news in Turkey. Keep enjoy the travel route at the Turkeys important commercial region! The Beautiful city in Marmara. İStanbul has a lot of culturel and historical places.'
   },
@@ -226,9 +199,9 @@ export const Veri = [
     btnValue: 5,
     type: "BEACH",
     tags: ["beach", "sea", "sun"],
-    info: [<FaCocktail className="icon" />, <FaUmbrellaBeach className="icon" />, <GiPalmTree className="icon" />],
-    yorumlar: ["Eğirdir / Isparta", "Side / Manavgat","Aspendos / Serik","Kızılkule / Alanya","Kleopatra Plajı / Alanya","Aynalı Göl / Mersin","Merkez Park / Adana",],
-    hakkında:["denemeeee"],
+    info: [<h2><FaCocktail /> <FaUmbrellaBeach /> <GiPalmTree /></h2>],
+    yorumlar: ["Eğirdir / Isparta", "Side / Manavgat", "Aspendos / Serik", "Kızılkule / Alanya", "Kleopatra Plajı / Alanya", "Aynalı Göl / Mersin", "Merkez Park / Adana",],
+    hakkında: ["denemeeee"],
     imgRoute: [egirdir, side, aspendos, kızılkule, kleopatra, mersinaynalıgöl, adana],
     description: 'A land of beautiful vistas over the sea, lovely evening breezes, and majestic sunsets, Western part of the country,including the Aegean Sea coast across from a wide arch of Greek islands and the adjoining inland areas.A land of beautiful vistas over the sea,A land of beautiful vistas over the sea,A land of beautiful vistas over the sea'
   },
@@ -244,11 +217,10 @@ export const Veri = [
     btnValue: 8,
     type: "FOOD",
     tags: ["forest", "sea", "food"],
-    info: <MdOutlineMuseum className="icon" />,
+    info: <h2><MdOutlineMuseum /></h2>,
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum8", "Günedoğu Anadolu deneme yorum"],
-    hakkında:["denemeeee"],
-
+    hakkında: ["denemeeee"],
     description: 'Southeastern Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east.Southeastern Anatolia is a region in Turkey. Also there are a lot of places.'
   },
   {
@@ -263,11 +235,10 @@ export const Veri = [
     btnValue: 3,
     type: "CAMPING",
     tags: ["historical", "food"],
-    info: [<MdOutlineCastle className="icon" />, <GiTvTower className="icon" />],
+    info: [<h2><MdOutlineCastle /> <GiTvTower /></h2>],
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum3", "Anadolu deneme yorum"],
-    hakkında:["denemeeee"],
-
+    hakkında: ["denemeeee"],
     description: ' Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east. Anatolia is a region in Turkey. Due to long distances of travel, if you are self-driving in the country.'
   },
   {
@@ -282,12 +253,10 @@ export const Veri = [
     fees: 600,
     type: "ADVENTURE",
     tags: ["traditional", "historical"],
-    info: [<BiTrain className="icon" />, <FaRegSnowflake className="icon" />],
-
+    info: [<h2><BiTrain /> <FaRegSnowflake /></h2>],
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum2", "Doğu Anadolu deneme yorum"],
-    hakkında:["denemeeee"],
-
+    hakkında: ["denemeeee"],
     description: 'Eastern Anatolia is a region in Turkey.It occupies the mountainous east of the country and has the harshest winters.Due to long distances of travel, if you are self-driving in the country; give a minimum ten days to explore this area as distances are long between both cities of interest in the are and the country from west to east'
   },
   {
@@ -302,13 +271,12 @@ export const Veri = [
     btnValue: 9,
     type: "HISTORICAL",
     tags: ["mysterious", "architectural", "historical"],
-    info: <MdOutlineMuseum className="icon" />,
-
+    info: <h2><MdOutlineMuseum /></h2>,
     imgRoute: [bolu, duzce, bartın],
     yorumlar: ["yorum9", "GöbekliTepe deneme yorum"],
-    hakkında:["denemeeee"],
+    hakkında: ["denemeeee"],
 
-    description: 'Famed as the oldest temple in the world, Göbekli Tepe has changed the way that archaeologists look at history. Its existence pre-dates farming and settlements, and so it proves that man had religion before he even lived in a village or a town. Dated to 9000 BCE and listed by UNESCO. Göbeklitepe has a lot of historical mausoleum. '
+    description: 'Famed as the oldest temple in the world, Göbekli Tepe has changed the way that archaeologists look at history. Its existence pre-dates farming and settlements, and so it proves that man had religion before he even lived in a village or a town. Dated to 9000 BCE and listed by UNESCO. There are many historical monumental tombs in Göbeklitepe and its surroundings. '
 
   },
 ]
@@ -322,25 +290,6 @@ const Main = () => {
   const navigate = useNavigate()
   const [selectedCardId, setSelectedCardId] = useState(null);
   const [cookies, setCookies, removeCookie] = useCookies()
-
-  // useEffect(()=> {
-  //   const verifyUser = async () => {
-  //       if(!cookies.jwt){
-  //         navigate("/")
-  //       } else {
-  //         const {data} = await axios.post (
-  //           "http://localhost:4000", {}, 
-  //           {withCredentials: true}
-  //         )
-  //         if(!data.status) {
-  //           removeCookie("jwt");
-  //           navigate("/") 
-  //         } else toast(`Hello! ${data.user} `, {theme:"dark"} )
-  //       }
-  //   }
-  //   verifyUser();
-  // }, [cookies, navigate, removeCookie])
-
   const verifyUser = async () => {
     if (!cookies.jwt) {
       toast(`Rota Detaylarını Görüntülemek İçin Giriş Yapmalısın!`, { theme: "dark" })
@@ -436,7 +385,6 @@ const Main = () => {
           {/* FILTER KISMI */}
 
           <div data-aos="fade-down" className="pr">
-            {/* <img src={banner} className='banner'></img> */}
             <BannerSlider images={images} duration={2500} />
           </div>
           <div data-aos="fade-up" className="homeFooterIcons flex">
@@ -581,7 +529,10 @@ const Main = () => {
                     <div className="cardInfo">
                       <h4 className="destTitle">{destTitle}</h4>
                       <span className="continent flex">
-                        <span className="name"><HiOutlineLocationMarker className="icon" />{location}</span>
+                        <span className="name" style={{ display: 'flex', alignItems: 'center' }}>
+                          <h2 style={{ marginRight: '0.1rem' }}><HiOutlineLocationMarker /></h2>
+                          <span>{location}</span>
+                        </span>
                         <span className='date'>{date}</span>
                         <small><span className='traveltype'>{type}</span></small>
                       </span>
@@ -600,7 +551,6 @@ const Main = () => {
                           ))}
                         </div>
                         <div className="info">
-                          {/* <h6>{info}</h6> */}
                           <span style={{ color: " hsl(1, 10%, 10%)", fontSize: "1.2rem" }}>{info}</span>
 
                         </div>

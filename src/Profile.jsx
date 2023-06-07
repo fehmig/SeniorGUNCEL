@@ -6,9 +6,6 @@ import axios from 'axios'
 import { useNavigate, Link } from 'react-router-dom'
 import ProfileName from "./Components/Navbar/Navbar"
 import video from './Assets/video.mp4'
-// import { Splitter, SplitterPanel } from 'primereact/splitter';
-
-// import './main.css'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import 'aos/dist/aos.css'
 import { BsFillStarFill } from 'react-icons/bs'
@@ -72,7 +69,6 @@ const Profile = () => {
           <br></br>
           <div className='profil-arkaplan'>
             <div className="profil-üstsol">
-              {/* <h3>  {profilename}'s Profile Page </h3> */}
               <div className="profilfoto">
   <span className="profilenamepic">{profilenamepic}</span>
 </div>
@@ -131,13 +127,6 @@ const Profile = () => {
 
           <br />
           <div className="profil-yorum">
-            <br />
-            {/* <button
-              type="submit"
-              className="btn-yorum"
-            >
-              EDIT PROFILE
-            </button> */}
             <br />
             <br />
           </div>

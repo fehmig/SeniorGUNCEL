@@ -113,39 +113,21 @@ const DenemeMap = () => {
             Add Waypoint
           </button>
         </div>
-        <div className="km-hesaplama" style={{ display: "flex", flexDirection: "column", alignItems: "center", marginLeft:"20px", }}>
+        <div className="km-hesaplama" style={{ display: "flex", flexDirection: "column", alignItems: "center", marginLeft: "20px", }}>
           <h3>Distance: {routeDistance && <p style={{ fontSize: 36, fontWeight: "bold", color: "hsl(199, 100%, 33%)" }}>{routeDistance} km</p>}</h3>
         </div>
-
       </div>
-
-      <div className="waypoints-list" style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center",backgroundColor: "hsl(0, 0%, 93%)" }}>
+      <div className="waypoints-list" style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: "hsl(0, 0%, 93%)" }}>
         <h3>Waypoints:</h3>
         <ul style={{ display: "flex", flexDirection: "row", alignItems: "center", listStyleType: "none", paddingLeft: 0 }}>
           {waypoints.map((waypoint, index) => (
-            <li key={index} style={{ marginRight: "1px" ,marginLeft: "5px"}}>
+            <li key={index} style={{ marginRight: "1px", marginLeft: "5px" }}>
               {waypoint}
-              <button className="btn-route-delete" style={{ color: "white", marginLeft: "5px",marginRight: "10px", marginBottom: "10px", marginTop: "10px", width: "60px", height: "30px" }} onClick={() => deleteWaypoint(index)}>Delete</button>
+              <button className="btn-route-delete" style={{ color: "white", marginLeft: "5px", marginRight: "10px", marginBottom: "10px", marginTop: "10px", width: "60px", height: "30px" }} onClick={() => deleteWaypoint(index)}>Delete</button>
             </li>
           ))}
         </ul>
       </div>
-
-
-      {/* <div className="waypoints-list" style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop:"5px"}}>
-          <h3>Waypoints:</h3>
-          <ul>
-            {waypoints.map((waypoint, index) => (
-              <li key={index}>
-                {waypoint}
-            
-                <button className="btn-route-delete" style={{color:"white", marginLeft:10, marginBottom:10,marginTop:10, width:70,height:30}} onClick={() => deleteWaypoint(index)}>Delete</button>
-                
-              </li>
-            ))}
-          </ul>
-        </div> */}
-
     </div>
   );
 };

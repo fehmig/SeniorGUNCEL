@@ -224,12 +224,6 @@ body {
     /* buradaki tükseklik footer ile arasındaki boşluğu ayarlıyor dikkat!*/
     text-align: center;
     margin: 0;
-    /* margin-bottom: 20px; */
-
-    /* margin-right: 20px; */
-    /* margin-left: 4px;
-    margin-right: 3px; */
-    /* background-color: white; */
     overflow: auto;
 
 
@@ -242,26 +236,16 @@ body {
     text-align: center;
     margin: auto;
     float: left;
-    /* border-radius: 10px; */
-    /* margin-bottom: 0px; */
     margin-left: 10px;
     margin-right: 10px;
-    /* background-color: white; */
 }
 
 .route-yorum-goruntule {
     width: 100%;
-    /* margin-left: 20px;
-    margin-right: 20px; */
     height: 482px;
     text-align: center;
     margin: auto;
     float: left;
-   
-    /* overflow: auto; */
-
-
-
 }
 .route-yorum2 {
     width: 100%;
@@ -269,22 +253,14 @@ body {
     text-align: center;
     margin: auto;
     float: left;
-    /* border-radius: 10px; */
-    /* margin-bottom: 0px; */
- 
-    /* background-color: white; */
 }
 
 .route-yorum-goruntule2 {
     width: 100%;
-    /* margin-left: 20px;
-    margin-right: 20px; */
     height: auto;
     text-align: center;
     margin: auto;
     float: left;
-    
-    /* overflow: auto; */
 }
 
 .packages-page {
@@ -309,30 +285,12 @@ body {
 
 }
 
-
-
-
-/* .input-yorum {
-    margin: auto;
-    display: block;
-    width: 80%;
-    height: 200px;
-    padding: 10px 15px;
-    border:0.7px solid black;
-    background-color: #f8f8f8f8;
-    border-radius: 7px;
-    transition: 0.4s;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 20px rgba(140, 140, 141, 0.549);
-
-} */
 .input-yorum {
     margin: auto;
     display: block;
     width: 40%;
     height: 120px;
     padding: 10px 15px;
-    /* border:0.7px solid black; */
     background-color: #f8f8f8f8;
     border-radius: 7px;
     transition: 0.4s;
@@ -359,8 +317,6 @@ body {
     padding: 0;
     margin-left: 15px;
     margin-right: 15px;
-    /* padding-left: 10px; */
-    /* padding-right: 10px; */
     float: left;
     border-radius: 10px;
     overflow: auto;
@@ -372,8 +328,6 @@ body {
     margin: 0;
     text-align: center;
     padding: 0;
-    /* padding-left: 10px; */
-    /* padding-right: 10px; */
     float: left;
     border-radius: 10px;
     overflow: auto;
@@ -387,8 +341,6 @@ body {
     width: 100%;
     z-index: 1;
     margin-top: 20%;
-
-
 }
 
 .input-login {
@@ -401,18 +353,11 @@ body {
     padding: 2em;
 }
 
-/* .route-sagtaraf-map {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-} */
 .route-sagtaraf {
     width: 65%;
     float: left;
     margin-top: 15px;
-    /* margin-bottom: 50px; */
     height: 100%;
-    /* margin-bottom: 50px; */
 }
 
 .route-soltaraf {
@@ -429,8 +374,6 @@ body {
     width: 100%;
     float: left;
     height: auto;
-    /* margin-top: 30px; */
-    /* margin-bottom: 30px; */
 }
 
 .about-page {
@@ -451,7 +394,6 @@ body {
     padding: 50px;
     text-align: center;
     clear: both;
-    /* margin-bottom: 10px; */
 }
 
 .contact-page {
@@ -526,9 +468,6 @@ body {
     align-items: center;
     margin-top: 30px;
     background-color: hsl(0, 0%, 93%);
-
-    /* margin-bottom: 30px; */
-
 }
 
 .contact-sag {
@@ -540,8 +479,6 @@ body {
     position: relative;
     align-items: center;
     margin-top: 30px;
-
-    /* margin-bottom: 30px; */
 }
 
 
@@ -681,6 +618,7 @@ body {
     height: 100%;
     text-align: center;
     margin: 0;
+    margin-top: ;
     background-color: hsl(0, 0%, 93%);
 }
 
@@ -699,14 +637,12 @@ body {
     padding-right: 200px;
     text-align: center;
     flex-direction: column;
-    background-color: hsl(0, 0%, 93%);
 }
 
 .forum {
 
     width: 100%;
     height: 100%;
-    background-color: hsl(0, 0%, 93%);
     border-radius: 7px;
     text-align: center;
     margin: 0;
@@ -732,7 +668,7 @@ body {
 }
 
 .forum-sağ {
-    width: 50%;
+    /* width: 50%;
     height: 50%;
     float: left;
     text-align: center;
@@ -740,7 +676,17 @@ body {
     flex-direction: column;
     background-color: hsl(0, 0%, 93%);
     position: relative;
+    border-radius: 7px; */
+    width: 50%;
+    height: 50%;
+    float: left;
+    text-align: center;
+    position: relative;
+    background-color: hsl(0, 0%, 93%);
     border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
 }
 
 .forum-sol-sol {
@@ -755,7 +701,6 @@ body {
     padding: 10%;
     text-align: center;
     flex-direction: column;
-    background-color: hsl(0, 0%, 93%);
 }
 
 .forum-sağ-sağ {
@@ -770,7 +715,6 @@ body {
     padding: 10%;
     text-align: center;
     flex-direction: column;
-    background-color: hsl(0, 0%, 93%);
 }
 
 .forum-solalt-sol {
@@ -897,7 +841,6 @@ body {
     gap: 0.5rem;
     display: flex;
     justify-content: space-between;
-    /* öğeleri sol, orta ve sağa yaslamak için */
     align-items: center;
     margin-top: 10px;
 }
@@ -955,13 +898,6 @@ body {
 
 }
 
-/* .createroute {
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-    background-color: hsl(0, 0%, 93%);
-} */
-
 .input-search {
     border: none;
     background-color: rgb(229, 226, 226);
@@ -990,9 +926,6 @@ body {
     display: flex;
     flex-direction: column;
     background-color: hsl(0, 0%, 93%);
-    /* margin-top: 5px; */
-    /* margin-bottom: 5px; */
-
 }
 
 

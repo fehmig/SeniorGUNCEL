@@ -1,29 +1,22 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
-import { FaRoute, FaRegCommentDots } from "react-icons/fa";
+import RouteSlider from "../RouteSlider";
+import axios from 'axios';
+import { withScriptjs } from "react-google-maps";
+import { useCookies } from 'react-cookie';
+import { useNavigate, Link, useParams } from 'react-router-dom';
+import { FaRegCommentDots } from "react-icons/fa";
+import { HiOutlineLocationMarker } from "react-icons/hi";
+import { BsFillStarFill } from "react-icons/bs";
+import { Veri } from "./Main/Main";
 import Map2 from '../Map/Map2';
 import Map3 from '../Map/Map3';
 import Map4 from '../Map/MapIstanbulDetail';
 import Map5 from '../Map/map5';
-import { withScriptjs } from "react-google-maps";
-import axios from 'axios';
-import { useCookies } from 'react-cookie';
-import { useNavigate, Link, useParams } from 'react-router-dom';
-import { Veri } from "./Main/Main";
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { BsFillStarFill } from "react-icons/bs";
-import BannerSlider from '../BannerSlider'
-import bolu from '../Assets/bolu.jpg'
-import bartın from '../Assets/bartın.jpg'
-import trabzon from '../Assets/trabzon.jpg'
-import RouteSlider from "../RouteSlider";
-
-
 
 
 const RoutePage = () => {
-
 
     const [veri, setVeri] = useState(Veri);
     const { id } = useParams();
@@ -33,12 +26,9 @@ const RoutePage = () => {
     const [username, setUsername] = useState('');
     const [sendID, setSendID] = useState('');
 
-
     const filteredData = Veri.filter((veri) => {
         return veri.tags.some((tag) => myVeri.tags.includes(tag)) && veri.id !== myVeri.id;
     });
-
-
 
     const MapLoaderBlackSea = withScriptjs(Map2);
     const MapLoaderAegean = withScriptjs(Map3);
@@ -66,6 +56,26 @@ const RoutePage = () => {
                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
                 loadingElement={<div style={{ height: "100%" }} />}
             />;
+        } else if (myVeri.id === 8) {
+            return <MapLoaderCappadocia className='route-sagtaraf-map'
+                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+                loadingElement={<div style={{ height: "100%" }} />}
+            />;
+        } else if (myVeri.id === 3) {
+            return <MapLoaderCappadocia className='route-sagtaraf-map'
+                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+                loadingElement={<div style={{ height: "100%" }} />}
+            />;
+        } else if (myVeri.id === 2) {
+            return <MapLoaderCappadocia className='route-sagtaraf-map'
+                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+                loadingElement={<div style={{ height: "100%" }} />}
+            />;
+        } else if (myVeri.id === 9) {
+            return <MapLoaderCappadocia className='route-sagtaraf-map'
+                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyANPdIjlr1uM8TOcUPBwzA8x5vM96zT7Iw"
+                loadingElement={<div style={{ height: "100%" }} />}
+            />;
         }
     };
 
@@ -84,7 +94,6 @@ const RoutePage = () => {
         }
     };
 
-
     useEffect(() => {
 
         const verifyUser = async () => {
@@ -102,7 +111,6 @@ const RoutePage = () => {
                 } else {
                     setProfilename(data.user.name);
                     fetchComments()
-
                 }
             }
         };
@@ -126,24 +134,11 @@ const RoutePage = () => {
             console.error('Yorum gönderilemedi:', error);
         }
     };
-
-    // const handleCommentSubmit = (event) => {
-    //     event.preventDefault();
-    //     if (commentText.trim() === "") {
-    //         return;
-    //     }
-    //     // Save the comment in the backend or update the state accordingly
-    //     const updatedVeri = [...veri];
-    //     const myVeriIndex = updatedVeri.findIndex((v) => v.id === parseInt(id));
-    //     updatedVeri[myVeriIndex].yorumlar.push(commentText);
-    //     setVeri(updatedVeri);
-    //     setCommentText("");
-    // };
     const hakkındaList = myVeri.hakkında.map((item, index) => (
         <li key={index}>
-          <h4 style={{ marginLeft: 10, marginRight: 10 }}>{item}</h4>
+            <h4 style={{ marginLeft: 10, marginRight: 10 }}>{item}</h4>
         </li>
-      ));
+    ));
 
     return (
         <>
@@ -162,23 +157,11 @@ const RoutePage = () => {
                         </div>
                         <div className="route-yorum-goruntule">
                             <hr></hr>
-
-                            {/* <div className="yorumlar">
-
-                                <ul>
-                                    {comments.map((comment) => (
-                                        <li key={comment._id}>
-                                            <strong>{comment.username}:</strong> {comment.text}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <br />
-                            </div> */}
                             <div className="yorumlar">
-                            <h1 style={{ textAlign: 'center', }}>{myVeri.destTitle}</h1>
+                                <h1 style={{ textAlign: 'center', }}>{myVeri.destTitle}</h1>
                                 <ul>
                                     <li>
-                                        <h4 style={{marginLeft:10, marginRight:10}}><ul>{hakkındaList}</ul></h4>
+                                        <h4 style={{ marginLeft: 10, marginRight: 10 }}><ul>{hakkındaList}</ul></h4>
                                     </li>
                                 </ul>
                             </div>
@@ -243,7 +226,7 @@ const RoutePage = () => {
                     <br />
                     <hr></hr>
                     <br />
-                    <h3>BİZİMLE YORUMUNU PAYLAŞ<FaRegCommentDots className="icon" /></h3>
+                    <h3>BİZİMLE YORUMUNU PAYLAŞ  <FaRegCommentDots /></h3>
                     <form onSubmit={handleSubmit}>
                         <textarea
                             name="message"
@@ -264,10 +247,7 @@ const RoutePage = () => {
                     <hr></hr>
                 </div>
                 <div className="route-yorum-goruntule2">
-                    <br />
-                    {/* <hr></hr> */}
                     <div className="yorumlar2">
-
                         <ul>
                             {comments.map((comment) => (
                                 <li key={comment._id}>
@@ -276,16 +256,11 @@ const RoutePage = () => {
                             ))}
                         </ul>
                         <br />
-                        <br />
-
                         <hr></hr>
                         <br />
-
                     </div>
                 </div>
-
             </div>
-
             <Footer />
         </>
     );

@@ -79,11 +79,9 @@ render() {
     const GoogleMapExample = withGoogleMap(props => (
 
       
-        <GoogleMap
-           
+        <GoogleMap           
             defaultCenter={{ lat: 40.730190, lng:31.600210  }}
-            defaultZoom={4}
-            
+            defaultZoom={4}            
         >
             <DirectionsRenderer
                 directions={this.state.directions}
@@ -93,20 +91,13 @@ render() {
     ));
 
     return (
-
-    
-        <div>
-
-            
+   
+        <div> 
             <GoogleMapExample
                 containerElement={<div style={{ height: `499px`, width: "810px" }} />}
                 mapElement={<div style={{ height: `100%` , borderRadius: "1em"}} />}
             />
-
-            
         </div>
-
-
        );
     }
 }
